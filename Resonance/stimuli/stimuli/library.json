@@ -1,0 +1,109 @@
+{
+  "v": 1,
+  "_comment": [
+    "The shared cue library. One catalogue that every protocol draws from, filtered by tag.",
+    "",
+    "This replaces the fifteen StimulusList_*.js files the legacy tree carried, each a fork of",
+    "the last with the unwanted entries commented out -- StimulusList_mipuzzleA1.js ships 45",
+    "entries of which 26 are commented. A protocol here names the cues it uses; nothing is ever",
+    "commented out, and adding a paradigm adds pictures rather than forking a catalogue.",
+    "",
+    "`root` is where image/video/audio paths resolve from, relative to this file.",
+    "`legacyCode` is the integer the cue had in the old catalogue, carried so an analysis script",
+    "written against the old marker numbers still finds what it expects.",
+    "",
+    "Every cue below is text or blank on purpose: the shipped demonstration runs on a machine",
+    "that has never seen this lab, with no image assets at all."
+  ],
+  "root": "assets",
+
+  "cues": [
+    {
+      "id": "welcome",
+      "kind": "text",
+      "label": "Welcome",
+      "text": "Начинаем\n\nСледите за крестом в центре",
+      "fontSize": 44,
+      "tags": ["frame"],
+      "legacyCode": -1
+    },
+    {
+      "id": "goodbye",
+      "kind": "text",
+      "label": "Goodbye",
+      "text": "Готово\n\nСпасибо",
+      "fontSize": 44,
+      "tags": ["frame"],
+      "legacyCode": -2
+    },
+    {
+      "id": "blank",
+      "kind": "blank",
+      "label": "Blank",
+      "tags": ["rest"],
+      "legacyCode": 4
+    },
+    {
+      "id": "eyes_closed",
+      "kind": "text",
+      "label": "Eyes closed",
+      "text": "Закройте глаза",
+      "fontSize": 52,
+      "tags": ["rest", "passive"],
+      "legacyCode": 3
+    },
+    {
+      "id": "eyes_open",
+      "kind": "text",
+      "label": "Eyes open",
+      "text": "Откройте глаза",
+      "fontSize": 52,
+      "tags": ["rest", "passive"],
+      "legacyCode": 2
+    },
+    {
+      "id": "left_hand",
+      "kind": "text",
+      "label": "Left hand",
+      "text": "◀  ЛЕВАЯ",
+      "fontSize": 76,
+      "tags": ["imagery", "motor"],
+      "legacyCode": 10
+    },
+    {
+      "id": "right_hand",
+      "kind": "text",
+      "label": "Right hand",
+      "text": "ПРАВАЯ  ▶",
+      "fontSize": 76,
+      "tags": ["imagery", "motor"],
+      "legacyCode": 20
+    },
+    {
+      "id": "feet",
+      "kind": "text",
+      "label": "Feet",
+      "text": "▼  НОГИ",
+      "fontSize": 76,
+      "tags": ["imagery", "motor"],
+      "legacyCode": 30
+    },
+    {
+      "id": "flash_white",
+      "kind": "blank",
+      "label": "White flash",
+      "colour": "#FFFFFF",
+      "tags": ["vep"],
+      "legacyCode": 301
+    },
+    {
+      "id": "prompt_type",
+      "kind": "text",
+      "label": "Free text prompt",
+      "text": "Опишите, что вы представляли\n\n(пробел — дальше)",
+      "fontSize": 34,
+      "tags": ["report"],
+      "legacyCode": 901
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "v": 1,
+  "name": "TMS during cue, 7 s",
+  "presenter": "sequence",
+  "library": "library.json",
+
+  "_comment": [
+    "The paradigm this module was built for.",
+    "",
+    "Three kinds of cue, each held for 7 s, with a randomised 1.5–2 s gap between them, and ONE",
+    "TMS pulse delivered 3.5 s into each cue — halfway, so the stimulus lands in a settled mental",
+    "state rather than in the transient at the cue's onset.",
+    "",
+    "The three numbers that matter, and why they are what they are:",
+    "",
+    "  duration 7000    the cue itself. Anything from about 4 s up works; below that the pulse",
+    "                   offset has to come down with it, and below ~2 s the state is still the",
+    "                   onset transient.",
+    "  triggerOffset    3500, i.e. the middle. It must clear the cue's own evoked response (a few",
+    "                   hundred ms) and leave room for the epoch's right edge before the cue ends:",
+    "                   with a 500 ms window and a 200 ms guard that is 700 ms, so the offset must",
+    "                   sit at least 700 ms before the end of the cue AND before the next pulse.",
+    "  isi 1500–2000    the gap. Randomised so the subject cannot anticipate the next cue, and",
+    "                   drawn from a recorded seed so the session can be reproduced.",
+    "",
+    "Pulse-to-pulse spacing is therefore 8.5–9.0 s, comfortably longer than the 700 ms an epoch",
+    "needs before it can exist at all — so the console is never behind the subject. The service",
+    "warns if a protocol violates that.",
+    "",
+    "`trigger: 1` selects the first line of the module's trigger map, which for the arduinoTTL",
+    "board is `2:P1` — a one-millisecond pulse on BNC2, timed by the board itself."
+  ],
+
+  "screen": {
+    "background": "#000000",
+    "fixation": "cross",
+    "photodiode": "top-right",
+    "photodiodeSize": 0.06
+  },
+
+  "trials": {
+    "a": { "cue": "cue_a", "duration": 7000, "marker": 11, "trigger": 1, "triggerOffset": 3500 },
+    "b": { "cue": "cue_b", "duration": 7000, "marker": 12, "trigger": 1, "triggerOffset": 3500 },
+    "c": { "cue": "cue_c", "duration": 7000, "marker": 13, "trigger": 1, "triggerOffset": 3500 }
+  },
+
+  "blocks": [
+    {
+      "name": "practice",
+      "repeat": 1,
+      "order": "fixed",
+      "trials": ["a", "b", "c"],
+      "isi": { "min": 1500, "max": 2000 }
+    },
+    {
+      "name": "main",
+      "repeat": 20,
+      "order": "shuffled",
+      "trials": ["a", "b", "c"],
+      "isi": { "min": 1500, "max": 2000 }
+    }
+  ],
+
+  "welcome": { "cue": "welcome", "duration": 4000 },
+  "goodbye": { "cue": "goodbye", "duration": 3000 },
+
+  "devices": [],
+
+  "record": {
+    "enabled": false,
+    "file": "$protocol_$subject_$$$$.h5",
+    "streams": []
+  }
+}

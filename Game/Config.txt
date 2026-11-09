@@ -1,0 +1,31 @@
+[fish]
+# Original hooked-fish drift: 0.05 scene units/second.
+speed = 0.05
+# Original pull speed = 1 / strength. Multiplier 1.0 keeps that rule.
+reel_speed_multiplier = 1.0
+# Escape movement is 10 * speed = 0.5
+slip_speed_multiplier = 10.0
+# Pause after successful catch (seconds).
+catch_pause_seconds = 1.0
+# Exact arrival at (0, 1) as in the original. Raise to enable early escape.
+slip_trigger_distance = 0.0
+# Safety cap for time used by ONE callback; no long-lived impulse.
+reel_impulse_seconds = 0.10
+# Original rule: signal > 0.7 means immediately slip off.
+slip_strength_threshold = 0.70
+# Original rule: fish caught if its y position < 0.3.
+catch_y = 0.30
+
+[signal]
+# Applied to real and keyboard event strengths before game logic.
+multiplier = 1.0
+# Minimum divisor for 1 / strength, to avoid division by zero.
+min_to_reel = 0.0001
+# 0.06 permits testing the original "weak signal pulls" mechanic.
+keyboard_strength = 0.06
+# Optional EMA smoothing across contraction events. 0 disables it.
+smoothing_seconds = 0.0
+
+[input]
+selected_arm = right
+keyboard = false

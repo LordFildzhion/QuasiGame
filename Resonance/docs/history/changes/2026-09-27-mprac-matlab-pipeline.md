@@ -1,0 +1,33 @@
+# MPRAC MATLAB processing update — 2026-09-27
+
+Requested entry point: `R:\dist_legacy\PRACTICUMPC\MATLAB\mp_pipeline.m`. The new sectioned script is [mp_pipeline_2026.m](../../../dist_legacy/PRACTICUMPC/MATLAB/mp_pipeline_2026.m); changed/new helpers have `_2026` names beside it. All original files are retained. [Compact usage/reference](../../../dist_legacy/PRACTICUMPC/MATLAB/README_2026.md).
+
+## Processing and corrections
+
+The original section sequence remains: rhythms spectra, single-channel spectra, spectrogram, EEG fragments, large/medium/small checkers, checker comparison, buttons, P300 and target-minus-nontarget difference. File selection is centralized and refuses to guess between multiple subject/run matches. Figures remain interactive outputs; the script exports nothing automatically.
+
+The reader accepts current `eeg/events` and legacy `eeg_N`/numeric markers/`Stimulus` JSON. Numeric sample counts come from the block index; only unwritten legacy tail rows are ignored. It reads rate, channel labels, units and coordinates, uses a supplied modern 12-channel CED only for missing coordinates, and consistently returns samples × EEG channels in µV. Current onset JSON is distinguished from repeated markers inside the realised plan. A current file need not have twelve EEG channels; the actual eight-channel NVX recording was tested too.
+
+Corrected errors include:
+
+- The old epoch loop silently omitted its last five rows, while callers also dropped first/last epochs. Every requested epoch now receives explicit bounds/gap/finite-data checks; valid tail epochs survive. Baseline intervals are explicit milliseconds and respect the recorded sampling rate.
+- Photodiode matching formerly added an unsigned nearest-neighbour distance to the message index, potentially placing an earlier edge later. Matching now uses the actual edge index, a bounded search and unique assignments. No arbitrary half-refresh addition, end padding or unseen-light fallback is applied. Missing edges stay NaN. Static defaults reject the floating-AUX noise in the known disconnected hardware files; these defaults are not universal diode calibration.
+- P300 JSON used substring/field-order parsing and could misclassify off/unknown-target messages. Only highlighted `show=true` flashes enter; target membership uses decoded fields. Unlabelled typing stays unlabelled. Current `events` takes precedence over the legacy duplicate `Stimulus` stream.
+- Button matching could reuse the nearest press or a preceding press. Each trigger press is now assigned once, 50–1800 ms after a target message and before the next cue. Button-locked analysis does not require a diode; optical reaction times remain missing without an optical edge. This matters because the 2021 button examples have real presses but no useful diode transitions.
+- Removed orientation guesses, off-by-one P300 padding/cropping and path-shadowed filter helpers. The two external `bandpassFilter.m` variants in the MATLAB working tree implement different causal/zero-phase behavior; the new pipeline pins the intended offline stages instead.
+- Plot axes now contain actual frequencies/time, labels no longer depend on `gca.Children` order, ERP counts reflect accepted events, reference labels describe the chosen reference, alpha search is limited to 8–13 Hz, and absent data does not produce invalid plot limits or legends.
+
+Original filter stages/reference choices are retained explicitly: checker order-4 1–20 Hz Butterworth plus FIR 40 Hz; button FIR 25 Hz plus two-second median detrending; P300 FIR 30 Hz plus order-9 0.5–15 Hz Butterworth. SOS/filtfilt and FIR are continuous before epoching, separately over finite segments, without zero-filling gaps. Fz is the default reference for rhythms/checkers, CAR for buttons and recorded reference for P300. These are offline ERP filters, not online-classifier processing. Checker/P300 baselines are now wholly prestimulus (−100…0 ms); button baseline remains −1300…−1000 ms. Superlet parameters are retained; the default antialias-resampled 100 Hz rhythm analysis saves memory/processing and can be changed back to the recording rate.
+
+## Verification
+
+Evidence: `src/_test-output/mprac-matlab-20260927`. MATLAB R2023b Update 3 ran serially with `W:\MATLAB\startup.m`, high priority and affinity 65535, in private hidden batch processes. No existing MATLAB or Resonance session was stopped/reconfigured. No new acquisition was needed; no raw recording was modified. Figures were created invisibly for verification and closed, never exported. The summary table is `verification.xlsx`.
+
+- Full legacy pipeline: 11 figures constructed, 120 accepted responses for each checker size, 20 right/20 left/40 total button responses, and 600 nontarget/120 target P300 epochs. All 720 P300 flash onsets matched.
+- All seven 2021 button examples: 40 responses in the first shorter recording and 80 in each of the other six, uniquely assigned after the target message. Missing photodiode values remain missing.
+- Five current physical NVX QA recordings (eyes, three checkers, buttons) import their exact extents and 12 EEG + photo + trigger metadata. The known disconnected EEG/absent-diode conditions produce no usable ERP/optical events, rather than invented responses. The complete rhythms/checkers/buttons script handles those recordings.
+- Current physical NVX four-letter pretraining: all 240 flashes found, 200 nontarget/40 target epochs, all optical onsets matched; the P300 script sections run with its eight EEG channels.
+- Current MPRAC synthetic native training: all 48 flashes, including eight targets, import with twelve EEG channels. The separate current 600-flash typing file remains unlabelled.
+- Focused checks cover all seven requested epochs, valid final epochs, out-of-range onsets, baseline subtraction, the exact 500 Hz time grid, gap rejection, signed/bounded/unique optical alignment, unchanged filter output length, finite filtering, segmented median detrending and empty optional gap arguments.
+
+`batch_03.log` is the full passing regression with retained filter/reference stages and corrected empty-data plotting. Earlier passes retained in evidence exposed the button/no-diode distinction and floating-AUX false matches, which were corrected. `batch_final2.log` verifies the explicit-empty-gap fix and final segmented detrending. `ready.log` confirms all 16 MATLAB `_2026` files have zero Code Analyzer findings. Twenty distinct legacy/current recordings were exercised. Original-file hashes remain unchanged; delivered-file hashes are retained in the evidence folder. No participant-performance or new physical display-latency claim is made.

@@ -1,0 +1,5 @@
+[
+	{ "name": "samplingRate", "serialized": "1 kHz (device 16 kHz / 16)", "type": "Resonance::Parameters::Select" },
+	{ "name": "blockSize", "serialized": 100, "type": "Resonance::Parameters::Integer" },
+	{ "name": "decimation", "serialized": "Drop samples (vendor-compatible)", "type": "Resonance::Parameters::Select" }
+]

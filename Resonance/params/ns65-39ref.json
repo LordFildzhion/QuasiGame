@@ -1,0 +1,72 @@
+[
+ {
+  "name": "mode",
+  "serialized": "Acquisition",
+  "type": "Resonance::Parameters::Select"
+ },
+ {
+  "name": "dc_channels_mode",
+  "serialized": "Referential (EEG)",
+  "type": "Resonance::Parameters::Select"
+ },
+ {
+  "name": "samplingRate",
+  "serialized": "1 kHz (device 16 kHz / 16)",
+  "type": "Resonance::Parameters::Select"
+ },
+ {
+  "name": "channels",
+  "serialized": [
+   false,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false
+  ],
+  "type": "Resonance::Parameters::ChannelsList"
+ }
+]

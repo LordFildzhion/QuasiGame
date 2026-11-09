@@ -1,0 +1,61 @@
+{
+  "v": 1,
+  "name": "TEP·SOUND cue library",
+
+  "_comment": [
+    "The cue catalogue this module's shipped protocols draw from.",
+    "",
+    "Every cue here is text or a flat colour, so the module runs on a machine that has never seen",
+    "this lab and a protocol can be checked before any image exists. Replace `kind` with `image`",
+    "and give a `src` relative to this file to use the real pictures; nothing else changes.",
+    "",
+    "`legacyCode` is the integer the same picture had in the lab's StimulusList_*.js files, so an",
+    "analysis written against the old marker numbers still reads a recording made here."
+  ],
+
+  "cues": {
+    "cue_a": {
+      "kind": "text",
+      "text": "A",
+      "label": "Cue A",
+      "fontSize": 220,
+      "tags": ["task"],
+      "legacyCode": 11
+    },
+    "cue_b": {
+      "kind": "text",
+      "text": "B",
+      "label": "Cue B",
+      "fontSize": 220,
+      "tags": ["task"],
+      "legacyCode": 12
+    },
+    "cue_c": {
+      "kind": "text",
+      "text": "C",
+      "label": "Cue C",
+      "fontSize": 220,
+      "tags": ["task"],
+      "legacyCode": 13
+    },
+    "rest": {
+      "kind": "blank",
+      "colour": "#000000",
+      "label": "Rest (blank)",
+      "tags": ["rest"],
+      "legacyCode": 3
+    },
+    "welcome": {
+      "kind": "text",
+      "text": "Please relax and keep your eyes on the centre of the screen.",
+      "label": "Welcome",
+      "fontSize": 40
+    },
+    "goodbye": {
+      "kind": "text",
+      "text": "Thank you — the session is finished.",
+      "label": "Goodbye",
+      "fontSize": 40
+    }
+  }
+}

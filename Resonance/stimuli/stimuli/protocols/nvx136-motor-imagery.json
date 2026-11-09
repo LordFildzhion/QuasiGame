@@ -1,0 +1,64 @@
+{
+  "v": 1,
+  "name": "NVX136 motor imagery",
+  "presenter": "sequence",
+  "library": "../library.json",
+
+  "_comment": [
+    "The same paradigm wired to real hardware, and the shape a rig protocol takes.",
+    "",
+    "One amplifier. The legacy console drove two NVX in lock-step through a chain of fixed",
+    "sleeps; that is deliberately not reproduced.",
+    "",
+    "profile picks the timeout budget: `nvx` opens in about a second, `nvx136` needs five --",
+    "NVXOpenEx alone is 3.3 s on the media converter. Nothing here sleeps; every step waits for",
+    "the service to reach an observable state, and says which wait expired when one does.",
+    "",
+    "impedanceMode is what the console's Impedance button switches to. It is a separate mode,",
+    "entered with recording stopped: one run is one recording is one file."
+  ],
+
+  "screen": {
+    "background": "#000000",
+    "fixation": "cross",
+    "photodiode": "top-right"
+  },
+
+  "trials": {
+    "left":  { "cue": "left_hand",  "duration": 4000, "marker": 10, "trigger": 10 },
+    "right": { "cue": "right_hand", "duration": 4000, "marker": 20, "trigger": 20 },
+    "feet":  { "cue": "feet",       "duration": 4000, "marker": 30, "trigger": 30 },
+    "rest":  { "cue": "blank",      "duration": 3000, "marker": 4 }
+  },
+
+  "blocks": [
+    {
+      "name": "main",
+      "repeat": 20,
+      "order": "shuffled",
+      "trials": ["left", "right", "feet", "rest"],
+      "isi": { "min": 1000, "max": 2000 }
+    }
+  ],
+
+  "welcome": { "cue": "welcome", "duration": 4000 },
+  "goodbye": { "cue": "goodbye", "duration": 3000 },
+
+  "devices": [
+    {
+      "service": "NVX136",
+      "role": "eeg",
+      "stream": "eeg",
+      "launch": "NVX136.bat",
+      "profile": "nvx136",
+      "acquireMode": "Normal",
+      "impedanceMode": "Impedance"
+    }
+  ],
+
+  "record": {
+    "enabled": true,
+    "file": "$protocol_$subject_$$$$.h5",
+    "streams": []
+  }
+}

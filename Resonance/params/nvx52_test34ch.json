@@ -1,0 +1,496 @@
+[
+	{
+		"attributes": {
+			"options": [
+				"Level",
+				"Rising edge",
+				"Falling edge"
+			],
+			"optionsAreUnique": true
+		},
+		"description": "How the device reports the trigger input. Level is its ordinary high/low state; Rising and Falling use the device's own edge detection. Edge modes exist only on NVX-24, -36 and -52; asking for one elsewhere is refused rather than silently ignored. Applied at the next Start.",
+		"enabled": true,
+		"group": "main",
+		"index": 27,
+		"label": "Trigger detection",
+		"name": "trigger_mode",
+		"serialized": "Level",
+		"type": "Resonance::Parameters::Select"
+	},
+	{
+		"attributes": null,
+		"description": "Raises the trigger output line. Takes effect while running, and is also applied at Start.\nThe device reports one output line (NVXGetPossibility OutTriggersCount = 1 on an NVX-52), and measurement confirms only the exact value 1 raises it -- 2 and 3 leave it low, so this was never a bit mask and is now a checkbox. Its state reads back in bit 9 of the trigger word, not bit 10 as NVX.h claims.\nIMPORTANT: the amplifier powers up with its trigger lines HIGH, so the output is asserted before this service ever writes to it. The driver therefore drives the line to this value at every Start rather than leaving it wherever the hardware left it -- otherwise an unticked box would sit above a line that is actually high.",
+		"enabled": true,
+		"group": "main",
+		"index": 60,
+		"label": "Trigger output",
+		"name": "trigger_state",
+		"serialized": false,
+		"type": "Resonance::Parameters::Boolean"
+	},
+	{
+		"attributes": {
+			"options": [
+				"Unipolar",
+				"Bipolar",
+				"Impedance"
+			],
+			"optionsAreUnique": true
+		},
+		"description": "Unipolar: every selected output is one physical EEG or AUX input, referenced as the amplifier provides it.\nBipolar: every output row is A - B, with GND allowed on either side. Below 10 kHz the difference is computed in software from two valid inputs; at 10 and 50 kHz the device does it. If either source is disconnected the row is blank rather than a fabricated number.\nImpedance: electrode-to-GND impedance in Ohm instead of signal, updated about five times a second. The vendor specifies measurement up to roughly 120 kOhm; above that, or with nothing connected, the value is blank -- not a huge number.\nApplied at the next Start.",
+		"enabled": true,
+		"group": "main",
+		"index": 30,
+		"label": "Mode",
+		"name": "mode",
+		"serialized": "Unipolar",
+		"type": "Resonance::Parameters::Select"
+	},
+	{
+		"attributes": null,
+		"description": "Appends the amplifier's raw status/trigger word to the stream as an extra channel. It is a bitfield, not a boolean: the viewer expands it into one lane per bit and never filters it. A lane appears only once its bit has actually toggled. Applied at the next Start.",
+		"enabled": true,
+		"group": "main",
+		"index": 26,
+		"label": "Add trigger",
+		"name": "addTrigger",
+		"serialized": true,
+		"type": "Resonance::Parameters::Boolean"
+	},
+	{
+		"attributes": [
+			"Ch 1",
+			"Ch 2",
+			"Ch 3",
+			"Ch 4",
+			"Ch 5",
+			"Ch 6",
+			"Ch 7",
+			"Ch 8",
+			"Ch 9",
+			"Ch 10",
+			"Ch 11",
+			"Ch 12",
+			"Ch 13",
+			"Ch 14",
+			"Ch 15",
+			"Ch 16",
+			"Ch 17",
+			"Ch 18",
+			"Ch 19",
+			"Ch 20",
+			"Ch 21",
+			"Ch 22",
+			"Ch 23",
+			"Ch 24",
+			"Ch 25",
+			"Ch 26",
+			"Ch 27",
+			"Ch 28",
+			"Ch 29",
+			"Ch 30",
+			"Ch 31",
+			"Ch 32",
+			"Ch 33",
+			"Ch 34",
+			"Ch 35",
+			"Ch 36",
+			"Ch 37",
+			"Ch 38",
+			"Ch 39",
+			"Ch 40",
+			"Ch 41",
+			"Ch 42",
+			"Ch 43",
+			"Ch 44",
+			"Ch 45",
+			"Ch 46",
+			"Ch 47",
+			"Ch 48",
+			"AUX 1",
+			"AUX 2",
+			"AUX 3",
+			"AUX 4"
+		],
+		"description": "",
+		"enabled": true,
+		"group": "main",
+		"index": 40,
+		"label": "Channels",
+		"name": "channels_unipolar",
+		"serialized": [
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			true,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false,
+			false
+		],
+		"type": "Resonance::Parameters::ChannelsList"
+	},
+	{
+		"attributes": {
+			"options": [
+				"NVX-52, serial 1219"
+			],
+			"optionsAreUnique": true
+		},
+		"description": "The amplifier to acquire from, shown as model plus serial number. A fresh device id is acquired at every Start, so a reconnected unit works without relaunching; use rescan after replugging.",
+		"enabled": true,
+		"group": "main",
+		"index": 10,
+		"label": "Device",
+		"name": "device",
+		"serialized": "NVX-52, serial 1219",
+		"type": "Resonance::Parameters::Select"
+	},
+	{
+		"attributes": {
+			"maximum": 99999,
+			"minimum": 1,
+			"stepSize": 1
+		},
+		"description": "Target number of samples per SDK read and per published block -- a latency/overhead trade, not a guarantee that every block contains exactly this many samples. 100 at 1 kHz is the qualified default: a 15-minute recording produced 899,963 rows at 999.96 Hz with no missing rows. Very large values approach the SDK read-cadence limit; very small ones raise CPU use. Applied at the next Start.",
+		"enabled": true,
+		"group": "main",
+		"index": 25,
+		"label": "Block size",
+		"name": "blockSize",
+		"serialized": 100,
+		"type": "Resonance::Parameters::Integer"
+	},
+	{
+		"attributes": false,
+		"description": "An EEGLAB .ced montage. Its electrode names and coordinates are applied to the selected EEG outputs only; AUX and the trigger keep their own names and units. With no file loaded the EEG channels are named Ch 1, Ch 2, ...",
+		"enabled": true,
+		"group": "main",
+		"index": 28,
+		"label": "CED file",
+		"name": "ced",
+		"serialized": "",
+		"type": "Resonance::Parameters::File"
+	},
+	{
+		"attributes": {
+			"options": [
+				"125 Hz (all channels)",
+				"250 Hz (all channels)",
+				"500 Hz (all channels)",
+				"1 kHz (all channels)",
+				"2 kHz (all channels)",
+				"5 kHz (all channels)",
+				"10 kHz (select any 24 EEG channels)",
+				"50 kHz (select any 4 of Ch 1-Ch 8)"
+			],
+			"optionsAreUnique": true
+		},
+		"description": "All channels are available up to 5 kHz. At 10 kHz the device acquires at most 24 EEG channels, though any of the physical inputs may be chosen; at 50 kHz at most four, drawn from Ch 1-Ch 8, and AUX is not available. Start is refused if more are selected rather than silently dropping channels. Applied at the next Start.",
+		"enabled": true,
+		"group": "main",
+		"index": 20,
+		"label": "Sampling rate",
+		"name": "samplingRate",
+		"serialized": "1 kHz (all channels)",
+		"type": "Resonance::Parameters::Select"
+	},
+	{
+		"attributes": [
+			"GND",
+			"Ch 1",
+			"Ch 2",
+			"Ch 3",
+			"Ch 4",
+			"Ch 5",
+			"Ch 6",
+			"Ch 7",
+			"Ch 8",
+			"Ch 9",
+			"Ch 10",
+			"Ch 11",
+			"Ch 12",
+			"Ch 13",
+			"Ch 14",
+			"Ch 15",
+			"Ch 16",
+			"Ch 17",
+			"Ch 18",
+			"Ch 19",
+			"Ch 20",
+			"Ch 21",
+			"Ch 22",
+			"Ch 23",
+			"Ch 24",
+			"Ch 25",
+			"Ch 26",
+			"Ch 27",
+			"Ch 28",
+			"Ch 29",
+			"Ch 30",
+			"Ch 31",
+			"Ch 32",
+			"Ch 33",
+			"Ch 34",
+			"Ch 35",
+			"Ch 36",
+			"Ch 37",
+			"Ch 38",
+			"Ch 39",
+			"Ch 40",
+			"Ch 41",
+			"Ch 42",
+			"Ch 43",
+			"Ch 44",
+			"Ch 45",
+			"Ch 46",
+			"Ch 47",
+			"Ch 48"
+		],
+		"description": "",
+		"enabled": false,
+		"group": "main",
+		"index": 50,
+		"label": "Channels",
+		"name": "channels_bipolar",
+		"serialized": [
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			],
+			[
+				0,
+				0
+			]
+		],
+		"type": "Resonance::Parameters::BipolarChannelsList"
+	}
+]

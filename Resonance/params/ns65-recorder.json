@@ -1,0 +1,46 @@
+[
+	{
+		"enabled": true,
+		"group": "default",
+		"index": 10,
+		"label": "File name",
+		"name": "fileName",
+		"serialized": "ns65-acceptance-$$$$.h5",
+		"type": "Resonance::Parameters::String"
+	},
+	{
+		"enabled": true,
+		"group": "default",
+		"index": 20,
+		"label": "Streams",
+		"name": "streamsCount",
+		"serialized": 1,
+		"type": "Resonance::Parameters::Integer"
+	},
+	{
+		"enabled": true,
+		"group": "default",
+		"index": 30,
+		"label": "Stream 1",
+		"name": "stream1",
+		"serialized": {
+			"desiredStream": {
+				"connections": [
+					"discover:///?stream=eeg&name=NeuronSpectrum"
+				],
+				"metaData": {}
+			},
+			"reconnect": true
+		},
+		"type": "Resonance::Parameters::Stream"
+	},
+	{
+		"enabled": true,
+		"group": "default",
+		"index": 40,
+		"label": "Auto start",
+		"name": "autoStart",
+		"serialized": true,
+		"type": "Resonance::Parameters::Boolean"
+	}
+]

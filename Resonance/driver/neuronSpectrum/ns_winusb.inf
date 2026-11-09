@@ -1,0 +1,745 @@
+;==========================================================================================
+; INF-file for installing the standard Windows driver (WinUSB) for Neurosoft USB devices.
+; Processor support for OS x86 & amd64.
+; Copyright (c) Neurosoft Ltd. 2022
+;==========================================================================================
+
+[Version]
+Signature   = "$Windows NT$"
+Class		= NeuroSoftUSBdevices
+ClassGUID   = {E488380F-E249-4b22-9848-D203EE085313}
+Provider    = %ManufacturerName%
+CatalogFile = NS_WinUSB.cat
+DriverVer   = 01/31/2023, 2.0.0.9 ; MM/DD/YYYY, version
+PnpLockdown = 1
+
+[ClassInstall32] 
+AddReg = ClassInstall_AddReg
+
+[ClassInstall_AddReg]
+HKR,,,,"%NeurosoftDeviceClassDisplayName%"
+HKR,,Icon,,"-20"
+
+; ========== Manufacturer/Models sections ===========
+
+[Manufacturer]
+%ManufacturerName% = Standard,NTx86,NTamd64
+
+[Standard.NTx86]
+%DeviceDesc_0547_2235% = Install_xxxx_xxxx, USB\VID_0547&PID_2235
+%DeviceDesc_04B4_6473% = Install_xxxx_xxxx, USB\VID_04B4&PID_6473
+%DeviceDesc_04B4_8613% = Install_xxxx_xxxx, USB\VID_04B4&PID_8613
+%DeviceDesc_ACCA_7000% = Install_xxxx_xxxx, USB\VID_ACCA&PID_7000
+%DeviceDesc_ACCA_7001% = Install_xxxx_xxxx, USB\VID_ACCA&PID_7001														  
+%DeviceDesc_ACCA_7002% = Install_xxxx_xxxx, USB\VID_ACCA&PID_7002
+%DeviceDesc_ACCA_8000% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8000
+%DeviceDesc_ACCA_8002% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8002
+%DeviceDesc_ACCA_8003% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8003
+%DeviceDesc_ACCA_8004% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8004
+%DeviceDesc_ACCA_8005% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8005
+%DeviceDesc_ACCA_8010% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8010
+%DeviceDesc_ACCA_8020% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8020
+%DeviceDesc_ACCA_8021% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8021
+%DeviceDesc_ACCA_8022% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8022
+%DeviceDesc_ACCA_8023% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8023
+%DeviceDesc_ACCA_8200% = Install_ACCA_820X, USB\VID_ACCA&PID_8200
+%DeviceDesc_ACCA_8201% = Install_ACCA_820X, USB\VID_ACCA&PID_8201
+%DeviceDesc_ACCA_8210% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8210
+%DeviceDesc_ACCA_8220% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8220
+%DeviceDesc_ACCA_8230% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8230
+%DeviceDesc_ACCA_8250% = Install_ACCA_825X, USB\VID_ACCA&PID_8250
+%DeviceDesc_ACCA_8251% = Install_ACCA_825X, USB\VID_ACCA&PID_8251
+%DeviceDesc_ACCA_8252% = Install_ACCA_825X, USB\VID_ACCA&PID_8252
+%DeviceDesc_ACCA_8253% = Install_ACCA_825X, USB\VID_ACCA&PID_8253
+%DeviceDesc_ACCA_8254% = Install_ACCA_825X, USB\VID_ACCA&PID_8254
+%DeviceDesc_ACCA_8255% = Install_ACCA_825X, USB\VID_ACCA&PID_8255
+%DeviceDesc_ACCA_8256% = Install_ACCA_825X, USB\VID_ACCA&PID_8256
+%DeviceDesc_ACCA_8257% = Install_ACCA_825X, USB\VID_ACCA&PID_8257
+%DeviceDesc_ACCA_8260% = Install_ACCA_826X, USB\VID_ACCA&PID_8260
+%DeviceDesc_ACCA_8261% = Install_ACCA_826X, USB\VID_ACCA&PID_8261
+%DeviceDesc_ACCA_8262% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8262
+%DeviceDesc_ACCA_8263% = Install_ACCA_826X, USB\VID_ACCA&PID_8263
+%DeviceDesc_ACCA_8264% = Install_ACCA_8264, USB\VID_ACCA&PID_8264
+%DeviceDesc_ACCA_8265% = Install_ACCA_8265, USB\VID_ACCA&PID_8265
+%DeviceDesc_ACCA_8266% = Install_ACCA_8266, USB\VID_ACCA&PID_8266
+%DeviceDesc_ACCA_8267% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8267
+%DeviceDesc_ACCA_8268% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8268
+%DeviceDesc_ACCA_8268% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8269
+%DeviceDesc_ACCA_8270% = Install_ACCA_827X, USB\VID_ACCA&PID_8270
+%DeviceDesc_ACCA_8271% = Install_ACCA_827X, USB\VID_ACCA&PID_8271
+%DeviceDesc_ACCA_8272% = Install_ACCA_8272, USB\VID_ACCA&PID_8272
+%DeviceDesc_ACCA_8279% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8279
+%DeviceDesc_ACCA_827A% = Install_xxxx_xxxx, USB\VID_ACCA&PID_827A
+%DeviceDesc_ACCA_827B% = Install_xxxx_xxxx, USB\VID_ACCA&PID_827B
+%DeviceDesc_ACCA_827C% = Install_xxxx_xxxx, USB\VID_ACCA&PID_827C
+%DeviceDesc_ACCA_8284% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8284
+%DeviceDesc_ACCA_8280% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8280
+%DeviceDesc_ACCA_8282% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8282
+%DeviceDesc_ACCA_8283% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8283
+%DeviceDesc_ACCA_8300% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8300
+%DeviceDesc_ACCA_8302% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8302
+%DeviceDesc_ACCA_8303% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8303
+%DeviceDesc_ACCA_8304% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8304
+%DeviceDesc_ACCA_8305% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8305
+%DeviceDesc_ACCA_8306% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8306
+%DeviceDesc_ACCA_8310% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8310
+%DeviceDesc_ACCA_8311% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8311
+%DeviceDesc_ACCA_8312% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8312
+%DeviceDesc_ACCA_8313% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8313
+%DeviceDesc_ACCA_8314% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8314
+%DeviceDesc_ACCA_8315% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8315
+%DeviceDesc_ACCA_8316% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8316
+%DeviceDesc_ACCA_8317% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8317
+%DeviceDesc_ACCA_8320% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8320
+%DeviceDesc_ACCA_8330% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8330
+%DeviceDesc_ACCA_8340% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8340
+%DeviceDesc_ACCA_8390% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8390
+%DeviceDesc_ACCA_8400% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8400
+%DeviceDesc_ACCA_8410% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8410
+%DeviceDesc_ACCA_8411% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8411
+%DeviceDesc_ACCA_8412% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8412
+%DeviceDesc_ACCA_8413% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8413
+%DeviceDesc_ACCA_8420% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8420
+%DeviceDesc_ACCA_8421% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8421
+%DeviceDesc_ACCA_8422% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8422
+%DeviceDesc_ACCA_8423% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8423
+%DeviceDesc_ACCA_8424% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8424
+%DeviceDesc_ACCA_8425% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8425
+%DeviceDesc_ACCA_8430% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8430
+%DeviceDesc_ACCA_8440% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8440
+%DeviceDesc_ACCA_8490% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8490
+%DeviceDesc_ACCA_8491% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8491
+%DeviceDesc_ACCA_8492% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8492
+%DeviceDesc_ACCA_8500% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8500
+%DeviceDesc_ACCA_8501% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8501
+%DeviceDesc_ACCA_8510% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8510
+%DeviceDesc_ACCA_8520% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8520
+%DeviceDesc_ACCA_8580% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8580
+%DeviceDesc_ACCA_8581% = Install_ACCA_8581, USB\VID_ACCA&PID_8581
+%DeviceDesc_ACCA_8600% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8600
+%DeviceDesc_ACCA_8601% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8601
+%DeviceDesc_ACCA_8602% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8602
+%DeviceDesc_ACCA_8603% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8603
+%DeviceDesc_ACCA_8604% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8604
+%DeviceDesc_ACCA_8680% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8680
+%DeviceDesc_ACCA_8700% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8700
+%DeviceDesc_ACCA_8701% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8701
+%DeviceDesc_ACCA_8702% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8702
+%DeviceDesc_ACCA_8703% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8703
+%DeviceDesc_ACCA_8704% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8704
+%DeviceDesc_ACCA_8705% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8705
+%DeviceDesc_ACCA_8706% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8706
+%DeviceDesc_ACCA_8780% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8780
+%DeviceDesc_ACCA_8800% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8800
+%DeviceDesc_ACCA_8801% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8801
+%DeviceDesc_ACCA_8802% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8802
+%DeviceDesc_ACCA_8803% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8803
+%DeviceDesc_ACCA_8900% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8900
+%DeviceDesc_ACCA_8901% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8901
+%DeviceDesc_ACCA_8902% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8902
+%DeviceDesc_ACCA_8903% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8903
+%DeviceDesc_ACCA_8904% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8904
+%DeviceDesc_ACCA_8905% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8905
+%DeviceDesc_ACCA_8906% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8906
+%DeviceDesc_ACCA_8907% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8907
+%DeviceDesc_ACCA_8908% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8908
+%DeviceDesc_ACCA_8909% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8909
+%DeviceDesc_ACCA_8930% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8930
+%DeviceDesc_ACCA_8931% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8931
+%DeviceDesc_ACCA_8932% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8932
+
+;for x64 platforms
+[Standard.NTamd64]
+%DeviceDesc_0547_2235% = Install_xxxx_xxxx, USB\VID_0547&PID_2235
+%DeviceDesc_04B4_6473% = Install_xxxx_xxxx, USB\VID_04B4&PID_6473
+%DeviceDesc_04B4_8613% = Install_xxxx_xxxx, USB\VID_04B4&PID_8613
+%DeviceDesc_ACCA_7000% = Install_xxxx_xxxx, USB\VID_ACCA&PID_7000
+%DeviceDesc_ACCA_7001% = Install_xxxx_xxxx, USB\VID_ACCA&PID_7001														  
+%DeviceDesc_ACCA_7002% = Install_xxxx_xxxx, USB\VID_ACCA&PID_7002
+%DeviceDesc_ACCA_8000% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8000
+%DeviceDesc_ACCA_8002% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8002
+%DeviceDesc_ACCA_8003% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8003
+%DeviceDesc_ACCA_8004% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8004
+%DeviceDesc_ACCA_8005% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8005
+%DeviceDesc_ACCA_8010% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8010
+%DeviceDesc_ACCA_8020% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8020
+%DeviceDesc_ACCA_8021% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8021
+%DeviceDesc_ACCA_8022% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8022
+%DeviceDesc_ACCA_8023% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8023
+%DeviceDesc_ACCA_8200% = Install_ACCA_820X, USB\VID_ACCA&PID_8200
+%DeviceDesc_ACCA_8201% = Install_ACCA_820X, USB\VID_ACCA&PID_8201
+%DeviceDesc_ACCA_8210% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8210
+%DeviceDesc_ACCA_8220% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8220
+%DeviceDesc_ACCA_8230% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8230
+%DeviceDesc_ACCA_8250% = Install_ACCA_825X, USB\VID_ACCA&PID_8250
+%DeviceDesc_ACCA_8251% = Install_ACCA_825X, USB\VID_ACCA&PID_8251
+%DeviceDesc_ACCA_8252% = Install_ACCA_825X, USB\VID_ACCA&PID_8252
+%DeviceDesc_ACCA_8253% = Install_ACCA_825X, USB\VID_ACCA&PID_8253
+%DeviceDesc_ACCA_8254% = Install_ACCA_825X, USB\VID_ACCA&PID_8254
+%DeviceDesc_ACCA_8255% = Install_ACCA_825X, USB\VID_ACCA&PID_8255
+%DeviceDesc_ACCA_8256% = Install_ACCA_825X, USB\VID_ACCA&PID_8256
+%DeviceDesc_ACCA_8257% = Install_ACCA_825X, USB\VID_ACCA&PID_8257
+%DeviceDesc_ACCA_8260% = Install_ACCA_826X, USB\VID_ACCA&PID_8260
+%DeviceDesc_ACCA_8261% = Install_ACCA_826X, USB\VID_ACCA&PID_8261
+%DeviceDesc_ACCA_8262% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8262
+%DeviceDesc_ACCA_8263% = Install_ACCA_826X, USB\VID_ACCA&PID_8263
+%DeviceDesc_ACCA_8264% = Install_ACCA_8264, USB\VID_ACCA&PID_8264
+%DeviceDesc_ACCA_8265% = Install_ACCA_8265, USB\VID_ACCA&PID_8265
+%DeviceDesc_ACCA_8266% = Install_ACCA_8266, USB\VID_ACCA&PID_8266
+%DeviceDesc_ACCA_8267% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8267
+%DeviceDesc_ACCA_8268% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8268
+%DeviceDesc_ACCA_8268% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8269
+%DeviceDesc_ACCA_8270% = Install_ACCA_827X, USB\VID_ACCA&PID_8270
+%DeviceDesc_ACCA_8271% = Install_ACCA_827X, USB\VID_ACCA&PID_8271
+%DeviceDesc_ACCA_8272% = Install_ACCA_8272, USB\VID_ACCA&PID_8272
+%DeviceDesc_ACCA_8279% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8279
+%DeviceDesc_ACCA_827A% = Install_xxxx_xxxx, USB\VID_ACCA&PID_827A
+%DeviceDesc_ACCA_827B% = Install_xxxx_xxxx, USB\VID_ACCA&PID_827B
+%DeviceDesc_ACCA_827C% = Install_xxxx_xxxx, USB\VID_ACCA&PID_827C
+%DeviceDesc_ACCA_8284% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8284
+%DeviceDesc_ACCA_8280% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8280
+%DeviceDesc_ACCA_8282% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8282
+%DeviceDesc_ACCA_8283% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8283
+%DeviceDesc_ACCA_8300% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8300
+%DeviceDesc_ACCA_8302% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8302
+%DeviceDesc_ACCA_8303% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8303
+%DeviceDesc_ACCA_8304% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8304
+%DeviceDesc_ACCA_8305% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8305
+%DeviceDesc_ACCA_8306% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8306
+%DeviceDesc_ACCA_8310% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8310
+%DeviceDesc_ACCA_8311% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8311
+%DeviceDesc_ACCA_8312% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8312
+%DeviceDesc_ACCA_8313% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8313
+%DeviceDesc_ACCA_8314% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8314
+%DeviceDesc_ACCA_8315% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8315
+%DeviceDesc_ACCA_8316% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8316
+%DeviceDesc_ACCA_8317% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8317
+%DeviceDesc_ACCA_8320% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8320
+%DeviceDesc_ACCA_8330% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8330
+%DeviceDesc_ACCA_8340% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8340
+%DeviceDesc_ACCA_8390% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8390
+%DeviceDesc_ACCA_8400% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8400
+%DeviceDesc_ACCA_8410% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8410
+%DeviceDesc_ACCA_8411% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8411
+%DeviceDesc_ACCA_8412% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8412
+%DeviceDesc_ACCA_8413% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8413
+%DeviceDesc_ACCA_8420% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8420
+%DeviceDesc_ACCA_8421% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8421
+%DeviceDesc_ACCA_8422% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8422
+%DeviceDesc_ACCA_8423% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8423
+%DeviceDesc_ACCA_8424% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8424
+%DeviceDesc_ACCA_8425% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8425
+%DeviceDesc_ACCA_8430% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8430
+%DeviceDesc_ACCA_8440% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8440
+%DeviceDesc_ACCA_8490% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8490
+%DeviceDesc_ACCA_8491% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8491
+%DeviceDesc_ACCA_8492% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8492
+%DeviceDesc_ACCA_8500% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8500
+%DeviceDesc_ACCA_8501% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8501
+%DeviceDesc_ACCA_8510% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8510
+%DeviceDesc_ACCA_8520% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8520
+%DeviceDesc_ACCA_8580% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8580
+%DeviceDesc_ACCA_8581% = Install_ACCA_8581, USB\VID_ACCA&PID_8581
+%DeviceDesc_ACCA_8600% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8600
+%DeviceDesc_ACCA_8601% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8601
+%DeviceDesc_ACCA_8602% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8602
+%DeviceDesc_ACCA_8680% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8680
+%DeviceDesc_ACCA_8700% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8700
+%DeviceDesc_ACCA_8701% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8701
+%DeviceDesc_ACCA_8702% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8702
+%DeviceDesc_ACCA_8703% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8703
+%DeviceDesc_ACCA_8704% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8704
+%DeviceDesc_ACCA_8705% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8705
+%DeviceDesc_ACCA_8706% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8706
+%DeviceDesc_ACCA_8780% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8780
+%DeviceDesc_ACCA_8800% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8800
+%DeviceDesc_ACCA_8801% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8801
+%DeviceDesc_ACCA_8802% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8802
+%DeviceDesc_ACCA_8803% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8803
+%DeviceDesc_ACCA_8900% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8900
+%DeviceDesc_ACCA_8901% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8901
+%DeviceDesc_ACCA_8902% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8902
+%DeviceDesc_ACCA_8903% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8903
+%DeviceDesc_ACCA_8904% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8904
+%DeviceDesc_ACCA_8905% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8905
+%DeviceDesc_ACCA_8906% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8906
+%DeviceDesc_ACCA_8907% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8907
+%DeviceDesc_ACCA_8908% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8908
+%DeviceDesc_ACCA_8909% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8909
+%DeviceDesc_ACCA_8930% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8930
+%DeviceDesc_ACCA_8931% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8931
+%DeviceDesc_ACCA_8932% = Install_xxxx_xxxx, USB\VID_ACCA&PID_8932
+
+; =================== Installation ===================
+[Install_xxxx_xxxx]
+Include = winusb.inf
+Needs = WINUSB.NT
+
+[Install_xxxx_xxxx.Services]
+Include = winusb.inf
+Needs = WINUSB.NT.Services
+
+[Install_xxxx_xxxx.HW]
+AddReg = Dev_AddReg_xxxx_xxxx
+
+[Install_xxxx_xxxx.Wdf]
+KmdfService = WINUSB, WinUsb_Install
+
+[Dev_AddReg_xxxx_xxxx]
+HKR,,DeviceInterfaceGUIDs,0x10008,"{52F5619D-D8A4-42C4-B2F9-D19171C660A4}"
+
+
+[Install_ACCA_820X]
+Include = winusb.inf
+Needs = WINUSB.NT
+
+[Install_ACCA_820X.Services]
+Include = winusb.inf
+Needs = WINUSB.NT.Services
+
+[Install_ACCA_820X.HW]
+AddReg = Dev_AddReg_ACCA_820X, Dev_AddReg_xxxx_xxxx
+
+[Install_ACCA_820X.Wdf]
+KmdfService = WINUSB, WinUsb_Install
+
+[Dev_AddReg_ACCA_820X]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{C6133496-B39B-48E2-828B-D7C42639DD3C}"
+
+
+[Install_ACCA_825X]
+Include = winusb.inf
+Needs = WINUSB.NT
+
+[Install_ACCA_825X.Services]
+Include = winusb.inf
+Needs = WINUSB.NT.Services
+
+[Install_ACCA_825X.HW]
+AddReg = Dev_AddReg_ACCA_825X, Dev_AddReg_xxxx_xxxx
+
+[Install_ACCA_825X.Wdf]
+KmdfService = WINUSB, WinUsb_Install
+
+[Dev_AddReg_ACCA_825X]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{C6133496-B39B-48E2-828B-D7C42639DD3C}"
+
+
+[Install_ACCA_826X]
+Include = winusb.inf
+Needs = WINUSB.NT
+
+[Install_ACCA_826X.Services]
+Include = winusb.inf
+Needs = WINUSB.NT.Services
+
+[Install_ACCA_826X.HW]
+AddReg = Dev_AddReg_ACCA_826X, Dev_AddReg_xxxx_xxxx
+
+[Install_ACCA_826X.Wdf]
+KmdfService = WINUSB, WinUsb_Install
+
+[Dev_AddReg_ACCA_826X]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{28648BFE-321B-4928-9EE9-1A5865527845}"
+
+
+[Install_ACCA_8264]
+Include = winusb.inf
+Needs = WINUSB.NT
+
+[Install_ACCA_8264.Services]
+Include = winusb.inf
+Needs = WINUSB.NT.Services
+
+[Install_ACCA_8264.HW]
+AddReg = Dev_AddReg_ACCA_8264, Dev_AddReg_xxxx_xxxx
+
+[Install_ACCA_8264.Wdf]
+KmdfService = WINUSB, WinUsb_Install
+
+[Dev_AddReg_ACCA_8264]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{B8801254-D575-415A-9F2B-FFF6407F368C}"
+
+
+[Install_ACCA_8265]
+Include = winusb.inf
+Needs = WINUSB.NT
+
+[Install_ACCA_8265.Services]
+Include = winusb.inf
+Needs = WINUSB.NT.Services
+
+[Install_ACCA_8265.HW]
+AddReg = Dev_AddReg_ACCA_8265, Dev_AddReg_xxxx_xxxx
+
+[Install_ACCA_8265.Wdf]
+KmdfService = WINUSB, WinUsb_Install
+
+[Dev_AddReg_ACCA_8265]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{878BAB7F-0424-462F-8F24-E496004DBE07}"
+
+
+[Install_ACCA_8266]
+Include = winusb.inf
+Needs = WINUSB.NT
+
+[Install_ACCA_8266.Services]
+Include = winusb.inf
+Needs = WINUSB.NT.Services
+
+[Install_ACCA_8266.HW]
+AddReg = Dev_AddReg_ACCA_8266, Dev_AddReg_xxxx_xxxx
+
+[Install_ACCA_8266.Wdf]
+KmdfService = WINUSB, WinUsb_Install
+
+[Dev_AddReg_ACCA_8266]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{0704A7D4-AB15-441C-B03E-61CC17604211}"
+
+
+[Install_ACCA_827X]
+Include = winusb.inf
+Needs = WINUSB.NT
+
+[Install_ACCA_827X.Services]
+Include = winusb.inf
+Needs = WINUSB.NT.Services
+
+[Install_ACCA_827X.HW]
+AddReg = Dev_AddReg_ACCA_827X, Dev_AddReg_xxxx_xxxx
+
+[Install_ACCA_827X.Wdf]
+KmdfService = WINUSB, WinUsb_Install
+
+[Dev_AddReg_ACCA_827X]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{28648BFE-321B-4928-9EE9-1A5865527845}"
+
+
+[Install_ACCA_8272]
+Include = winusb.inf
+Needs = WINUSB.NT
+
+[Install_ACCA_8272.Services]
+Include = winusb.inf
+Needs = WINUSB.NT.Services
+
+[Install_ACCA_8272.HW]
+AddReg = Dev_AddReg_ACCA_8272, Dev_AddReg_xxxx_xxxx
+
+[Install_ACCA_8272.Wdf]
+KmdfService = WINUSB, WinUsb_Install
+
+[Dev_AddReg_ACCA_8272]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{358314FA-41E3-45B6-8DC9-9B27A06FFC68}"
+
+
+[Install_ACCA_8581]
+Include = winusb.inf
+Needs = WINUSB.NT
+
+[Install_ACCA_8581.Services]
+Include = winusb.inf
+Needs = WINUSB.NT.Services
+
+[Install_ACCA_8581.HW]
+AddReg = Dev_AddReg_ACCA_8581, Dev_AddReg_xxxx_xxxx
+
+[Install_ACCA_8581.Wdf]
+KmdfService = WINUSB, WinUsb_Install
+
+[Dev_AddReg_ACCA_8581]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{55A286D8-C416-4C04-9B91-F07E8B6AD794}"
+
+
+[WinUsb_Install]
+KmdfLibraryVersion = 1.11
+
+; =================== Strings ===================
+
+[Strings]
+ManufacturerName = "Neurosoft Ltd."
+NeurosoftDeviceClassDisplayName = "Neurosoft USB Devices"
+
+; Devices
+DeviceDesc_0547_2235 = "Cypress FX - No EEPROM"
+DeviceDesc_04B4_6473 = "Cypress FX1 - No EEPROM"
+DeviceDesc_04B4_8613 = "Cypress FX2LP - No EEPROM"
+
+DeviceDesc_ACCA_7000 = "Test Device 1"
+DeviceDesc_ACCA_7001 = "Test Device 2"
+DeviceDesc_ACCA_7002 = "Universal test stand"
+DeviceDesc_ACCA_8000 = "USB power unit"
+DeviceDesc_ACCA_8002 = "Protection Key"
+DeviceDesc_ACCA_8003 = "Neuro-MEP Amplifier"
+DeviceDesc_ACCA_8004 = "Neuro-MEP Amplifier"
+DeviceDesc_ACCA_8005 = "Neurosoft Neuro-MEP Amplifier 4k"
+DeviceDesc_ACCA_8010 = "Temperature Sensor"
+DeviceDesc_ACCA_8020 = "SpO2 Recording Unit"
+DeviceDesc_ACCA_8021 = "Blood Pressure Unit"
+DeviceDesc_ACCA_8022 = "CO2 and O2 Unit"
+DeviceDesc_ACCA_8023 = "Light Sensor"
+DeviceDesc_ACCA_8200 = "Neuron-Spectrum-4 (v.1) 25-channels Digital EEG System"
+DeviceDesc_ACCA_8201 = "Neuro-EMG-Micro EMG System"
+DeviceDesc_ACCA_8210 = "Neuron-Spectrum-3 (v.1) Digital EEG System"
+DeviceDesc_ACCA_8220 = "Neuron-Spectrum-2 (v.1) Digital EEG System"
+DeviceDesc_ACCA_8230 = "Neuron-Spectrum-1 (v.1) Digital EEG System"
+DeviceDesc_ACCA_8250 = "Neuron-Spectrum-4/EP Digital EEG System"
+DeviceDesc_ACCA_8251 = "Neuron-Spectrum-1 Digital EEG System"
+DeviceDesc_ACCA_8252 = "Neuron-Spectrum-2 Digital EEG System"
+DeviceDesc_ACCA_8253 = "Neuron-Spectrum-3 Digital EEG System"
+DeviceDesc_ACCA_8254 = "Neuron-Spectrum-4 Digital EEG System"
+DeviceDesc_ACCA_8255 = "Neuro-EMG-Micro-4 EMG System"
+DeviceDesc_ACCA_8256 = "Neuro-EMG-Micro-2 EMG System"
+DeviceDesc_ACCA_8257 = "Neuron-Spectrum-4/P Digital EEG System"
+DeviceDesc_ACCA_8260 = "Neuro-MEP-Micro"
+DeviceDesc_ACCA_8261 = "Neuro-EMG-Micro-2M EMG system"
+DeviceDesc_ACCA_8262 = "Neuro-MEP-Micro-M"
+DeviceDesc_ACCA_8263 = "Neuro-EMG-MC"
+DeviceDesc_ACCA_8264 = "Neuro-MEP-Micro"
+DeviceDesc_ACCA_8265 = "Skybox (2-channel)"
+DeviceDesc_ACCA_8266 = "Skybox"
+DeviceDesc_ACCA_8267 = "Neuro-MEP-5BP"
+DeviceDesc_ACCA_8268 = "LightBox"
+DeviceDesc_ACCA_8269 = "LightBox"
+DeviceDesc_ACCA_8270 = "Neuron-Spectrum-5 Digital EEG System"
+DeviceDesc_ACCA_8271 = "Neuron-Spectrum-4EPM Digital EEG System"
+DeviceDesc_ACCA_8272 = "Litebox"
+
+DeviceDesc_ACCA_8279 = "NeuroMep EMG unit"
+DeviceDesc_ACCA_827A = "NeuroMep Electrical Stimulator"
+DeviceDesc_ACCA_827B = "NeuroMep Visual Stimulator"
+DeviceDesc_ACCA_827C = "NeuroMep Auditory Stimulator"
+DeviceDesc_ACCA_8284 = "Neuro-IOM-II"
+
+; IOM devices
+DeviceDesc_ACCA_8280 = "Electrocautery Detector"
+DeviceDesc_ACCA_8282 = "Neuro-IOM-16"
+DeviceDesc_ACCA_8283 = "Neuro-MMG"
+
+; Stimulators
+DeviceDesc_ACCA_8300 = "Neuro-MEP Electrical Stimulator"
+DeviceDesc_ACCA_8302 = "Neuro-MEP Nerve Electrical Stimulator"
+DeviceDesc_ACCA_8303 = "Neuro-TES"
+DeviceDesc_ACCA_8304 = "Neuro-IOM Electrostimulator (100mA/20mA)"
+DeviceDesc_ACCA_8305 = "Neuro-IOM Electrostimulator (200mA/20mA)"
+DeviceDesc_ACCA_8306 = "Neuro-MEP Electrical Stimulator (v.2)"
+DeviceDesc_ACCA_8310 = "Neuro-MS Magnetic Stimulator"
+DeviceDesc_ACCA_8311 = "Neuro-MS Magnetic Stimulator"
+DeviceDesc_ACCA_8312 = "Neurosoft Magnetic Stimulator Expansion unit"
+DeviceDesc_ACCA_8313 = "Neurosoft Magnetic Stimulator Cooling unit"
+DeviceDesc_ACCA_8314 = "Neurosoft Magnetic Stimulator Coil Tester"
+DeviceDesc_ACCA_8315 = "Neuro-MS Monophasic Magnetic Stimulator"
+DeviceDesc_ACCA_8316 = "Neuro-MS Biphasic Magnetic Stimulator"
+DeviceDesc_ACCA_8317 = "Neuro-MS Quadro Monophasic Magnetic Stimulator"
+DeviceDesc_ACCA_8320 = "Hight Resolution Pattern Adapter"
+DeviceDesc_ACCA_8330 = "Tendon Hammer"
+DeviceDesc_ACCA_8340 = "USB LED photic stimulator"
+
+DeviceDesc_ACCA_8390 = "Neuro-MSX test bench"
+
+; Poly-Spectrum
+DeviceDesc_ACCA_8400 = "Poly-Spectrum-12 12-channels Digital ECG System"
+DeviceDesc_ACCA_8410 = "Poly-Spectrum-8 12-channels Digital ECG System" 
+DeviceDesc_ACCA_8411 = "Poly-Spectrum-8/V 12-channels Digital ECG System" 
+DeviceDesc_ACCA_8412 = "Poly-Spectrum-8M 12-channels Digital ECG System"
+DeviceDesc_ACCA_8413 = "Poly-Spectrum-8-veterinary 12-channels Digital ECG System"
+DeviceDesc_ACCA_8420 = "Poly-Spectrum MRIS"
+DeviceDesc_ACCA_8421 = "Poly-Spectrum-Radio Receiver Unit"
+DeviceDesc_ACCA_8422 = "Poly-Spectrum Radio ECG System (Polar)"
+DeviceDesc_ACCA_8423 = "Poly-Spectrum-Radio Transmitter Unit"
+DeviceDesc_ACCA_8424 = "Poly-Spectrum Radio/V ECG Transmitter System "
+DeviceDesc_ACCA_8425 = "Poly-Spectrum Radio/V ECG Receiver System"
+DeviceDesc_ACCA_8430 = "Poly-Spectrum-12E 12-channels Digital ECG System" 
+DeviceDesc_ACCA_8440 = "Reader For EventRecorder" 
+DeviceDesc_ACCA_8490 = "Poly-Spectrum-AM Ambulatory ECG Recorder"
+DeviceDesc_ACCA_8491 = "Poly-Spectrum-AM Ambulatory ECG Recorder"
+
+DeviceDesc_ACCA_8492 = "Escargot"
+
+DeviceDesc_ACCA_8500 = "Neuro-MEP Auditory-Visual Stimulator"
+DeviceDesc_ACCA_8501 = "Neuro-MEP Auditory-Visual Stimulator v.2"
+DeviceDesc_ACCA_8510 = "Neurosoft Ganzfield Stimulator"
+DeviceDesc_ACCA_8520 = "Neurosoft Video Stimulator"
+DeviceDesc_ACCA_8580 = "Neuro-Audio ABR, OAE, ASSR Digital System"
+DeviceDesc_ACCA_8581 = "Neuro-Audio"
+DeviceDesc_ACCA_8600 = "Neurosoft Spiro-Spectrum Spirometer System"
+DeviceDesc_ACCA_8601 = "Neurosoft Spiro-Spectrum Calibration Pump"
+DeviceDesc_ACCA_8602 = "Neurosoft Spiro-Spectrum Spirometer System"
+DeviceDesc_ACCA_8680 = "Neurosoft Zond"
+
+DeviceDesc_ACCA_8603 = "PulseOxi"
+DeviceDesc_ACCA_8604 = "Neurosoft Spiro-Spectrum Spirometer System II"
+
+; Digital research system VNS
+DeviceDesc_ACCA_8700 = "VNS-Spectrum Digital Research System"
+DeviceDesc_ACCA_8701 = "VNS-Micro Digital Research System"
+DeviceDesc_ACCA_8702 = "VNS-Rhythm Digital Research System"
+DeviceDesc_ACCA_8703 = "VNS-Spectrum-4T Digital Research System"
+DeviceDesc_ACCA_8704 = "VNS-Micro-2 Digital Research System"
+DeviceDesc_ACCA_8705 = "VNS-Rhythm-2 Digital Research System"
+DeviceDesc_ACCA_8706 = "VNS-Spectrum-DC Digital Research System"
+DeviceDesc_ACCA_8780 = "Photo-Plethysmograph"
+DeviceDesc_ACCA_8800 = "Rheo-Spectrum v.2 Digital System"
+DeviceDesc_ACCA_8801 = "Rheo-Spectrum v.1 Digital System"
+DeviceDesc_ACCA_8802 = "Rheo-Spectrum-3 Digital System (v.3)"
+DeviceDesc_ACCA_8803 = "Rheo-Spectrum-2 Digital System (v.3)"
+
+; NS-PsychoTest
+DeviceDesc_ACCA_8900 = "NS-PsychoTest Visual Tube Unit"
+DeviceDesc_ACCA_8901 = "NS-PsychoTest Dynamometer Unit"
+DeviceDesc_ACCA_8902 = "NS-PsychoTest Tepping Test Unit"
+DeviceDesc_ACCA_8903 = "NS-PsychoTest Visual-Motor Analyze Unit"
+DeviceDesc_ACCA_8904 = "NS-PsychoTest Keyboard Unit"
+DeviceDesc_ACCA_8905 = "NS-PsychoTest Coordination Meter Unit"
+DeviceDesc_ACCA_8906 = "VNS-Micro-M Digital Research System"
+DeviceDesc_ACCA_8907 = "NS-PsychoTest Auditory Stimulation Unit"
+DeviceDesc_ACCA_8908 = "NS-PsychoTest  Visual-Motor Analyze Full Color Unit"
+DeviceDesc_ACCA_8909 = "NS-PsychoTest Polygraph Unit"
+
+DeviceDesc_ACCA_8930 = "Neurosoft Motion Sensor"
+DeviceDesc_ACCA_8931 = "Snorlex"
+DeviceDesc_ACCA_8932 = "UroDynamicsDevice"
+
+[Strings.0419]
+ManufacturerName = "ООО Нейрософт"
+NeurosoftDeviceClassDisplayName = "USB устройства компании Нейрософт"
+
+; Devices
+DeviceDesc_0547_2235 = "Cypress FX - No EEPROM"
+DeviceDesc_04B4_6473 = "Cypress FX1 - No EEPROM"
+DeviceDesc_04B4_8613 = "Cypress FX2LP - No EEPROM"
+
+DeviceDesc_ACCA_7000 = "Test Device 1"
+DeviceDesc_ACCA_7001 = "Test Device 2"
+DeviceDesc_ACCA_7002 = "Universal test stand"
+DeviceDesc_ACCA_8000 = "USB power unit"
+DeviceDesc_ACCA_8002 = "Protection Key"
+DeviceDesc_ACCA_8003 = "Neuro-MEP Amplifier"
+DeviceDesc_ACCA_8004 = "Neuro-MEP Amplifier"
+DeviceDesc_ACCA_8005 = "Neurosoft Neuro-MEP Amplifier 4k"
+DeviceDesc_ACCA_8010 = "Temperature Sensor"
+DeviceDesc_ACCA_8020 = "SpO2 Recording Unit"
+DeviceDesc_ACCA_8021 = "Blood Pressure Unit"
+DeviceDesc_ACCA_8022 = "CO2 and O2 Unit"
+DeviceDesc_ACCA_8023 = "Light Sensor"
+DeviceDesc_ACCA_8200 = "Neuron-Spectrum-4 (v.1) 25-channels Digital EEG System"
+DeviceDesc_ACCA_8201 = "Neuro-EMG-Micro EMG System"
+DeviceDesc_ACCA_8210 = "Neuron-Spectrum-3 (v.1) Digital EEG System"
+DeviceDesc_ACCA_8220 = "Neuron-Spectrum-2 (v.1) Digital EEG System"
+DeviceDesc_ACCA_8230 = "Neuron-Spectrum-1 (v.1) Digital EEG System"
+DeviceDesc_ACCA_8250 = "Neuron-Spectrum-4/EP Digital EEG System"
+DeviceDesc_ACCA_8251 = "Neuron-Spectrum-1 Digital EEG System"
+DeviceDesc_ACCA_8252 = "Neuron-Spectrum-2 Digital EEG System"
+DeviceDesc_ACCA_8253 = "Neuron-Spectrum-3 Digital EEG System"
+DeviceDesc_ACCA_8254 = "Neuron-Spectrum-4 Digital EEG System"
+DeviceDesc_ACCA_8255 = "Neuro-EMG-Micro-4 EMG System"
+DeviceDesc_ACCA_8256 = "Neuro-EMG-Micro-2 EMG System"
+DeviceDesc_ACCA_8257 = "Neuron-Spectrum-4/P Digital EEG System"
+DeviceDesc_ACCA_8260 = "Neuro-MEP-Micro"
+DeviceDesc_ACCA_8261 = "Neuro-EMG-Micro-2M EMG system"
+DeviceDesc_ACCA_8262 = "Neuro-MEP-Micro-M"
+DeviceDesc_ACCA_8263 = "Neuro-EMG-MC"
+DeviceDesc_ACCA_8264 = "Нейро-МВП-Микро"
+DeviceDesc_ACCA_8265 = "Скайбокс (2-канальный)"
+DeviceDesc_ACCA_8266 = "Скайбокс"
+DeviceDesc_ACCA_8267 = "Neuro-MEP-5BP"
+DeviceDesc_ACCA_8268 = "LightBox"
+DeviceDesc_ACCA_8269 = "LightBox"
+DeviceDesc_ACCA_8270 = "Neuron-Spectrum-5 Digital EEG System"
+DeviceDesc_ACCA_8271 = "Neuron-Spectrum-4EPM Digital EEG System"
+DeviceDesc_ACCA_8272 = "Лайтбокс"
+
+DeviceDesc_ACCA_8279 = "NeuroMep EMG unit"
+DeviceDesc_ACCA_827A = "NeuroMep Electrical Stimulator"
+DeviceDesc_ACCA_827B = "NeuroMep Visual Stimulator"
+DeviceDesc_ACCA_827C = "NeuroMep Auditory Stimulator"
+DeviceDesc_ACCA_8284 = "Neuro-IOM-II"
+
+; IOM devices
+DeviceDesc_ACCA_8280 = "Electrocautery Detector"
+DeviceDesc_ACCA_8282 = "Neuro-IOM-16"
+DeviceDesc_ACCA_8283 = "Neuro-MMG"
+
+; Stimulators
+DeviceDesc_ACCA_8300 = "Neuro-MEP Electrical Stimulator"
+DeviceDesc_ACCA_8302 = "Neuro-MEP Nerve Electrical Stimulator"
+DeviceDesc_ACCA_8303 = "Neuro-TES"
+DeviceDesc_ACCA_8304 = "Neuro-IOM Electrostimulator (100mA/20mA)"
+DeviceDesc_ACCA_8305 = "Neuro-IOM Electrostimulator (200mA/20mA)"
+DeviceDesc_ACCA_8306 = "Neuro-MEP Electrical Stimulator (v.2)"
+DeviceDesc_ACCA_8310 = "Neuro-MS Magnetic Stimulator"
+DeviceDesc_ACCA_8311 = "Neuro-MS Magnetic Stimulator"
+DeviceDesc_ACCA_8312 = "Neurosoft Magnetic Stimulator Expansion unit"
+DeviceDesc_ACCA_8313 = "Neurosoft Magnetic Stimulator Cooling unit"
+DeviceDesc_ACCA_8314 = "Neurosoft Magnetic Stimulator Coil Tester"
+DeviceDesc_ACCA_8315 = "Neuro-MS Monophasic Magnetic Stimulator"
+DeviceDesc_ACCA_8316 = "Neuro-MS Biphasic Magnetic Stimulator"
+DeviceDesc_ACCA_8317 = "Neuro-MS Quadro Monophasic Magnetic Stimulator"
+DeviceDesc_ACCA_8320 = "Hight Resolution Pattern Adapter"
+DeviceDesc_ACCA_8330 = "Tendon Hammer"
+DeviceDesc_ACCA_8340 = "USB LED photic stimulator"
+
+DeviceDesc_ACCA_8390 = "Neuro-MSX test bench"
+
+; Poly-Spectrum
+DeviceDesc_ACCA_8400 = "Поли-Спектр-12"
+DeviceDesc_ACCA_8410 = "Поли-Спектр-8" 
+DeviceDesc_ACCA_8411 = "Поли-Спектр-8/В" 
+DeviceDesc_ACCA_8412 = "Поли-Спектр-8/E"
+DeviceDesc_ACCA_8413 = "Поли-Спектр-8/В"
+DeviceDesc_ACCA_8420 = "Poly-Spectrum MRIS"
+DeviceDesc_ACCA_8421 = "Poly-Spectrum-Radio Receiver Unit"
+DeviceDesc_ACCA_8422 = "Poly-Spectrum Radio ECG System (Polar)"
+DeviceDesc_ACCA_8423 = "Poly-Spectrum-Radio Transmitter Unit"
+DeviceDesc_ACCA_8424 = "Poly-Spectrum Radio/V ECG Transmitter System "
+DeviceDesc_ACCA_8425 = "Poly-Spectrum Radio/V ECG Receiver System"
+DeviceDesc_ACCA_8430 = "Поли-Спектр-12/E" 
+DeviceDesc_ACCA_8440 = "Reader For EventRecorder" 
+DeviceDesc_ACCA_8490 = "Poly-Spectrum-AM Ambulatory ECG Recorder"
+DeviceDesc_ACCA_8491 = "Poly-Spectrum-AM Ambulatory ECG Recorder"
+
+DeviceDesc_ACCA_8492 = "Escargot"
+
+DeviceDesc_ACCA_8500 = "Neuro-MEP Auditory-Visual Stimulator"
+DeviceDesc_ACCA_8501 = "Neuro-MEP Auditory-Visual Stimulator v.2"
+DeviceDesc_ACCA_8510 = "Neurosoft Ganzfield Stimulator"
+DeviceDesc_ACCA_8520 = "Neurosoft Video Stimulator"
+DeviceDesc_ACCA_8580 = "Neuro-Audio ABR, OAE, ASSR Digital System"
+DeviceDesc_ACCA_8581 = "Нейро-Аудио"
+DeviceDesc_ACCA_8600 = "Neurosoft Spiro-Spectrum Spirometer System"
+DeviceDesc_ACCA_8601 = "Neurosoft Spiro-Spectrum Calibration Pump"
+DeviceDesc_ACCA_8602 = "Neurosoft Spiro-Spectrum Spirometer System"
+DeviceDesc_ACCA_8680 = "Neurosoft Zond"
+
+DeviceDesc_ACCA_8603 = "PulseOxi"
+DeviceDesc_ACCA_8604 = "Neurosoft Spiro-Spectrum Spirometer System II"
+
+; Digital research system VNS
+DeviceDesc_ACCA_8700 = "VNS-Spectrum Digital Research System"
+DeviceDesc_ACCA_8701 = "VNS-Micro Digital Research System"
+DeviceDesc_ACCA_8702 = "VNS-Rhythm Digital Research System"
+DeviceDesc_ACCA_8703 = "VNS-Spectrum-4T Digital Research System"
+DeviceDesc_ACCA_8704 = "VNS-Micro-2 Digital Research System"
+DeviceDesc_ACCA_8705 = "VNS-Rhythm-2 Digital Research System"
+DeviceDesc_ACCA_8706 = "VNS-Spectrum-DC Digital Research System"
+DeviceDesc_ACCA_8780 = "Photo-Plethysmograph"
+DeviceDesc_ACCA_8800 = "Rheo-Spectrum v.2 Digital System"
+DeviceDesc_ACCA_8801 = "Rheo-Spectrum v.1 Digital System"
+DeviceDesc_ACCA_8802 = "Rheo-Spectrum-3 Digital System (v.3)"
+DeviceDesc_ACCA_8803 = "Rheo-Spectrum-2 Digital System (v.3)"
+
+; NS-PsychoTest
+DeviceDesc_ACCA_8900 = "NS-PsychoTest Visual Tube Unit"
+DeviceDesc_ACCA_8901 = "NS-PsychoTest Dynamometer Unit"
+DeviceDesc_ACCA_8902 = "NS-PsychoTest Tepping Test Unit"
+DeviceDesc_ACCA_8903 = "NS-PsychoTest Visual-Motor Analyze Unit"
+DeviceDesc_ACCA_8904 = "NS-PsychoTest Keyboard Unit"
+DeviceDesc_ACCA_8905 = "NS-PsychoTest Coordination Meter Unit"
+DeviceDesc_ACCA_8906 = "VNS-Micro-M Digital Research System"
+DeviceDesc_ACCA_8907 = "NS-PsychoTest Auditory Stimulation Unit"
+DeviceDesc_ACCA_8908 = "NS-PsychoTest  Visual-Motor Analyze Full Color Unit"
+DeviceDesc_ACCA_8909 = "NS-PsychoTest Polygraph Unit"
+
+DeviceDesc_ACCA_8930 = "Neurosoft Motion Sensor"
+DeviceDesc_ACCA_8931 = "Snorlex"
+DeviceDesc_ACCA_8932 = "UroDynamicsDevice"

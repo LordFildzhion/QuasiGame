@@ -1,0 +1,31 @@
+# P300 startup, acquisition ownership and arbitrary adaptation counts — 2026-09-27
+
+Deployed `R:/dist/bin/P300.exe`; owning contract: [P300](../../components/p300.md). Evidence: `R:/src/_test-output/p300-startup-simplification-20260927` (source/binary snapshots, parameters, logs, PNGs and private recordings).
+
+## Failure investigation
+
+`R:/dist/params/why_not_working_p300.json` selected Movicom, firmware synchronization and Pretraining + Typing. Its final failed `Anonymous_movicom-adapt_Pretraining-Typing_training-0004.hdf5` contains 8,100 EEG samples/channel and 81 paired clock messages, including 76 valid mappings, but no P300 processing origin. Thus EEG and a usable clock were present at Recorder while P300 timed out with “No compatible live EEG reached P300.” Earlier failed recordings lacked the sync stream.
+
+Confirmed source defect: a nonempty acquisition service caused a Stop/configure/Start even with an empty Before recording array. That changed publisher endpoints between runs. P300 also opened a second EEG subscription only after recording readiness and opened the clock before the restart. Stale endpoint/time-out messages are present in the old log. The exact original discovery race was not independently forced by restarting the operator's physical acquisition.
+
+P300 now reuses the recording helper's verified EEG subscription, starts its clock subscription after recording readiness, resets subscriptions at run boundaries and distinguishes missing EEG, missing clock and unlocked/unmatched clock in startup errors. Nonrecorded runs retain their own EEG subscription. Two physical repeated combined runs passed without restarting the amplifier.
+
+## Behavior
+
+- Main **Amplifier** selects NVX, Movicom or Other stream. Explicit NVX/Movicom changes set the EEG address and the complete corresponding bundled eight-channel calibration/group profile together. Personal typing models are retained and checked for compatibility. Generic P300 also ships the existing priors in `p300/classifier/`.
+- Recording **Amplifier startup** defaults to **Use running amplifier**. Optional **Start if stopped** starts the addressed service with its current settings. P300 never stops or reconfigures acquisition on completion, cancellation or error. Old acquisition service/before/after IDs remain loadable but hidden and ignored. The shared helper's default legacy behavior remains for Stimulus paradigms.
+- P300TEST/MPRAC task launchers configure/start only a stopped amplifier; running acquisition is left alone. Explicit EEG/impedance launchers still perform their requested mode changes. P300TEST task presets no longer embed acquisition arrays.
+- Pretraining and manual recorded-data adaptation accept any positive requested count (ordinary integer/planner resource bounds remain), default two. Exact stored 1/2/3/4/6-letter weights are unchanged. Missing counts interpolate between anchors; outside them, a fixed equivalent group pseudo-count extends the nearest anchor. This extension is not a new empirically optimized policy. Actual weights and policy are saved. Combined filenames receive automatic numbering when absent.
+- REF is the declared physical reference, not a ninth Movicom channel or a software rereferencing command. Tooltip and documentation state this explicitly.
+- P300 has its own monitor/P300 icon, embedded in the executable and supplied as PNG for the strip. Global Movicom follows NVX136. Existing venue task icons remain available.
+
+## Validation and deployment
+
+- Native classifier, planner and shared Stimulus presentation executables exited successfully. All **705 anchor fits across 141 subjects** still match the independent group reference; maximum relative weight error **2.59e−12**. New count tests cover interpolation, extension, positive-count validation and exclusion of later letters.
+- Recorded software integration: **19 UI tests passed**, zero failures/skips. Three/one/five-letter combined sessions produced eight audited recordings and three saved models. Key pacing, automatic typing, cancellation and failed-training retention passed. The software amplifier started **once** and was never stopped by P300, despite invalid legacy Before JSON and subsequent failures. Handoffs were **1,941 / 1,911 / 1,919 ms**, without the configured extra three-second padding.
+- Final UI run: **18 passed**, zero failures, one optional recorded-session skip. Standard 330-pixel Main/Recording panel PNGs and the new icon were visually inspected. UI/profile changes after the recorded run were checked in this final suite.
+- Physical Movicom: private offscreen P300 and Recorder attached to the already-running eight-channel stream. Three and five labelled letters each adapted/saved a model and proceeded to two typed selections. Four files contain valid firmware processing origins, monotonically continuing sample ordinals and a single unchanged hardware clock session. Both typing replays have **24/24 epochs**, identical sample indices and **zero score difference**, two matching decisions each. These are workflow/processing tests, not display-latency or human-accuracy measurements.
+- A clean launch of the already-deployed Movicom executable reports **25 samples**, as do both source/deployed EEG presets: 50 ms or nominal 20 blocks/s at 500 Hz. The operator's running instance was explicitly at 100. It was left uninterrupted and unchanged; this was not a 100-sample constructor default. USB draining is independent of publication size.
+- P300 was relaunched with its existing command and all writable operator values restored, including the chosen three-letter count and Movicom source. Configurator was not restarted. The real amplifier remained running with identical writable values. Operator HDF5 input hashes were unchanged. `deployment.json` records deployed file identities and process; `operator-before/after.json` records the migration.
+
+Two evidence scripts initially failed in their own plumbing (Windows text decoding and an absent `streams` description key). Their private services cleaned up; existing physical recordings were audited without repeating acquisition. A missing font path in the offscreen icon render was corrected before inspection/deployment. No acquisition interruption was used to resolve these harness issues.

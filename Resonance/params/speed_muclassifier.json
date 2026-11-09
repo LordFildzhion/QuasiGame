@@ -1,0 +1,110 @@
+[
+    {
+        "attributes": null,
+        "description": "Runs for every block of input. Keep it short -- it executes at the block\nrate, and anything slow here shows up as latency in the stream.",
+        "enabled": true,
+        "group": "default",
+        "index": 201,
+        "label": "Code",
+        "name": "code",
+        "readOnly": false,
+        "serialized": "import os\nroot = os.path.join(os.environ['RESONANCE_DIR'], 'mulines')\n\nfrom mulines import pipeline\n\npipeline(r\"C:\\Users\\hodor\\Documents\\lab-MSU\\Resonance2026\\resonance_novosib\\mulines\\resources\\classifier_settings.json\")",
+        "type": "Resonance::Parameters::MultiLine",
+        "visible": true
+    },
+    {
+        "attributes": {
+            "options": [
+                "python 3.12"
+            ],
+            "optionsAreUnique": true
+        },
+        "description": "Which scripting engine runs the code below. The list is what this build\nactually found; an engine whose runtime is missing does not appear.",
+        "enabled": true,
+        "group": "default",
+        "index": 1,
+        "label": "Engine",
+        "name": "engine",
+        "readOnly": false,
+        "serialized": "python 3.12",
+        "type": "Resonance::Parameters::Select",
+        "visible": true
+    },
+    {
+        "attributes": null,
+        "description": "Runs once when the service prepares, before any data arrives. Imports and\nanything expensive to set up belong here, not in Code.",
+        "enabled": true,
+        "group": "default",
+        "index": 2,
+        "label": "Load code",
+        "name": "loadCode",
+        "readOnly": false,
+        "serialized": "import resonance\n",
+        "type": "Resonance::Parameters::MultiLine",
+        "visible": true
+    },
+    {
+        "attributes": {
+            "activeStream": {
+                "connections": [
+                ],
+                "metaData": {
+                }
+            },
+            "reconnect": true,
+            "requested": "discover:///?stream=eeg&name=nvx136",
+            "resolved": false,
+            "waitingFor": "discover:///?stream=eeg&name=nvx136"
+        },
+        "description": "",
+        "enabled": true,
+        "group": "default",
+        "index": 100,
+        "label": "Stream 1",
+        "name": "stream1",
+        "readOnly": false,
+        "serialized": {
+            "desiredStream": {
+                "connections": [
+                    "discover:///?stream=eeg&name=nvx136"
+                ],
+                "metaData": {
+                },
+                "name": "eeg"
+            },
+            "reconnect": true
+        },
+        "type": "Resonance::Parameters::Stream",
+        "visible": true
+    },
+    {
+        "attributes": null,
+        "description": "What the engine reported when the code last failed. A readout, not a\nsetting -- it is where a syntax error in Code shows up.",
+        "enabled": true,
+        "group": "default",
+        "index": 9999,
+        "label": "Error messages",
+        "name": "errorMessages",
+        "readOnly": false,
+        "serialized": "",
+        "type": "Resonance::Parameters::MultiLine",
+        "visible": true
+    },
+    {
+        "attributes": {
+            "maximum": 99,
+            "minimum": 0,
+            "stepSize": 1
+        },
+        "description": "How many input streams the script receives. Each one gets its own slot\nbelow to drag a stream into.",
+        "enabled": true,
+        "group": "default",
+        "index": 99,
+        "label": "Number of input streams",
+        "name": "inputsCount",
+        "readOnly": false,
+        "serialized": 1,
+        "type": "Resonance::Parameters::Integer",
+        "visible": true
+    }
+]

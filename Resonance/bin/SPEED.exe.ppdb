@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#Author: maximus
+#speed.exe / Need for Speed - Most Wanted
+#Rating=1-5
+################################################
+export PW_VULKAN_USE="2"
+export LAUNCH_PARAMETERS=""
+export WINEDLLOVERRIDES="dinput8=n,b"
+export PORTPROTON_NAME="speed"
+export PW_WINE_USE="PROTON_LG_10-28"
+export PW_MESA_VK_WSI_PRESENT_MODE="relaxed"
+export FILE_SHA256SUM="f4007a0c7f77a4de129ed91693c4534f46d6e417bacb0ec9a518d9d8c3f8d814"
+export PW_PREFIX_NAME="DEFAULT"

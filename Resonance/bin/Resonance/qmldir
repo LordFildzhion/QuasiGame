@@ -1,0 +1,20 @@
+module Resonance
+plugin quickStimulusPlugin
+classname ResonanceQMLPlugin
+
+StreamView 3.0 StreamView.qml
+ParametersView 3.0 ParametersView.qml
+ParameterToolTip 3.0 ParameterToolTip.qml
+SquareCheckBox 3.0 SquareCheckBox.qml
+Resonance__Parameters__ChannelsList 3.0 Resonance__Parameters__ChannelsList.qml
+Resonance__Parameters__Select 3.0 Resonance__Parameters__Select.qml
+Configurator 3.0 Configurator.qml
+LaunchBar 3.0 LaunchBar.qml
+ParamView 3.0 ParamView.qml
+Resonance__Parameters__Stream 3.0 Resonance__Parameters__Stream.qml
+Resonance__Parameters__String 3.0 Resonance__Parameters__String.qml
+Resonance__Parameters__Double 3.0 Resonance__Parameters__Double.qml
+Resonance__Parameters__Integer 3.0 Resonance__Parameters__Integer.qml
+Resonance__Parameters__Boolean 3.0 Resonance__Parameters__Boolean.qml
+Resonance__Parameters__BipolarChannelsList 3.0 Resonance__Parameters__BipolarChannelsList.qml
+TwoWayBinding 3.0 TwoWayBinding.qml

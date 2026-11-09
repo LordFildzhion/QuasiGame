@@ -1,0 +1,6 @@
+[
+	{ "name": "mode", "serialized": "Impedance", "type": "Resonance::Parameters::Select" },
+	{ "name": "impedance_interval", "serialized": 800, "type": "Resonance::Parameters::Integer" },
+	{ "name": "impedance_good", "serialized": 5, "type": "Resonance::Parameters::Integer" },
+	{ "name": "impedance_bad", "serialized": 20, "type": "Resonance::Parameters::Integer" }
+]

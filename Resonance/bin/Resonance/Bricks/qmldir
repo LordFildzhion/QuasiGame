@@ -1,0 +1,4 @@
+module Resonance.Bricks
+Head 1.0 Head.qml
+StimulusDisplay 1.0 StimulusDisplay.qml
+StimulusSelector 1.0 StimulusSelector.qml

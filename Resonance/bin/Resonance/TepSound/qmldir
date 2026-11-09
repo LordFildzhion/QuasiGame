@@ -1,0 +1,28 @@
+module Resonance.TepSound
+
+singleton Theme 1.0 Theme.qml
+
+Panel 1.0 Panel.qml
+TepField 1.0 TepField.qml
+TepToolTip 1.0 TepToolTip.qml
+TepButton 1.0 TepButton.qml
+TepDialog 1.0 TepDialog.qml
+StatPill 1.0 StatPill.qml
+ParamControl 1.0 ParamControl.qml
+
+# The editing bricks for the experiment table. Every one of them is DRIVEN from outside and owns
+# no state of its own -- see EditField.qml for why that is a correctness rule here and not a
+# style preference.
+EditField 1.0 EditField.qml
+EditNumber 1.0 EditNumber.qml
+EditChoice 1.0 EditChoice.qml
+EditToggle 1.0 EditToggle.qml
+ParamRow 1.0 ParamRow.qml
+GateRow 1.0 GateRow.qml
+ChainNode 1.0 ChainNode.qml
+ChainArrow 1.0 ChainArrow.qml
+ScaleBox 1.0 ScaleBox.qml
+EpochTable 1.0 EpochTable.qml
+PlotFrame 1.0 PlotFrame.qml
+StatusPill 1.0 StatusPill.qml
+VerdictMark 1.0 VerdictMark.qml

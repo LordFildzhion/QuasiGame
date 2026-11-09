@@ -1,0 +1,86 @@
+{
+  "v": 1,
+  "name": "Demo motor imagery",
+  "presenter": "sequence",
+  "library": "../library.json",
+
+  "_comment": [
+    "A complete paradigm, as a document. This is what replaces sp_mipuzzleA.qml and its",
+    "seventeen siblings: to run a different experiment, write a different one of these -- there",
+    "is nothing to build and nothing to copy.",
+    "",
+    "It needs no image assets, so it runs on any machine. Point `devices` at a real amplifier",
+    "and turn `record` on to make it a real session.",
+    "",
+    "presenter: how the next cue is chosen. `sequence` is the flat trial list every legacy sp_",
+    "file used. A speller grid or a media timeline would be another value here -- another",
+    "presenter, not another program."
+  ],
+
+  "screen": {
+    "background": "#000000",
+    "fixation": "cross",
+    "photodiode": "top-right",
+    "photodiodeSize": 0.06
+  },
+
+  "trials": {
+    "left": {
+      "cue": "left_hand",
+      "duration": 3000,
+      "marker": 10,
+      "trigger": 10
+    },
+    "right": {
+      "cue": "right_hand",
+      "duration": 3000,
+      "marker": 20,
+      "trigger": 20
+    },
+    "rest": {
+      "cue": "blank",
+      "duration": 2000,
+      "marker": 4
+    },
+    "report": {
+      "cue": "prompt_type",
+      "until": "key:Space",
+      "collect": "text",
+      "marker": 900
+    }
+  },
+
+  "blocks": [
+    {
+      "name": "practice",
+      "repeat": 1,
+      "order": "fixed",
+      "trials": ["left", "rest", "right", "rest"],
+      "isi": { "min": 500, "max": 500 }
+    },
+    {
+      "name": "main",
+      "repeat": 6,
+      "order": "shuffled",
+      "trials": ["left", "right", "rest"],
+      "isi": { "min": 800, "max": 1600 }
+    },
+    {
+      "name": "report",
+      "repeat": 1,
+      "order": "fixed",
+      "trials": ["report"]
+    }
+  ],
+
+  "welcome": { "cue": "welcome", "duration": 3000 },
+  "goodbye": { "cue": "goodbye", "duration": 2500 },
+
+  "devices": [],
+
+  "record": {
+    "enabled": false,
+    "file": "$protocol_$subject_$$$$.h5",
+    "streams": []
+  }
+}

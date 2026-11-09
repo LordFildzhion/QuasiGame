@@ -1,0 +1,4 @@
+[
+	{ "name": "mode", "serialized": "Acquisition + impedance", "type": "Resonance::Parameters::Select" },
+	{ "name": "impedance_interval", "serialized": 2, "type": "Resonance::Parameters::Integer" }
+]

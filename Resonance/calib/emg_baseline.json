@@ -1,0 +1,770 @@
+{
+  "schema_version": 1,
+  "source_file": "/mnt/data/recording.h5",
+  "stream_name": "eeg",
+  "sampling_rate_hz": 500.0,
+  "sample_count": 169560,
+  "duration_s": 339.119985487,
+  "channels": {
+    "left": {
+      "side": "left",
+      "channel_name": "left_p",
+      "channel_index": 63,
+      "sample_count": 60317,
+      "rest_seconds": 120.634,
+      "rest_interval_count": 9,
+      "baseline_median_rms": 6.445952441816664e-07,
+      "baseline_mean_rms": 6.77173233805843e-07,
+      "baseline_q95_rms": 8.085658509399594e-07,
+      "baseline_q99_rms": 1.2187727949120002e-06,
+      "baseline_mad_rms": 4.980930882920039e-08,
+      "robust_sigma_rms": 7.384728127017249e-08,
+      "activation_threshold_rms": 9.399843692623563e-07,
+      "interval_q95_median_rms": 8.336795306374653e-07,
+      "interval_q95_cv": 0.12426775003701018,
+      "rest_spectrum_peak_hz": 0.244140625,
+      "rest_spectrum_fraction_0_5_hz": 0.9954616945041536,
+      "rest_spectrum_fraction_45_55_hz": 0.09040417063440823,
+      "rest_spectrum_raw_fraction_45_55_hz": 0.9995348213674531,
+      "matching_task_count": 32,
+      "task_q95_median_rms": 7.134496263677119e-07,
+      "task_to_rest_q95_ratio": 0.8823642818186364,
+      "task_trials_above_rest_q95_fraction": 0.21875,
+      "task_block_count": 8,
+      "task_block_q95_median_rms": 7.570702202960144e-07,
+      "task_block_to_rest_q95_ratio": 0.9363123849664424,
+      "task_block_fraction_above_rest_q95": 0.375,
+      "task_block_ipsilateral_to_contralateral_ratio": 0.5010945269195921,
+      "task_block_separated_from_rest": false,
+      "status": "low_quality",
+      "warnings": [
+        "Сильная сетевая помеха на входе; адаптивное подавление существенно уменьшило остаток",
+        "Высокая доля низкочастотного дрейфа/движения в полосе 0–5 Гц",
+        "Типичная активность задания не превышает 95-й процентиль покоя",
+        "Явно размеченные task_block не показывают устойчивого превышения фона"
+      ]
+    },
+    "right": {
+      "side": "right",
+      "channel_name": "right_p",
+      "channel_index": 65,
+      "sample_count": 60317,
+      "rest_seconds": 120.634,
+      "rest_interval_count": 9,
+      "baseline_median_rms": 8.910821094695903e-07,
+      "baseline_mean_rms": 9.55694274543262e-07,
+      "baseline_q95_rms": 1.2769359995992373e-06,
+      "baseline_q99_rms": 2.5548420042334677e-06,
+      "baseline_mad_rms": 5.36708697777788e-08,
+      "robust_sigma_rms": 7.957243153253484e-08,
+      "activation_threshold_rms": 1.2769359995992373e-06,
+      "interval_q95_median_rms": 1.1159393114170248e-06,
+      "interval_q95_cv": 0.24915568278105277,
+      "rest_spectrum_peak_hz": 0.244140625,
+      "rest_spectrum_fraction_0_5_hz": 0.9801298838420519,
+      "rest_spectrum_fraction_45_55_hz": 0.11862859835399553,
+      "rest_spectrum_raw_fraction_45_55_hz": 0.9999669039356492,
+      "matching_task_count": 35,
+      "task_q95_median_rms": 1.0063455127830855e-06,
+      "task_to_rest_q95_ratio": 0.7880939319581594,
+      "task_trials_above_rest_q95_fraction": 0.2,
+      "task_block_count": 9,
+      "task_block_q95_median_rms": 1.120840428225756e-06,
+      "task_block_to_rest_q95_ratio": 0.8777577173621297,
+      "task_block_fraction_above_rest_q95": 0.3333333333333333,
+      "task_block_ipsilateral_to_contralateral_ratio": 1.4617585838805662,
+      "task_block_separated_from_rest": false,
+      "status": "low_quality",
+      "warnings": [
+        "Сильная сетевая помеха на входе; адаптивное подавление существенно уменьшило остаток",
+        "Высокая доля низкочастотного дрейфа/движения в полосе 0–5 Гц",
+        "Типичная активность задания не превышает 95-й процентиль покоя",
+        "Явно размеченные task_block не показывают устойчивого превышения фона"
+      ]
+    }
+  },
+  "task_cross_channel": {
+    "left_task_on_left_channel": {
+      "trial_count": 32,
+      "median_q95_rms": 7.134496263677119e-07,
+      "rest_q95_rms": 8.085658509399594e-07,
+      "task_to_rest_ratio": 0.8823642818186364
+    },
+    "left_task_on_right_channel": {
+      "trial_count": 32,
+      "median_q95_rms": 1.1313830869942334e-06,
+      "rest_q95_rms": 1.2769359995992373e-06,
+      "task_to_rest_ratio": 0.886013932843396
+    },
+    "right_task_on_left_channel": {
+      "trial_count": 35,
+      "median_q95_rms": 7.15947075125107e-07,
+      "rest_q95_rms": 8.085658509399594e-07,
+      "task_to_rest_ratio": 0.8854530206696425
+    },
+    "right_task_on_right_channel": {
+      "trial_count": 35,
+      "median_q95_rms": 1.0063455127830855e-06,
+      "rest_q95_rms": 1.2769359995992373e-06,
+      "task_to_rest_ratio": 0.7880939319581594
+    }
+  },
+  "rest_intervals_used": [
+    {
+      "interval_id": "rest_1",
+      "start_s": 52.495997667,
+      "end_s": 65.895997047,
+      "duration_s": 13.402,
+      "samples": 6701
+    },
+    {
+      "interval_id": "rest_2",
+      "start_s": 84.491996288,
+      "end_s": 97.895995855,
+      "duration_s": 13.406,
+      "samples": 6703
+    },
+    {
+      "interval_id": "rest_3",
+      "start_s": 116.493994951,
+      "end_s": 129.887994289,
+      "duration_s": 13.396,
+      "samples": 6698
+    },
+    {
+      "interval_id": "rest_4",
+      "start_s": 148.499993801,
+      "end_s": 161.895992994,
+      "duration_s": 13.398,
+      "samples": 6699
+    },
+    {
+      "interval_id": "rest_5",
+      "start_s": 180.497992277,
+      "end_s": 193.891991854,
+      "duration_s": 13.396,
+      "samples": 6698
+    },
+    {
+      "interval_id": "rest_6",
+      "start_s": 212.489990711,
+      "end_s": 225.893990278,
+      "duration_s": 13.406,
+      "samples": 6703
+    },
+    {
+      "interval_id": "rest_7",
+      "start_s": 244.497989655,
+      "end_s": 257.907989264,
+      "duration_s": 13.412,
+      "samples": 6706
+    },
+    {
+      "interval_id": "rest_8",
+      "start_s": 276.495988131,
+      "end_s": 289.911987782,
+      "duration_s": 13.418,
+      "samples": 6709
+    },
+    {
+      "interval_id": "rest_9",
+      "start_s": 308.49198699,
+      "end_s": 321.889986277,
+      "duration_s": 13.4,
+      "samples": 6700
+    }
+  ],
+  "config": {
+    "baseline": {
+      "rest_edge_trim_s": 0.3,
+      "minimum_rest_seconds": 10.0,
+      "minimum_rest_intervals": 3,
+      "minimum_task_blocks": 3,
+      "microrepeat_skip_s": 0.25,
+      "microrepeat_window_s": 2.0,
+      "minimum_trial_seconds": 0.25,
+      "task_rest_good_ratio": 1.5,
+      "task_rest_min_fraction_above": 0.5,
+      "mains_warn_fraction": 0.3,
+      "low_frequency_warn_fraction": 0.5,
+      "interval_q95_cv_warn": 0.5
+    },
+    "filter": {
+      "low_hz": 20.0,
+      "high_hz": 200.0,
+      "notch_hz": 50.0,
+      "notch_q": 30.0,
+      "order": 4,
+      "rms_window_ms": 200.0,
+      "attack_ms": 50.0,
+      "release_ms": 150.0,
+      "gap_reset_factor": 2.5
+    },
+    "mains_canceller": {
+      "nominal_frequency_hz": 50.0,
+      "search_low_hz": 48.0,
+      "search_high_hz": 52.0,
+      "window_seconds": 2.0,
+      "update_interval_ms": 250.0,
+      "narrowband_half_width_hz": 0.3,
+      "minimum_narrowband_fraction": 0.08,
+      "adaptation_rate": 0.02,
+      "coefficient_release_seconds": 0.5,
+      "frequency_smoothing": 0.2,
+      "max_frequency_slew_hz": 0.25,
+      "gap_reset_factor": 2.5
+    },
+    "task_activity_validator": {
+      "rest_edge_trim_s": 0.3,
+      "task_skip_s": 0.25,
+      "task_window_s": 2.0,
+      "task_block_edge_trim_s": 0.3,
+      "minimum_trial_seconds": 0.25,
+      "minimum_trials": 5,
+      "minimum_task_blocks": 3,
+      "minimum_task_rest_ratio": 1.5,
+      "minimum_fraction_above_rest_q95": 0.5
+    },
+    "baseline_method": "median + MAD; threshold=max(rest_q95, median+4*1.4826*MAD)"
+  },
+  "limitations": [
+    "Оценка baseline получена из имеющихся маркеров rest; новые записи не требуются для этого этапа.",
+    "activation_threshold_rms — экспериментальный порог обнаружения над фоном, а не MVC.",
+    "Маркеры microrepeat — события-подсказки; для task/rest сравнения используется ограниченное окно после маркера, а не доказанная длительность сокращения.",
+    "Качество спектра и разделение task/rest не доказывают физиологическую валидность sEMG; это диагностические признаки записи.",
+    "Текущая частота 500 Гц ограничивает верхнюю полосу доступной регистрации частотой Найквиста 250 Гц."
+  ],
+  "task_activity_validation": {
+    "schema_version": 2,
+    "config": {
+      "rest_edge_trim_s": 0.3,
+      "task_skip_s": 0.25,
+      "task_window_s": 2.0,
+      "task_block_edge_trim_s": 0.3,
+      "minimum_trial_seconds": 0.25,
+      "minimum_trials": 5,
+      "minimum_task_blocks": 3,
+      "minimum_task_rest_ratio": 1.5,
+      "minimum_fraction_above_rest_q95": 0.5
+    },
+    "channels": {
+      "left": {
+        "rest_q95_rms": 8.085658509399594e-07,
+        "microrepeat": {
+          "marker_count": 32,
+          "usable_trial_count": 32,
+          "task_q95_median_rms": 7.134496263677119e-07,
+          "task_to_rest_q95_ratio": 0.8823642818186364,
+          "fraction_trials_above_rest_q95": 0.21875,
+          "contralateral_task_q95_median_rms": 1.1313830869942334e-06,
+          "ipsilateral_to_contralateral_ratio": 0.6305995153800176,
+          "separated_from_rest": false,
+          "status": "microrepeat_not_above_rest",
+          "warnings": [
+            "Типичная активность в окнах задания не превышает фон покоя"
+          ]
+        },
+        "task_blocks": {
+          "usable_block_count": 8,
+          "task_q95_median_rms": 7.570702202960144e-07,
+          "task_to_rest_q95_ratio": 0.9363123849664424,
+          "fraction_blocks_above_rest_q95": 0.375,
+          "contralateral_task_q95_median_rms": 1.5108331454945172e-06,
+          "ipsilateral_to_contralateral_ratio": 0.5010945269195921,
+          "ipsilateral_dominance_observed": false,
+          "separated_from_rest": false,
+          "status": "task_blocks_not_above_rest",
+          "warnings": [
+            "Типичная активность в окнах задания не превышает фон покоя"
+          ],
+          "per_block": [
+            {
+              "interval_id": "left_block_0",
+              "start_s": 34.50577526092529,
+              "end_s": 51.89447016716004,
+              "duration_s": 17.388694906234747,
+              "ipsilateral_q95_rms": 1.5282209449344849e-06,
+              "contralateral_q95_rms": 6.483530543998829e-06,
+              "ipsilateral_to_rest_q95_ratio": 1.8900389413650416,
+              "contralateral_to_rest_q95_ratio": 5.077412294769406,
+              "ipsilateral_to_contralateral_ratio": 0.23570814305008708
+            },
+            {
+              "interval_id": "left_block_12",
+              "start_s": 98.49787740707397,
+              "end_s": 115.89325351715088,
+              "duration_s": 17.39537611007691,
+              "ipsilateral_q95_rms": 1.1997151770461553e-06,
+              "contralateral_q95_rms": 1.4208721294673454e-05,
+              "ipsilateral_to_rest_q95_ratio": 1.4837569205420733,
+              "contralateral_to_rest_q95_ratio": 11.12719924814777,
+              "ipsilateral_to_contralateral_ratio": 0.08443512629781139
+            },
+            {
+              "interval_id": "left_block_20",
+              "start_s": 133.66227893829347,
+              "end_s": 147.89895315170287,
+              "duration_s": 14.236674213409401,
+              "ipsilateral_q95_rms": 7.465271104273382e-07,
+              "contralateral_q95_rms": 1.036672390146873e-06,
+              "ipsilateral_to_rest_q95_ratio": 0.9232731132034564,
+              "contralateral_to_rest_q95_ratio": 0.8118436558075186,
+              "ipsilateral_to_contralateral_ratio": 0.720118638754884
+            },
+            {
+              "interval_id": "left_block_42",
+              "start_s": 194.49312047958375,
+              "end_s": 197.0543846607208,
+              "duration_s": 2.5612641811370622,
+              "ipsilateral_q95_rms": 7.676133301646905e-07,
+              "contralateral_q95_rms": 1.8969896832679516e-06,
+              "ipsilateral_to_rest_q95_ratio": 0.9493516567294283,
+              "contralateral_to_rest_q95_ratio": 1.4855792959579153,
+              "ipsilateral_to_contralateral_ratio": 0.4046481311602707
+            },
+            {
+              "interval_id": "left_block_44",
+              "start_s": 197.65438466072084,
+              "end_s": 211.8891140937805,
+              "duration_s": 14.23472943305967,
+              "ipsilateral_q95_rms": 6.932848258754009e-07,
+              "contralateral_q95_rms": 3.2552519472352793e-06,
+              "ipsilateral_to_rest_q95_ratio": 0.8574253105909134,
+              "contralateral_to_rest_q95_ratio": 2.549267894598422,
+              "ipsilateral_to_contralateral_ratio": 0.21297424503937867
+            },
+            {
+              "interval_id": "left_block_78",
+              "start_s": 290.51234250068666,
+              "end_s": 293.0496332168579,
+              "duration_s": 2.537290716171242,
+              "ipsilateral_q95_rms": 8.400411929688491e-07,
+              "contralateral_q95_rms": 9.655981713325233e-07,
+              "ipsilateral_to_rest_q95_ratio": 1.0389273699752464,
+              "contralateral_to_rest_q95_ratio": 0.756183686289347,
+              "ipsilateral_to_contralateral_ratio": 0.8699697430139022
+            },
+            {
+              "interval_id": "left_block_80",
+              "start_s": 293.6496332168579,
+              "end_s": 307.89047927856444,
+              "duration_s": 14.24084606170652,
+              "ipsilateral_q95_rms": 7.463466817373989e-07,
+              "contralateral_q95_rms": 1.1246766077210825e-06,
+              "ipsilateral_to_rest_q95_ratio": 0.9230499666412691,
+              "contralateral_to_rest_q95_ratio": 0.8807619239132258,
+              "ipsilateral_to_contralateral_ratio": 0.6636100338653895
+            },
+            {
+              "interval_id": "left_block_90",
+              "start_s": 322.49074869155885,
+              "end_s": 338.8199855804443,
+              "duration_s": 16.329236888885475,
+              "ipsilateral_q95_rms": 7.288989285458279e-07,
+              "contralateral_q95_rms": 1.1110926917796577e-06,
+              "ipsilateral_to_rest_q95_ratio": 0.901471324442507,
+              "contralateral_to_rest_q95_ratio": 0.8701240251103979,
+              "ipsilateral_to_contralateral_ratio": 0.6560199107946043
+            }
+          ]
+        },
+        "task_marker_count": 32,
+        "usable_trial_count": 32,
+        "task_q95_median_rms": 7.134496263677119e-07,
+        "task_to_rest_q95_ratio": 0.8823642818186364,
+        "fraction_trials_above_rest_q95": 0.21875,
+        "contralateral_task_q95_median_rms": 1.1313830869942334e-06,
+        "ipsilateral_to_contralateral_ratio": 0.6305995153800176,
+        "separated_from_rest": false,
+        "control_recommendation": "blocked",
+        "status": "task_blocks_not_above_rest",
+        "warnings": [
+          "Типичная активность в окнах задания не превышает фон покоя",
+          "Типичная активность в окнах задания не превышает фон покоя"
+        ]
+      },
+      "right": {
+        "rest_q95_rms": 1.2769359995992373e-06,
+        "microrepeat": {
+          "marker_count": 35,
+          "usable_trial_count": 35,
+          "task_q95_median_rms": 1.0063455127830855e-06,
+          "task_to_rest_q95_ratio": 0.7880939319581594,
+          "fraction_trials_above_rest_q95": 0.2,
+          "contralateral_task_q95_median_rms": 7.15947075125107e-07,
+          "ipsilateral_to_contralateral_ratio": 1.405614392107452,
+          "separated_from_rest": false,
+          "status": "microrepeat_not_above_rest",
+          "warnings": [
+            "Типичная активность в окнах задания не превышает фон покоя"
+          ]
+        },
+        "task_blocks": {
+          "usable_block_count": 9,
+          "task_q95_median_rms": 1.120840428225756e-06,
+          "task_to_rest_q95_ratio": 0.8777577173621297,
+          "fraction_blocks_above_rest_q95": 0.3333333333333333,
+          "contralateral_task_q95_median_rms": 7.667753352610617e-07,
+          "ipsilateral_to_contralateral_ratio": 1.4617585838805662,
+          "ipsilateral_dominance_observed": true,
+          "separated_from_rest": false,
+          "status": "task_blocks_not_above_rest",
+          "warnings": [
+            "Типичная активность в окнах задания не превышает фон покоя"
+          ],
+          "per_block": [
+            {
+              "interval_id": "right_block_6",
+              "start_s": 66.49720029830932,
+              "end_s": 83.8905586719513,
+              "duration_s": 17.393358373641973,
+              "ipsilateral_q95_rms": 9.759026646581683e-07,
+              "contralateral_q95_rms": 7.534126166380221e-07,
+              "ipsilateral_to_rest_q95_ratio": 0.7642533885523257,
+              "contralateral_to_rest_q95_ratio": 0.9317888156693465,
+              "ipsilateral_to_contralateral_ratio": 1.2953096923342893
+            },
+            {
+              "interval_id": "right_block_18",
+              "start_s": 130.48991446495057,
+              "end_s": 147.89895315170287,
+              "duration_s": 17.409038686752297,
+              "ipsilateral_q95_rms": 1.022345335208079e-06,
+              "contralateral_q95_rms": 7.525536406746508e-07,
+              "ipsilateral_to_rest_q95_ratio": 0.8006237865710881,
+              "contralateral_to_rest_q95_ratio": 0.9307264705772643,
+              "ipsilateral_to_contralateral_ratio": 1.358501613641208
+            },
+            {
+              "interval_id": "right_block_30",
+              "start_s": 162.49627380371095,
+              "end_s": 165.0537058830261,
+              "duration_s": 2.557432079315163,
+              "ipsilateral_q95_rms": 9.706477686630478e-07,
+              "contralateral_q95_rms": 7.7280609224137e-07,
+              "ipsilateral_to_rest_q95_ratio": 0.7601381502030508,
+              "contralateral_to_rest_q95_ratio": 0.9557738449416103,
+              "ipsilateral_to_contralateral_ratio": 1.2560042919018373
+            },
+            {
+              "interval_id": "right_block_32",
+              "start_s": 165.65370588302613,
+              "end_s": 179.89618344306945,
+              "duration_s": 14.242477560043312,
+              "ipsilateral_q95_rms": 5.9732605908424315e-06,
+              "contralateral_q95_rms": 1.76996078246348e-06,
+              "ipsilateral_to_rest_q95_ratio": 4.67780733937889,
+              "contralateral_to_rest_q95_ratio": 2.18901253423688,
+              "ipsilateral_to_contralateral_ratio": 3.3747982723824443
+            },
+            {
+              "interval_id": "right_block_54",
+              "start_s": 226.49555521011354,
+              "end_s": 229.04642362594603,
+              "duration_s": 2.550868415832497,
+              "ipsilateral_q95_rms": 9.682688218099524e-07,
+              "contralateral_q95_rms": 7.905862866902778e-07,
+              "ipsilateral_to_rest_q95_ratio": 0.7582751383889567,
+              "contralateral_to_rest_q95_ratio": 0.9777636364078691,
+              "ipsilateral_to_contralateral_ratio": 1.224747808191219
+            },
+            {
+              "interval_id": "right_block_56",
+              "start_s": 229.64642362594606,
+              "end_s": 243.89759678840636,
+              "duration_s": 14.251173162460304,
+              "ipsilateral_q95_rms": 1.370075634963563e-06,
+              "contralateral_q95_rms": 7.649276994355599e-07,
+              "ipsilateral_to_rest_q95_ratio": 1.0729399401329098,
+              "contralateral_to_rest_q95_ratio": 0.9460301823856769,
+              "ipsilateral_to_contralateral_ratio": 1.791117821951724
+            },
+            {
+              "interval_id": "right_block_66",
+              "start_s": 258.5085740566254,
+              "end_s": 261.05278463363646,
+              "duration_s": 2.5442105770110857,
+              "ipsilateral_q95_rms": 1.4778418084502803e-06,
+              "contralateral_q95_rms": 7.667753352610617e-07,
+              "ipsilateral_to_rest_q95_ratio": 1.1573342821520394,
+              "contralateral_to_rest_q95_ratio": 0.9483152601234442,
+              "ipsilateral_to_contralateral_ratio": 1.9273465648802122
+            },
+            {
+              "interval_id": "right_block_68",
+              "start_s": 261.6527846336365,
+              "end_s": 275.8947739124298,
+              "duration_s": 14.241989278793312,
+              "ipsilateral_q95_rms": 1.2119780183169115e-06,
+              "contralateral_q95_rms": 1.4322992789844096e-06,
+              "ipsilateral_to_rest_q95_ratio": 0.9491298065817608,
+              "contralateral_to_rest_q95_ratio": 1.7714070873996952,
+              "ipsilateral_to_contralateral_ratio": 0.8461765191812987
+            },
+            {
+              "interval_id": "right_block_92",
+              "start_s": 325.65206961631776,
+              "end_s": 338.8199855804443,
+              "duration_s": 13.167915964126564,
+              "ipsilateral_q95_rms": 1.120840428225756e-06,
+              "contralateral_q95_rms": 7.375350552445523e-07,
+              "ipsilateral_to_rest_q95_ratio": 0.8777577173621297,
+              "contralateral_to_rest_q95_ratio": 0.9121521201855932,
+              "ipsilateral_to_contralateral_ratio": 1.5197113957574626
+            }
+          ]
+        },
+        "task_marker_count": 35,
+        "usable_trial_count": 35,
+        "task_q95_median_rms": 1.0063455127830855e-06,
+        "task_to_rest_q95_ratio": 0.7880939319581594,
+        "fraction_trials_above_rest_q95": 0.2,
+        "contralateral_task_q95_median_rms": 7.15947075125107e-07,
+        "ipsilateral_to_contralateral_ratio": 1.405614392107452,
+        "separated_from_rest": false,
+        "control_recommendation": "blocked",
+        "status": "task_blocks_not_above_rest",
+        "warnings": [
+          "Типичная активность в окнах задания не превышает фон покоя",
+          "Типичная активность в окнах задания не превышает фон покоя"
+        ]
+      }
+    },
+    "cross_channel": {
+      "left_microrepeat": {
+        "ipsilateral_q95_median_rms": 7.134496263677119e-07,
+        "contralateral_q95_median_rms": 1.1313830869942334e-06,
+        "ipsilateral_to_contralateral_ratio": 0.6305995153800176
+      },
+      "right_microrepeat": {
+        "ipsilateral_q95_median_rms": 1.0063455127830855e-06,
+        "contralateral_q95_median_rms": 7.15947075125107e-07,
+        "ipsilateral_to_contralateral_ratio": 1.405614392107452
+      }
+    },
+    "task_blocks": {
+      "left": {
+        "block_count": 8,
+        "task_q95_median_rms": 7.570702202960144e-07,
+        "task_to_rest_q95_ratio": 0.9363123849664424,
+        "fraction_blocks_above_rest_q95": 0.375,
+        "ipsilateral_to_contralateral_ratio": 0.5010945269195921,
+        "separated_from_rest": false,
+        "status": "task_blocks_not_above_rest",
+        "per_block": [
+          {
+            "interval_id": "left_block_0",
+            "start_s": 34.50577526092529,
+            "end_s": 51.89447016716004,
+            "duration_s": 17.388694906234747,
+            "ipsilateral_q95_rms": 1.5282209449344849e-06,
+            "contralateral_q95_rms": 6.483530543998829e-06,
+            "ipsilateral_to_rest_q95_ratio": 1.8900389413650416,
+            "contralateral_to_rest_q95_ratio": 5.077412294769406,
+            "ipsilateral_to_contralateral_ratio": 0.23570814305008708
+          },
+          {
+            "interval_id": "left_block_12",
+            "start_s": 98.49787740707397,
+            "end_s": 115.89325351715088,
+            "duration_s": 17.39537611007691,
+            "ipsilateral_q95_rms": 1.1997151770461553e-06,
+            "contralateral_q95_rms": 1.4208721294673454e-05,
+            "ipsilateral_to_rest_q95_ratio": 1.4837569205420733,
+            "contralateral_to_rest_q95_ratio": 11.12719924814777,
+            "ipsilateral_to_contralateral_ratio": 0.08443512629781139
+          },
+          {
+            "interval_id": "left_block_20",
+            "start_s": 133.66227893829347,
+            "end_s": 147.89895315170287,
+            "duration_s": 14.236674213409401,
+            "ipsilateral_q95_rms": 7.465271104273382e-07,
+            "contralateral_q95_rms": 1.036672390146873e-06,
+            "ipsilateral_to_rest_q95_ratio": 0.9232731132034564,
+            "contralateral_to_rest_q95_ratio": 0.8118436558075186,
+            "ipsilateral_to_contralateral_ratio": 0.720118638754884
+          },
+          {
+            "interval_id": "left_block_42",
+            "start_s": 194.49312047958375,
+            "end_s": 197.0543846607208,
+            "duration_s": 2.5612641811370622,
+            "ipsilateral_q95_rms": 7.676133301646905e-07,
+            "contralateral_q95_rms": 1.8969896832679516e-06,
+            "ipsilateral_to_rest_q95_ratio": 0.9493516567294283,
+            "contralateral_to_rest_q95_ratio": 1.4855792959579153,
+            "ipsilateral_to_contralateral_ratio": 0.4046481311602707
+          },
+          {
+            "interval_id": "left_block_44",
+            "start_s": 197.65438466072084,
+            "end_s": 211.8891140937805,
+            "duration_s": 14.23472943305967,
+            "ipsilateral_q95_rms": 6.932848258754009e-07,
+            "contralateral_q95_rms": 3.2552519472352793e-06,
+            "ipsilateral_to_rest_q95_ratio": 0.8574253105909134,
+            "contralateral_to_rest_q95_ratio": 2.549267894598422,
+            "ipsilateral_to_contralateral_ratio": 0.21297424503937867
+          },
+          {
+            "interval_id": "left_block_78",
+            "start_s": 290.51234250068666,
+            "end_s": 293.0496332168579,
+            "duration_s": 2.537290716171242,
+            "ipsilateral_q95_rms": 8.400411929688491e-07,
+            "contralateral_q95_rms": 9.655981713325233e-07,
+            "ipsilateral_to_rest_q95_ratio": 1.0389273699752464,
+            "contralateral_to_rest_q95_ratio": 0.756183686289347,
+            "ipsilateral_to_contralateral_ratio": 0.8699697430139022
+          },
+          {
+            "interval_id": "left_block_80",
+            "start_s": 293.6496332168579,
+            "end_s": 307.89047927856444,
+            "duration_s": 14.24084606170652,
+            "ipsilateral_q95_rms": 7.463466817373989e-07,
+            "contralateral_q95_rms": 1.1246766077210825e-06,
+            "ipsilateral_to_rest_q95_ratio": 0.9230499666412691,
+            "contralateral_to_rest_q95_ratio": 0.8807619239132258,
+            "ipsilateral_to_contralateral_ratio": 0.6636100338653895
+          },
+          {
+            "interval_id": "left_block_90",
+            "start_s": 322.49074869155885,
+            "end_s": 338.8199855804443,
+            "duration_s": 16.329236888885475,
+            "ipsilateral_q95_rms": 7.288989285458279e-07,
+            "contralateral_q95_rms": 1.1110926917796577e-06,
+            "ipsilateral_to_rest_q95_ratio": 0.901471324442507,
+            "contralateral_to_rest_q95_ratio": 0.8701240251103979,
+            "ipsilateral_to_contralateral_ratio": 0.6560199107946043
+          }
+        ]
+      },
+      "right": {
+        "block_count": 9,
+        "task_q95_median_rms": 1.120840428225756e-06,
+        "task_to_rest_q95_ratio": 0.8777577173621297,
+        "fraction_blocks_above_rest_q95": 0.3333333333333333,
+        "ipsilateral_to_contralateral_ratio": 1.4617585838805662,
+        "separated_from_rest": false,
+        "status": "task_blocks_not_above_rest",
+        "per_block": [
+          {
+            "interval_id": "right_block_6",
+            "start_s": 66.49720029830932,
+            "end_s": 83.8905586719513,
+            "duration_s": 17.393358373641973,
+            "ipsilateral_q95_rms": 9.759026646581683e-07,
+            "contralateral_q95_rms": 7.534126166380221e-07,
+            "ipsilateral_to_rest_q95_ratio": 0.7642533885523257,
+            "contralateral_to_rest_q95_ratio": 0.9317888156693465,
+            "ipsilateral_to_contralateral_ratio": 1.2953096923342893
+          },
+          {
+            "interval_id": "right_block_18",
+            "start_s": 130.48991446495057,
+            "end_s": 147.89895315170287,
+            "duration_s": 17.409038686752297,
+            "ipsilateral_q95_rms": 1.022345335208079e-06,
+            "contralateral_q95_rms": 7.525536406746508e-07,
+            "ipsilateral_to_rest_q95_ratio": 0.8006237865710881,
+            "contralateral_to_rest_q95_ratio": 0.9307264705772643,
+            "ipsilateral_to_contralateral_ratio": 1.358501613641208
+          },
+          {
+            "interval_id": "right_block_30",
+            "start_s": 162.49627380371095,
+            "end_s": 165.0537058830261,
+            "duration_s": 2.557432079315163,
+            "ipsilateral_q95_rms": 9.706477686630478e-07,
+            "contralateral_q95_rms": 7.7280609224137e-07,
+            "ipsilateral_to_rest_q95_ratio": 0.7601381502030508,
+            "contralateral_to_rest_q95_ratio": 0.9557738449416103,
+            "ipsilateral_to_contralateral_ratio": 1.2560042919018373
+          },
+          {
+            "interval_id": "right_block_32",
+            "start_s": 165.65370588302613,
+            "end_s": 179.89618344306945,
+            "duration_s": 14.242477560043312,
+            "ipsilateral_q95_rms": 5.9732605908424315e-06,
+            "contralateral_q95_rms": 1.76996078246348e-06,
+            "ipsilateral_to_rest_q95_ratio": 4.67780733937889,
+            "contralateral_to_rest_q95_ratio": 2.18901253423688,
+            "ipsilateral_to_contralateral_ratio": 3.3747982723824443
+          },
+          {
+            "interval_id": "right_block_54",
+            "start_s": 226.49555521011354,
+            "end_s": 229.04642362594603,
+            "duration_s": 2.550868415832497,
+            "ipsilateral_q95_rms": 9.682688218099524e-07,
+            "contralateral_q95_rms": 7.905862866902778e-07,
+            "ipsilateral_to_rest_q95_ratio": 0.7582751383889567,
+            "contralateral_to_rest_q95_ratio": 0.9777636364078691,
+            "ipsilateral_to_contralateral_ratio": 1.224747808191219
+          },
+          {
+            "interval_id": "right_block_56",
+            "start_s": 229.64642362594606,
+            "end_s": 243.89759678840636,
+            "duration_s": 14.251173162460304,
+            "ipsilateral_q95_rms": 1.370075634963563e-06,
+            "contralateral_q95_rms": 7.649276994355599e-07,
+            "ipsilateral_to_rest_q95_ratio": 1.0729399401329098,
+            "contralateral_to_rest_q95_ratio": 0.9460301823856769,
+            "ipsilateral_to_contralateral_ratio": 1.791117821951724
+          },
+          {
+            "interval_id": "right_block_66",
+            "start_s": 258.5085740566254,
+            "end_s": 261.05278463363646,
+            "duration_s": 2.5442105770110857,
+            "ipsilateral_q95_rms": 1.4778418084502803e-06,
+            "contralateral_q95_rms": 7.667753352610617e-07,
+            "ipsilateral_to_rest_q95_ratio": 1.1573342821520394,
+            "contralateral_to_rest_q95_ratio": 0.9483152601234442,
+            "ipsilateral_to_contralateral_ratio": 1.9273465648802122
+          },
+          {
+            "interval_id": "right_block_68",
+            "start_s": 261.6527846336365,
+            "end_s": 275.8947739124298,
+            "duration_s": 14.241989278793312,
+            "ipsilateral_q95_rms": 1.2119780183169115e-06,
+            "contralateral_q95_rms": 1.4322992789844096e-06,
+            "ipsilateral_to_rest_q95_ratio": 0.9491298065817608,
+            "contralateral_to_rest_q95_ratio": 1.7714070873996952,
+            "ipsilateral_to_contralateral_ratio": 0.8461765191812987
+          },
+          {
+            "interval_id": "right_block_92",
+            "start_s": 325.65206961631776,
+            "end_s": 338.8199855804443,
+            "duration_s": 13.167915964126564,
+            "ipsilateral_q95_rms": 1.120840428225756e-06,
+            "contralateral_q95_rms": 7.375350552445523e-07,
+            "ipsilateral_to_rest_q95_ratio": 0.8777577173621297,
+            "contralateral_to_rest_q95_ratio": 0.9121521201855932,
+            "ipsilateral_to_contralateral_ratio": 1.5197113957574626
+          }
+        ]
+      }
+    },
+    "warnings": [
+      "left: Типичная активность в окнах задания не превышает фон покоя",
+      "left: Типичная активность в окнах задания не превышает фон покоя",
+      "right: Типичная активность в окнах задания не превышает фон покоя",
+      "right: Типичная активность в окнах задания не превышает фон покоя"
+    ]
+  },
+  "mains_cancellation": {
+    "enabled_fraction": 0.994108280254777,
+    "estimated_frequency_median_hz": 50.00780939312363,
+    "narrowband_fraction_median": 0.686356930394914,
+    "algorithm": "adaptive single-tone LMS cancellation with per-channel sine/cosine coefficients"
+  },
+  "calibration_status": "baseline_only_not_mvc"
+}

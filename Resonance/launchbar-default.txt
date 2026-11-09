@@ -1,0 +1,57 @@
+# The Configurator's icon strip -- the row of launch buttons beside its menus.
+#
+# The strip follows this file, top to bottom = left to right, and re-reads it as soon as it is
+# saved. View > Edit icon strip... opens this folder with the file selected.
+#
+#     launcher.bat | what it does (the tooltip) | icon
+#
+#   launcher   a .bat in this directory (or a path relative to it, or an absolute path)
+#   tooltip    free text; the launcher's name if left empty
+#   icon       optional: a .ico or .png (icons\nvx136-25k.ico), or an .exe whose icon to use
+#              (bin\nvx136.exe; bin\quickStimulus.exe,-102 for one of its numbered icon groups).
+#              Left empty, the button wears the icon of the program the launcher starts.
+#   [heading]  starts a new group, drawn with a thin separator; the text itself is not shown
+#   #          a comment. Blank lines are ignored. A launcher that does not exist shows greyed out.
+#
+# Custom icons -- three ways, every path relative to this directory:
+#     NVX136_25K.bat | NVX-136 amplifier at 25 kHz            | icons\nvx136-25k.ico
+#     myProtocol.bat | my own launcher with my own picture    | icons\my-protocol.png
+#     recorder2.bat  | a second recorder, an icon of the exe  | bin\quickStimulus.exe,-102
+# Any .ico or .png works (a 256x256 PNG is enough); icons\ holds every shipped icon as .ico.
+# The numbered groups of quickStimulus.exe: -101 configurator, -102 recorder, -103 message sender.
+# A second launcher for a preset is one copied .bat (add the --serviceConfig or other arguments
+# to its last line) and one line here.
+#
+# launchbar-default.txt is the shipped version, overwritten by every deploy. launchbar.txt is
+# yours: it is created from the default when missing and never touched afterwards.
+
+[general]
+configurator.bat    | Configurator: finds the services on the bus, edits their parameters, shows their signals, records
+recorderService.bat | Recorder: standalone service for recording streams to an HDF5 file
+playbackService.bat | Playback: replay a recorded HDF5 session as live services
+SPEED.bat           | SPEED: script-engine host (Python / R) processing streams online
+signalGenerator.bat | Signal generator: synthetic streams (waveforms, life-like EEG, epochs, messages) from one schedule
+messageSender.bat   | Message sender: type text into a named message stream, to poke a protocol or a trigger path
+latencyProbe.bat    | Latency probe: measures the whole trigger loop through an amplifier's trigger output
+
+[acquisition]
+NVX.bat             | NVX-16/24/36/52 amplifier (MCS)
+NVX136.bat          | NVX-136 amplifier (MCS), 1 kHz by default
+Movicom.bat         | Movicom amplifier: eight inputs against REF, 500 Hz
+actiChamp.bat       | actiCHamp amplifier (Brain Products)
+neuronSpectrum.bat  | Neuron-Spectrum-65 amplifier (Neurosoft)
+KARDi2.bat          | KARDi2 ECG / polygraph amplifier
+DAQmx.bat           | NI-DAQmx analogue input (National Instruments)
+fieldtrip.bat       | FieldTrip buffer client: streams data in from a FieldTrip realtime buffer over TCP
+eyeLink.bat         | EyeLink 1000 eye tracker (SR Research)
+
+[stimulation]
+stimulusService.bat | Stimulus: cue presentation -- text, images, audio, video, sequences, responses, triggers
+P300.bat           | P300: training, classifier calculation and letter typing | icons\p300.png
+tepSoundService.bat | TEP·SOUND: cue presentation, TMS triggering and online SOUND cleaning
+NeuroMS.bat         | Neuro-MS magnetic stimulator, TMS (Neurosoft)
+mStim.bat           | mStim: four-magnet maglev stimulator (Arduino + L298N bridges)
+eStim.bat           | eStim: electrostimulator (Neurosoft)
+feetStim.bat        | feetStim: foot-sole solenoid stimulator, 2 × 90 solenoids
+arduinoTTL.bat      | Arduino TTL: two-channel TTL pulse / gate generator with microsecond-stamped edges
+COMport.bat         | COM port: serial ⇄ message bridge -- send commands to a device, get its replies as a stream

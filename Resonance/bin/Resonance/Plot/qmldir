@@ -1,0 +1,14 @@
+module Resonance.Plot
+PlotView 3.0 PlotView.qml
+EpochView 3.0 EpochView.qml
+Settings 3.0 Settings.qml
+PlotSettings 3.0 PlotSettings.qml
+HeadView 3.0 HeadView.qml
+TopoPanel 3.0 TopoPanel.qml
+EpochGridPanel 3.0 EpochGridPanel.qml
+ColorBar 3.0 ColorBar.qml
+ChannelPanel 3.0 ChannelPanel.qml
+NumberField 3.0 NumberField.qml
+CompactCheckBox 3.0 CompactCheckBox.qml
+CompactButton 3.0 CompactButton.qml
+ComboBoxBinding 3.0 ComboBoxBinding.qml

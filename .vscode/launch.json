@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "QuasiGame — Keyboard Test",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "Integration.run_game",
+            "cwd": "${workspaceFolder}",
+            "args": ["--keyboard"],
+            "python": "${workspaceFolder}/Runtime/GameVenv/Scripts/python.exe",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "QuasiGame — Resonance / LSL",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "Integration.run_game",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/Runtime/GameVenv/Scripts/python.exe",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "console": "integratedTerminal"
+        }
+    ]
+}

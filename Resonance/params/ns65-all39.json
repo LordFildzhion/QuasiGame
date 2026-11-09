@@ -1,0 +1,5 @@
+[
+	{ "name": "mode", "serialized": "Acquisition + impedance", "type": "Resonance::Parameters::Select" },
+	{ "name": "dc_channels_mode", "serialized": "Referential (EEG)", "type": "Resonance::Parameters::Select" },
+	{ "name": "differential_ground_mask", "serialized": 255, "type": "Resonance::Parameters::Integer" }
+]

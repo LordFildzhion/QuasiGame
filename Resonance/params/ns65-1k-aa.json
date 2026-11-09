@@ -1,0 +1,6 @@
+[
+	{ "name": "samplingRate", "serialized": "1 kHz (device 16 kHz / 16)", "type": "Resonance::Parameters::Select" },
+	{ "name": "blockSize", "serialized": 100, "type": "Resonance::Parameters::Integer" },
+	{ "name": "decimation", "serialized": "Anti-alias average", "type": "Resonance::Parameters::Select" },
+	{ "name": "decimation_order", "serialized": 3, "type": "Resonance::Parameters::Integer" }
+]

@@ -1,0 +1,4 @@
+Number	labels	theta	radius	X	Y	Z	sph_theta	sph_phi	sph_radius	type
+1	EMG1	-30.763	0.66299	63.672	37.9	-41.647	30.763	-29.338	85	EMG
+2	EMG2	-39.806	0.74158	47.378	39.482	-58.493	39.806	-43.484	85	EMG
+3	Trigger	-39.806	0.74158	47.378	39.482	-58.493	39.806	-43.484	85	TRIG

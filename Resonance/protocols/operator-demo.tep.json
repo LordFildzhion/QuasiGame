@@ -1,0 +1,148 @@
+{
+    "background": {
+        "duringEnd": false,
+        "duringIsi": true,
+        "duringWelcome": false,
+        "enabled": true,
+        "label": "TMS",
+        "period": [
+            1900,
+            2100
+        ],
+        "trigger": {
+            "code": 3,
+            "id": "",
+            "kind": "udp",
+            "label": "TMS BNC2",
+            "offset": 0,
+            "target": "127.0.0.1:5005"
+        }
+    },
+    "devices": [
+    ],
+    "digest": "631d306925d6",
+    "end": {
+        "background": false,
+        "duration": 3000,
+        "id": "end",
+        "label": "end",
+        "marker": -2,
+        "medium": "text",
+        "number": -1,
+        "repetitions": 0,
+        "text": "END"
+    },
+    "generator": {
+        "blockSize": 0,
+        "isiNumber": 2,
+        "maxRedraws": 2000,
+        "maxRunLength": 2,
+        "mode": "shuffle"
+    },
+    "media": {
+        "N:\\Projects_MSU\\2025 - TEP\\method\\stimuli\\videoSamples\\animatedTriplet_tms2_0ms_NOsoundsTMS.mkv": {
+            "bytes": 727028,
+            "decodes": true,
+            "durationMs": 0,
+            "sha1": "6a15107dafb2"
+        },
+        "N:\\Projects_MSU\\2025 - TEP\\method\\stimuli\\videoSamples\\countdownLight__blackTrigger.mkv": {
+            "bytes": 420865,
+            "decodes": true,
+            "durationMs": 0,
+            "sha1": "9bc692e924f8"
+        }
+    },
+    "name": "",
+    "record": {
+        "enabled": true,
+        "file": "session-$$$$.h5",
+        "streams": [
+        ]
+    },
+    "schema": 1,
+    "screen": {
+        "background": "#000000",
+        "fixation": "none",
+        "photodiode": "top-right",
+        "photodiodeSize": 0.06
+    },
+    "seed": 48211,
+    "sequence": "3, 2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 2, 3, 2, 1, 2, 1, 2, 3, 2,\n1, 2, 1",
+    "stimuli": [
+        {
+            "duration": [
+                1800,
+                2200
+            ],
+            "id": "stimulus",
+            "label": "triplet A",
+            "marker": 11,
+            "medium": "video",
+            "number": 1,
+            "path": "N:\\Projects_MSU\\2025 - TEP\\method\\stimuli\\videoSamples\\animatedTriplet_tms2_0ms_NOsoundsTMS.mkv",
+            "repetitions": 6,
+            "triggers": [
+                {
+                    "code": 1,
+                    "id": "stimulus_t1",
+                    "kind": "udp",
+                    "label": "feetStim A",
+                    "offset": [
+                        10,
+                        80
+                    ],
+                    "target": "127.0.0.1:5005"
+                },
+                {
+                    "code": 2,
+                    "id": "stimulus_t2",
+                    "kind": "udp",
+                    "label": "feetStim B",
+                    "offset": [
+                        100,
+                        500
+                    ],
+                    "probability": 0.5,
+                    "target": "127.0.0.1:5005"
+                }
+            ]
+        },
+        {
+            "duration": [
+                800,
+                1200
+            ],
+            "id": "isi",
+            "isi": true,
+            "label": "cross",
+            "marker": 99,
+            "medium": "image",
+            "number": 2,
+            "path": "W:\\MATLAB\\quasimeg\\media\\base_cross_black_barred.png",
+            "repetitions": 0
+        },
+        {
+            "duration": 1000,
+            "id": "stimulus_2",
+            "label": "word",
+            "marker": 13,
+            "medium": "text",
+            "number": 3,
+            "repetitions": 6,
+            "text": "READY"
+        }
+    ],
+    "welcome": {
+        "background": false,
+        "duration": 5000,
+        "id": "welcome",
+        "label": "countdown",
+        "marker": -1,
+        "medium": "video",
+        "number": 0,
+        "path": "N:\\Projects_MSU\\2025 - TEP\\method\\stimuli\\videoSamples\\countdownLight__blackTrigger.mkv",
+        "repetitions": 0,
+        "text": "Ready"
+    }
+}

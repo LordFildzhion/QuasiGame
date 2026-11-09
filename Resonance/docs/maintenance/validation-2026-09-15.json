@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-15",
+  "documentation_check": {
+    "markdown_files": 217,
+    "local_links_checked": 1789,
+    "unchanged_publications": 11,
+    "initial_reading_words": 1336,
+    "current_document_words": 33512,
+    "errors": []
+  },
+  "historical_ranges_checked": 658,
+  "substantive_history_lines_checked": 27114,
+  "unexplained_history_differences": 0,
+  "old_entry_files_remaining": 0,
+  "entry_and_inbound_files_verified": 12,
+  "external_markdown_links_checked": 23,
+  "known_preexisting_missing_images": 4,
+  "application_builds_tests_deployments_or_hardware_runs": 0
+}

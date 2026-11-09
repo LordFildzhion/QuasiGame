@@ -1,0 +1,3 @@
+# Game runtime itself uses only pygame; UDP transport is standard-library socket.
+# SPEED and LSL dependencies must be installed in their respective environments.
+pygame-ce>=2.5,<3

@@ -1,0 +1,1150 @@
+{
+  "date": "2026-09-15",
+  "status": "completed",
+  "moves": [
+    {
+      "old": "R:/src_Qt5",
+      "new": "R:/src_legacy/Qt5",
+      "files": 8953,
+      "sha256_match": true
+    },
+    {
+      "old": "R:/dist_Qt5",
+      "new": "R:/dist_legacy/Qt5",
+      "files": 9407,
+      "sha256_match": true
+    },
+    {
+      "old": "R:/backup_docs_260615.zip",
+      "new": "R:/builds/backup_docs_260615.zip",
+      "files": 1,
+      "sha256_match": true
+    },
+    {
+      "old": "R:/resonance_20260905.zip",
+      "new": "R:/builds/resonance_20260905.zip",
+      "files": 1,
+      "sha256_match": true
+    },
+    {
+      "old": "R:/resonance_20260906.zip",
+      "new": "R:/builds/resonance_20260906.zip",
+      "files": 1,
+      "sha256_match": true
+    },
+    {
+      "old": "R:/resonance_20260907.zip",
+      "new": "R:/builds/resonance_20260907.zip",
+      "files": 1,
+      "sha256_match": true
+    },
+    {
+      "old": "R:/resonance_20260905.verification.json",
+      "new": "R:/builds/resonance_20260905.verification.json",
+      "files": 1,
+      "sha256_match": true
+    },
+    {
+      "old": "R:/aqtinstall.log",
+      "new": "R:/builds/backup_aqtinstall.log",
+      "files": 1,
+      "sha256_match": true
+    },
+    {
+      "old": "R:/patches/configurator-live-status-delete-20260908.zip",
+      "new": "R:/builds/patch_configurator-live-status-delete-20260908.zip",
+      "files": 1,
+      "sha256_match": true
+    },
+    {
+      "old": "R:/patches/configurator-stream-recovery-20260908.zip",
+      "new": "R:/builds/patch_configurator-stream-recovery-20260908.zip",
+      "files": 1,
+      "sha256_match": true
+    },
+    {
+      "old": "R:/Dbgview.exe",
+      "new": "R:/tools/debug/Dbgview.exe",
+      "files": 1,
+      "sha256_match": true
+    },
+    {
+      "old": "R:/tmp",
+      "new": "R:/tests/evidence/root-tmp-20260915",
+      "files": 18,
+      "sha256_match": true
+    },
+    {
+      "old": "R:/tests/`README.md",
+      "new": "R:/tests/README.md",
+      "files": 1,
+      "sha256_match": true
+    }
+  ],
+  "patch_packaging": [
+    {
+      "source": "R:\\patches\\nvx136_2021_20260904",
+      "archive": "R:\\builds\\patch_nvx136_2021_20260904.zip",
+      "files": 33,
+      "payload_sha256_match": true,
+      "archive_sha256": "76f5da8db5238ebb67a28da5b4fe142742bf7ebb353dc95b4abf0d416b4a36b3",
+      "inner_paths_preserved": true
+    },
+    {
+      "source": "R:\\patches\\nvx136_frame-layout_20260904",
+      "archive": "R:\\builds\\patch_nvx136_frame-layout_20260904.zip",
+      "files": 25,
+      "payload_sha256_match": true,
+      "archive_sha256": "8ce67c18b852af93f2cbd5a555f8e860984b609ed405add1ae50de69dca056c8",
+      "inner_paths_preserved": true
+    }
+  ],
+  "git": {
+    "repositories_checked": 41,
+    "files_checked": 23130,
+    "bytes_checked": 1222599990,
+    "preserved_repository_commands": [
+      "HEAD",
+      "branch",
+      "porcelain status",
+      "binary unstaged diff",
+      "binary staged diff"
+    ],
+    "refs_and_recursive_submodule_status_identical": true,
+    "changed_git_path_files": [
+      "branches/develop/.git",
+      "branches/feature_C_engine_protocol/.git",
+      "branches/feature_Fieldtrip_support/.git",
+      "branches/feature_cmake-qt6/.git",
+      "branches/feature_hdf5/.git",
+      "branches/feature_kardi2n/.git",
+      "branches/feature_move_to_cmake/.git",
+      "branches/feature_new-discovery-mechanism/.git",
+      "branches/feature_new-parameter-display/.git",
+      "branches/feature_openbci_v2/.git",
+      "branches/feature_pythonEngine/.git",
+      "branches/feature_reliable-ced-parser/.git",
+      "branches/feature_scriptEngine/.git",
+      "branches/feature_try-to-jump-to-qt6/.git",
+      "branches/feature_update-dependencies-versions/.git",
+      "branches/master/.git",
+      "main/.git/worktrees/develop/gitdir",
+      "main/.git/worktrees/feature_C_engine_protocol/gitdir",
+      "main/.git/worktrees/feature_Fieldtrip_support/gitdir",
+      "main/.git/worktrees/feature_cmake-qt6/gitdir",
+      "main/.git/worktrees/feature_hdf5/gitdir",
+      "main/.git/worktrees/feature_kardi2n/gitdir",
+      "main/.git/worktrees/feature_move_to_cmake/gitdir",
+      "main/.git/worktrees/feature_new-discovery-mechanism/gitdir",
+      "main/.git/worktrees/feature_new-parameter-display/gitdir",
+      "main/.git/worktrees/feature_openbci_v2/gitdir",
+      "main/.git/worktrees/feature_pythonEngine/gitdir",
+      "main/.git/worktrees/feature_reliable-ced-parser/gitdir",
+      "main/.git/worktrees/feature_scriptEngine/gitdir",
+      "main/.git/worktrees/feature_try-to-jump-to-qt6/gitdir",
+      "main/.git/worktrees/feature_update-dependencies-versions/gitdir",
+      "main/.git/worktrees/master/gitdir"
+    ],
+    "missing_files": [],
+    "added_files": [],
+    "unexplained_changed_files": [],
+    "errors": []
+  },
+  "consumers": {
+    "consumer_files": 108,
+    "path_references": 216,
+    "python_syntax_files": 29,
+    "python_checks": [
+      {
+        "path": "R:\\config\\make_nvx136_manual.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\nvx_manual_figures.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\manual_figures.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\make_manual.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\make_code_shot.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\nvx_health_check.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\make_sdk_questions_ru_docx.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\nvx136_manual_figures.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\make_nvx_manual.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\analyze_trigger_recording.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\ns65_sync_bench.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\lab\\ttl_probe.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\lab\\nvx136_coldprobe.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\verify_ttl_ns65_recording.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\offline\\extract_compareSOUND.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\nvx_trigger_probe.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\tepsound_reference_pipeline.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\nvx_polarization_probe.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\summarize_latency_sweep.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\topo_compose.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\config\\topoplot_v4_reference.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\src\\scripts\\test-comport-latency-parity.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\src\\scripts\\test-stimulus-presentation.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\src\\scripts\\test-actichamp-parity.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\src\\scripts\\test-eyelink-parity.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\src\\scripts\\test-speed-schema-parity.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\src\\scripts\\test-device-service-parity.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\src\\scripts\\test-daqmx-fieldtrip.py",
+        "parse": "pass"
+      },
+      {
+        "path": "R:\\src\\scripts\\test-neuron-mstim-estim-parity.py",
+        "parse": "pass"
+      }
+    ],
+    "json_syntax_files": 8,
+    "config_files": 272,
+    "config_paths_unchanged": true,
+    "config_files_with_relocation_paths_only": 86,
+    "tests": [
+      {
+        "name": "AllTests",
+        "tests": "43",
+        "failures": "0",
+        "disabled": "0",
+        "errors": "0",
+        "time": "0.67",
+        "timestamp": "2026-09-15T17:15:57.344",
+        "skipped": 0
+      },
+      {
+        "name": "AllTests",
+        "tests": "16",
+        "failures": "0",
+        "disabled": "0",
+        "errors": "0",
+        "time": "0.002",
+        "timestamp": "2026-09-15T17:15:57.736",
+        "skipped": 0
+      }
+    ],
+    "errors": []
+  },
+  "consumer_edits": [
+    {
+      "path": "R:\\config\\epoch_grid_shot.ps1",
+      "replacements": 5,
+      "before_sha256": "2cfee155debdaef6b5b5422322491eee3f777bec5e32a52b192600be94123966",
+      "after_sha256": "479b6f668f442e26a3120527088c98cc1c421b6ab31b73eb672d6ffeee598825",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\epoch_grid_numbers.ps1",
+      "replacements": 4,
+      "before_sha256": "91d9c11a602ee8a234df9d08cd5a818be0c5c574ef4949404c8fe022608a7d31",
+      "after_sha256": "719e819aa66c51332acce00a17a05b4040535472800754d33ff0117b99bf6ca5",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\epoch_freeze_probe.ps1",
+      "replacements": 2,
+      "before_sha256": "ec888d697716a6a992fa1b864ce85b8c31dd528d394f96ac519b7006d6d7271f",
+      "after_sha256": "d36c78790f350cd66fac4f1fdbd6cf219f1623b3193a55f804a7088961634272",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\epoch_cut_shot.ps1",
+      "replacements": 5,
+      "before_sha256": "61b436367306b889bc3251820a75175120d24e5f0426724a2179fe80017de59b",
+      "after_sha256": "bd6e73a5a65c4cd8e5b4ddce4de783d4f7a82ffdf5f11d6cf8ec8d9f6feaf3ac",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\epoch_contract_check.ps1",
+      "replacements": 4,
+      "before_sha256": "5479b0208c2f4bf80b1bfee5c9cb0935cf90751e0db9882abc94face35fe7f8e",
+      "after_sha256": "6576daa397ee248432b0718545301a2451d405dbe10da98d26ab53a42ea3ac08",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\epoch_average_shot.ps1",
+      "replacements": 5,
+      "before_sha256": "edf1b36b8ef4091c248e2c1d458f2379e732c03d49c17b2a4d03b150a944337d",
+      "after_sha256": "ca5d92db732214c266f80c8974302f954bc018ff4d282688dd12102b528b2ebf",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\nvx_mirror_probe_harness.qml",
+      "replacements": 1,
+      "before_sha256": "7288a444490595151559c4805cd4596f32de17520c8b3bfdf6b6593f5bd77788",
+      "after_sha256": "06f5a42ea1302ce5d2e7003dfd242d3b76711811962df1605ee65330979d4556",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\fourviews_shot.ps1",
+      "replacements": 2,
+      "before_sha256": "2bcf637a17300a32c0baa55dee93c270a3bc7cf3059a93e227bef5af2a9ce1fc",
+      "after_sha256": "a71c1d90f410b3c5d258501f245b2231272e6de70d3f668aa0396d2dbcbcca9c",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\nvx_mirror_delay_harness.qml",
+      "replacements": 1,
+      "before_sha256": "13e726393fbfd37a94daa2d71505687d2fef3ccb1fa94c746ddd9d582bf127a3",
+      "after_sha256": "41886decf6c36e3ab517d29a19493c428a23321fac62b561e7807bbf3d40cc73",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\ced_palette_shot.qml",
+      "replacements": 2,
+      "before_sha256": "6df4646efe319dad50c0f074f006256b1f8d26b4d66b19dded0edd12bb7369b2",
+      "after_sha256": "4528ad2d3a39a80fc138326c3884ef43fb8b11e3252524173eb82bcedf0c1885",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\epoch_view_numbers.ps1",
+      "replacements": 4,
+      "before_sha256": "7deea848253732520e0a0b86420eec924589d5adcac5837ed6cdcba8332570b6",
+      "after_sha256": "54fc83d329ac62a0fbbbad2b16c1b080e31aac615ee901c2aeee4947bfe58638",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\make_nvx136_manual.py",
+      "replacements": 3,
+      "before_sha256": "1d17666f327e8e6492206012dabf0e7e8b097137ff757c50fe4706fca2db82d5",
+      "after_sha256": "9ab6fe83806f59c62ce3dbfba316b36d1a6c8a1f18c7f28a965710d747f9f236",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\ced_palette_shot.ps1",
+      "replacements": 4,
+      "before_sha256": "fafef0227bb1b25624f7b0f5254c53b0b10619153f7b2e99c37b0ed9bf9a5d04",
+      "after_sha256": "3a3ebe20e9d1b667204f814dd520b22833fcb9318b78f4cce8cbc4e1a0beaa27",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\nvx_manual_figures.py",
+      "replacements": 1,
+      "before_sha256": "ae3cb57ed511a5edbc4090ecb69b6b29da656b238a54a02a5348ac0c7ccc24cc",
+      "after_sha256": "930b9a1f77b8b045c156e8d059a1f77111a6fceda31532c54a0699d21c1cca22",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\manual_figures.py",
+      "replacements": 1,
+      "before_sha256": "50cb2e2cd35d7e9ed6a2f51bc80007a03193dc250139bb35cc748e33bb1661bf",
+      "after_sha256": "c827fa5e6511957287393e99afe71d4d15069fbeb8fa5cf5be77c91a5409d10f",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\ced_palette_probe.m",
+      "replacements": 3,
+      "before_sha256": "595637e27c34236788535ed180349c66bb770dd8311a4203cf67fbd5c911729c",
+      "after_sha256": "53984dd2a6fd5c688d9e6eb007f20beee2b97bd47ad530485e873a8c8daf722f",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\make_manual.py",
+      "replacements": 4,
+      "before_sha256": "48253e1cd262aa0eecb7a3296cc89807d3d6bd37396cf801234b686190f2efeb",
+      "after_sha256": "2540858b01c995df57c4fc1c6eb5eb477e2cebaa21b094045767095e56bb3574",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\feedback_probe.ps1",
+      "replacements": 2,
+      "before_sha256": "233f409267db8e014f55d2eaac78f6db281c27f12a5fff46a8ed03c5e3a3dee6",
+      "after_sha256": "60a9c0bd0e5e6680285090d36d5bda7f0a6544ea6b806743b891a7f26b524c33",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\make_code_shot.py",
+      "replacements": 1,
+      "before_sha256": "a32f203d844a263656ebafe91601c0620457cf4d127fe4318fa5dea75a233c0b",
+      "after_sha256": "a8987b736cdb66f6c84ef807236d07c2d28266b010120d5c3c949ade5f075463",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\ced_palette_kind_check.m",
+      "replacements": 1,
+      "before_sha256": "fc1c3cdda36b53551815c9fe4f65e677992c3f798aeb27fea7a3c8f5dfc3cbf1",
+      "after_sha256": "a30d147ec5f00d79eb4870e6ed83961bc289575fff478bb58836e7e85a17f1da",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\epoch_view_shot.ps1",
+      "replacements": 5,
+      "before_sha256": "341e4f2666cd1d23a015783e30403e4d8a43796c29473658277f55db55a3de2c",
+      "after_sha256": "fd144cda95b2707ad315d66adc8d8b9eaa464b4fe2983c98e4404735d0801eed",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\legacy_runbar.ps1",
+      "replacements": 2,
+      "before_sha256": "ed9cc4069587e010dc3bd6dad9bb1512eb56065facb470103f7818398a1e62ff",
+      "after_sha256": "d4e036e4f0b1b911688f976b26448b331ea9a4a07b993890e9921610affa513f",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\nvx_health_check.py",
+      "replacements": 1,
+      "before_sha256": "4142e9d51ca9d389cdf576290ebcd1f19beab760eb2aff5c7a064e6b70db4ed9",
+      "after_sha256": "2c6e03792eafd82f75c5cdb4834d57d5e8af605866874db5c0a6836bbce18f4d",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\latency_probe_harness.qml",
+      "replacements": 1,
+      "before_sha256": "8359cf9ad6a6c93a326aebb471b3cb35489418c519a2afa0195162518b7458af",
+      "after_sha256": "ac491d9ec99d1575df4b0503dc90859063c9ba1fdbc732877712fa3d6923bd64",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\make_sdk_questions_ru_docx.py",
+      "replacements": 1,
+      "before_sha256": "2eb0b2966b59ae43661706abe22ad55571ced2a2036491f8daa9b845db5b29e2",
+      "after_sha256": "eefa0fc788d15e8f913a04aa021332345ab0dd1a45f669eae317ec86c0d7d924",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\nvx136_manual_figures.py",
+      "replacements": 1,
+      "before_sha256": "606a63f8f0c6190ecf919f3c3674214edce79fb34399835eb3f8f3fbf8f2fa07",
+      "after_sha256": "6b3f44246c4b27b681eccabe929452d7042bc3547a94e00bc2faaf46cc65cbc2",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\make_nvx_manual.py",
+      "replacements": 3,
+      "before_sha256": "b1dc26d8780e7bf343f6c544254005573977d22470681643afbd28f1aa124500",
+      "after_sha256": "7634c9c34be0ecf0ca82c92145b29a50dc5d01a6df367b08e3102760d9234000",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\build_all.bat",
+      "replacements": 1,
+      "before_sha256": "762ba02213753f221fe72501f9b7f0dd366a1e9c5ae33d9db35d8226d3891ad9",
+      "after_sha256": "3b6f5bc29e8ddf22b4804b64f26580d91cbecd734e7942302a7001da2bbfc894",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\analyze_trigger_recording.py",
+      "replacements": 1,
+      "before_sha256": "7b256ac6ae44176c915a0f54cba6df32432908410a9e931c5952e277fba7ca64",
+      "after_sha256": "9d329a5e8f7baa5d15ee0fdd55c6dfabc56fa0896134c4b9976b61837172478a",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\ns65_sync_out_lifecycle_harness.qml",
+      "replacements": 1,
+      "before_sha256": "1b007dda469b71b0b2e02392a99a5d92b8f9692ac0e908c9a696df71cb54f533",
+      "after_sha256": "fa843b3b1dbed794f724762c287e3cb2b353d40f914889bbfa5f8106c7a02a3e",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\ns65_sync_bench.py",
+      "replacements": 1,
+      "before_sha256": "95ea4c2fa68b1f62b9f3b36204d55851b001f06fc96c1332237a83490f19a693",
+      "after_sha256": "b13bbcd06e01e0c43be837b7772350ec5b5f3aed2d872529dfcda6c41d3686c7",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\ns65_bidirectional_record_1k_harness.qml",
+      "replacements": 1,
+      "before_sha256": "7ecb7904fb386cfde6783d43054d1a93e0560fc0937c3f484ecb91807eea7861",
+      "after_sha256": "e0e2346d87beeb8cb0b98d6e45079598f61d57ba921e5c8f3c64e8a1329f0f8b",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\ns65_bidirectional_record_16k_harness.qml",
+      "replacements": 1,
+      "before_sha256": "b19ce62e9a6ae2486fd9b45298e69a55c8918db2548d0e8463849abb9cecbce6",
+      "after_sha256": "849a0f84333641c53d2a04a137030025d95fa20f70f6a8e25124882ba4d4b150",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\scroll_probe.ps1",
+      "replacements": 2,
+      "before_sha256": "9ef398716afac1347e730ea7fcbbb26f13c694dcdb9a2e8d843273f7dbc05ed9",
+      "after_sha256": "39f7aa9c1a4ed4ebefdea17e2064d914f6e704f94cbe233fc1627912396ddb79",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\retention_final_shot.ps1",
+      "replacements": 4,
+      "before_sha256": "8fcea3ad2b9ede380f1716a3dd2cf1e79aebd7b4348ec556a846821030d9b040",
+      "after_sha256": "9e7a3f58a81005bbb186d9d353940b6af8a8c4375500dfbc9414c7262ed7ac47",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\republish_verify.ps1",
+      "replacements": 2,
+      "before_sha256": "6e0a483f00f57ad0889e730ce421b970e3f3f7113767c006199781e67d4f1950",
+      "after_sha256": "c4fc0503b2825dee474f25dc517e9702c7640a0af685de6268612f03e1f29a4b",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\lab\\ttl_probe.py",
+      "replacements": 2,
+      "before_sha256": "7008889c177a3e59cb1414818d174cb1ce47d7133b9f97202e360c08d1dab12a",
+      "after_sha256": "cf60e35dc6f47e347fa0fa7071bb959b6325a39b37630351f5fb2ef2f377137f",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\republish_scope_probe.ps1",
+      "replacements": 2,
+      "before_sha256": "db65dff4b5e964818fe55e1f402e482f18ac68cf34744418cee4b8b00ebd43f5",
+      "after_sha256": "aaa1ccca80db6414ead46a2e94c5a9a560a8caabdd7bc5d5d0306b8aee4d7578",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\republish_report.ps1",
+      "replacements": 1,
+      "before_sha256": "47df8345e182cc2d59fcf8a20d484148b7a8f58ce33e3af42386c4e918931729",
+      "after_sha256": "b0a4b3caf3f7a4ea5be1e2b79e5445df3cddb340bd148dbc4ee0bb31b1fac6ad",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\republish_quit_stress.ps1",
+      "replacements": 1,
+      "before_sha256": "059f2f79af56a9414eb8d3020283ffd930463977e30ad8bdf7369d9f1a637ae9",
+      "after_sha256": "598094344f385c463f3a1bf6fd0ababa134f79bce1873794a55fffd27f3869e0",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\lab\\nvx136_coldprobe.py",
+      "replacements": 5,
+      "before_sha256": "daefcf89f12ce13844c30f35994793a7d111886dcd9b740173039955cbbf151d",
+      "after_sha256": "0323582551761ab92158ca588e924bbdcc00a654b04e98ea98f5c87d759eff06",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\republish_gap_probe.ps1",
+      "replacements": 2,
+      "before_sha256": "64c5b09a28a047babbc8e95ac780be3663f441aca3778fed838e441c8539eb87",
+      "after_sha256": "5d4550c7c0a1e0b498076f114321f3285b0d947609a6c74a74a9d96595a9ce3b",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\isolation_check.ps1",
+      "replacements": 3,
+      "before_sha256": "f5fa7ec7627b92c87acfcc65fa308b7c3de575317a934b738dfc88affe7f4b4a",
+      "after_sha256": "ddf21babe18307e0ba3d663639cf180e3d73b9b002ce0414bc4d503cf7a010d0",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\republish_cycles.ps1",
+      "replacements": 1,
+      "before_sha256": "023c137f520b7b18b66ef839e37aab81a7eb53de448401cc39b004d4c5092a38",
+      "after_sha256": "2fe1483d5bbe1b49f436d217988e125b3821951552f5f2abf271729f8135f3dc",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\isolation_acceptance.qml",
+      "replacements": 1,
+      "before_sha256": "63ab03c950869f13cb6beb8c68b9c329624674621a942e14c5ec6a12c6a548ad",
+      "after_sha256": "f326b04dd83a0f163d7c797cf705375f82eb451ccdccc4bef9635d1da4960be3",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\isolation_acceptance.ps1",
+      "replacements": 3,
+      "before_sha256": "7d5a2b016a72d282bde3299063a62888bde091a3aee076513970f00562e3a590",
+      "after_sha256": "288f1d55ebd6c825fc776acf293883eba35179b040a53978ef1d009c01ab892c",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\vis_live_probe.ps1",
+      "replacements": 2,
+      "before_sha256": "a602f1810726c083707a7266f64c12ee744e7bb04110817595d266ccd1bdd750",
+      "after_sha256": "2853f7277b1def4788590b39b7e05233e30b36215318028987dd79863e97ba31",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\vis_live2.ps1",
+      "replacements": 2,
+      "before_sha256": "7db826060017561b0d20bbb6ffd5a539f02f85754b7bac9bf50b0767994d637e",
+      "after_sha256": "03486f16c3af0d7b79a5dbc910430e2e317c48748c667a458aa09743b14f6a46",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\verify_ttl_ns65_recording.py",
+      "replacements": 1,
+      "before_sha256": "e399cf51483bf7d19424f25e744c7d377dc154c305c5f09817334def6e907d58",
+      "after_sha256": "ae8d6ea10126cf891f1207ccd687b3e99186e61b73117d8e4dfadcb90932a72e",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\offline\\extract_compareSOUND.py",
+      "replacements": 1,
+      "before_sha256": "83c8bb28cf0554c714a6835407e2bbed2a88e245a1fa53b3e97329ad2f0c02bc",
+      "after_sha256": "d38c5ebee0f1a37303722d15f96248de25880adfa8100671707fe6d9509edd58",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\ttl_ns65_record_harness.qml",
+      "replacements": 1,
+      "before_sha256": "d132b41f676a92771a876b51e734a0deab49e857ed815917170603e0dd7f62d7",
+      "after_sha256": "c40563a4e5cf1d9b703c19d59c5d4dcb485029bfd7c24f3fd2bb61958db82922",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\ttl_ns65_record_16k_harness.qml",
+      "replacements": 1,
+      "before_sha256": "342daa47b8a594a08cb2e60a45cce28d220765217457fd1570e2d043103f6f1d",
+      "after_sha256": "aa3e2784048a02f0ddd29f50ecc11afb2d2858f319a4a1d9daa05e1d963dddae",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\nvx_trigger_validation_harness.qml",
+      "replacements": 1,
+      "before_sha256": "d9637997a4f11ed2dc1dab736b67b4ba1d63bfb2eacd3908fc693d64123d4c6d",
+      "after_sha256": "69adb605d9e0b2a9c9915cbd1209dd28b193ff715fdba9b38f1b72dbd0c92a6d",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\tepsound_validation_run.ps1",
+      "replacements": 3,
+      "before_sha256": "b100d50b342bb2afdd163ee5a033abf02714dfa90d88cadf8fb90db2a7a2276c",
+      "after_sha256": "296eb19557e9b094ebe8d706bf24b55af627d167ef409e551e907ae36fb8eb93",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\trigger_service_harness.qml",
+      "replacements": 1,
+      "before_sha256": "df39daaf432484f9c9c63935f062fa6df415141bd2f313c0add58b122b6b60ae",
+      "after_sha256": "3d36d89d9933fb7ad40c6290bd303cb8c3115e82c0ad354e8a83a5c38d58736c",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\nvx_trigger_probe.py",
+      "replacements": 1,
+      "before_sha256": "dd865dfb3db15ed7399aa7aa20404a9ea4db7fc47e0d126be0e9e5171eab31e5",
+      "after_sha256": "7397c8de050e61950af1ef287be70a693e3cfdb45c199a592d9a2f29fc84709e",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\tepsound_reference_pipeline.py",
+      "replacements": 1,
+      "before_sha256": "08b5bda7e0c2c583b1582b1953e27cb62275b86f64990051efb73d517b8b4164",
+      "after_sha256": "c41e696cd477ebf7c95d1996dbfc37cb473ae2b8ff4d57cd98a21b778994fc4d",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\eStim\\CMakeLists.txt",
+      "replacements": 1,
+      "before_sha256": "4e44921bd70140cd08bfc1c701b08877701ab645e2bbf5b646d2bb3f92cece38",
+      "after_sha256": "a15650ffe8a1dc305c9397333bfb54803939fe26d9d9ad2c4ede708c12afb86c",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\nvx_polarization_probe.py",
+      "replacements": 1,
+      "before_sha256": "ba7c16c29a63bab3a946f5caac21295ae1c38d741cac31c383166d319e9b8ca6",
+      "after_sha256": "56c92015a5b483c8b306644dd1812d153b2163e2cfe8f5e5bd6da776064bc905",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\summarize_latency_sweep.py",
+      "replacements": 1,
+      "before_sha256": "5704223ca29b88938c0e3aadae0e08333c3714fc2eb162b49e9a5fd91f514fef",
+      "after_sha256": "c079620d28d42a711c36a6e4a0e90356e62a4e7747318bdea46eea1302043c6a",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\topo_side_by_side.qml",
+      "replacements": 1,
+      "before_sha256": "1d2945faa9bafe05d224b9733cb28a7eb3558d17c9aaef73b730826fb9b42ecd",
+      "after_sha256": "608727f34b4c1d3d8842c66a8463e82cd364d1a0803f71f1cc66b42d2e80b4fb",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\nvx_mirror_sweep_harness.qml",
+      "replacements": 1,
+      "before_sha256": "1a1102d4515ccb72cef327fa529582bc3fe5c60707a87d84db901ca6f82b2bd1",
+      "after_sha256": "49350749db9269881ee006754e73e121ee867056cd1cf989a10226af628d877b",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\topo_side_by_side.ps1",
+      "replacements": 7,
+      "before_sha256": "ee25e9a9aa56c280620d08771897687431d35b96f1c241fb2a78d623dc483400",
+      "after_sha256": "3bef756395b5965141beaaf3ea286896e43448cbe02ca5495d394edaadc510e8",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\topo_final_shot.qml",
+      "replacements": 1,
+      "before_sha256": "8dbde45e5f7b0e30d8b535ff2ae4fe1373f0a1d37ae238cb07670b9a63ebbf04",
+      "after_sha256": "7ef247364b1838724f76b5ee3c5bb06b76a55dbb2bf470f50a610bcbc0c3134a",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\stage6_deployed_check.ps1",
+      "replacements": 5,
+      "before_sha256": "e62943e987cdd7367b655f7b691204022b104bf9e4e72388c81958650627a6ba",
+      "after_sha256": "0e3cda6bd9b7b34017c9bdff5e8f744fc37d926ca467be26b5cb265db8b36864",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\topo_final_shot.ps1",
+      "replacements": 6,
+      "before_sha256": "230d9997a6434fccbf7d05f7198e205e2ce9daabe1be4bee5423e26e595c7063",
+      "after_sha256": "a6ca6a23ef6855693950e3f5a1efdebdcdbcb0daccf46c415e236dc4c4084315",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\topo_compose.py",
+      "replacements": 2,
+      "before_sha256": "f50cebb53ad7383068582dfd019c037495669fb7493a201f76bf22a1b628dd5c",
+      "after_sha256": "3f052c1dee9fbf24c23e472bdff5c254dfa3e4593ebb1581e3621d5fe28c0f50",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\topoplot_v4_reference.py",
+      "replacements": 4,
+      "before_sha256": "934207a984a3291e44e9db6a9e44bcefd58da2140424a71ef6be20b16bcda318",
+      "after_sha256": "3780a9c8d39db90ab41053d9d13d5fc82d88337876da59d593b2a07415d951ce",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\topoplot_reference.m",
+      "replacements": 2,
+      "before_sha256": "482636f1c5d83317f29e674a348ad2fc28261fd686ada5124d7bad40e6033026",
+      "after_sha256": "88ab8ccd4aa93ec0bbd9fae8fc0c6104aced6adf875c0b5d0c9ab06c0bb7a6ed",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\stage6_cutpublish.ps1",
+      "replacements": 5,
+      "before_sha256": "c6eb509cc0db65265c2e7886b62140b336c3a90233b0147869ec0b3d7b9cd31d",
+      "after_sha256": "a17e83c2c730d2509c92a0dc6539bc3a43826364bc1bc1e602bc853260b7bd2f",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\topoplot_probe.m",
+      "replacements": 2,
+      "before_sha256": "30b7226c13d7f21abd812391744944f92223977363fa7dbd7fe913b216418ff6",
+      "after_sha256": "d294ced07cd3077e2a1b9ebef774ea64924a47aef38afc9fa082664e395cc0a3",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\space_guard_probe.ps1",
+      "replacements": 2,
+      "before_sha256": "d3c123a2032040518f2e76142dffb31e5e88463046e7123a1726fcb254f6fcff",
+      "after_sha256": "d298d47ddd42ce50c5b4f1d24520a376da021b8c58cb6e6c5881832932487be2",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\topoplot_outline.m",
+      "replacements": 2,
+      "before_sha256": "cce8dff5d46f275c0f9ada6f1429f39a947e1516df854594304a3de955a81628",
+      "after_sha256": "2aa287afce8f3d6dc802fa2c5d975b65d8a06f77ffd4a04741a045103c3f7003",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\topoplot_contour_conv_probe.m",
+      "replacements": 4,
+      "before_sha256": "fab5780328a3039f523840931d69914edac3fd87c41d5ee2400b453d6bada925",
+      "after_sha256": "070e611e6d7acf143c683cdbf59128579849fbad441a92049bb9a2a501fa3bc3",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\topoplot_contour_conv_check.m",
+      "replacements": 3,
+      "before_sha256": "5644418777c10c5b96d0256da147abe9b16fce8ac1a1619fb754877db8427374",
+      "after_sha256": "09e5b42d96889f07d7a9b1090d3f37813faf1c100d418de3a02805ce32664cd1",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\stage6_roundtrip.ps1",
+      "replacements": 5,
+      "before_sha256": "31fb5dbee60d169a7836a596978213b0bffcdece251d1f6592d7ffe30543c888",
+      "after_sha256": "6b07ad8741b9cece4531aa1809caf18bf8dc960dad2c635bff4579e80b6a55e2",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\stage6_kindfilter_shot.ps1",
+      "replacements": 5,
+      "before_sha256": "d83e87eea31a4d412cb7e8138c8d9903e12e6f8262d10f4c535274be5edcae61",
+      "after_sha256": "85eba1517e1e2fd78c10b00e82151205ee43fe3963b520a08e2942d45689effa",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\tep_validation_run.ps1",
+      "replacements": 4,
+      "before_sha256": "414a12537ea68b7d84d645cb9347f31256eb98c6be4bfbabe8783342921593c5",
+      "after_sha256": "c80897eb6822f3b0e2f56ddf370a9853def7ff820a9b886851186bcf15a4c38c",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\tep_reference_rerun.qml",
+      "replacements": 1,
+      "before_sha256": "93d6b543472697be09c2d80703c717c45fb18fa704a03c987c8a8896add68ba4",
+      "after_sha256": "4882e51b14c48fe9e41a03d47eec5d4f81a105fc2b72cc6a6aa29c2bae7f290c",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\tep_acceptance.qml",
+      "replacements": 1,
+      "before_sha256": "28ddf659128cab4d92ee5d36834f344fde1bb9656e2838f2b238112e92108e8f",
+      "after_sha256": "101fec65a2dc6a3a0b75fbf22bd72eb4f45dc41627dc8cde89967227588fd062",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\tepSoundService\\tests\\topo_test.cpp",
+      "replacements": 1,
+      "before_sha256": "f4e80b975d7e683886d37490e1dcbe8b316c5c74b277c1bfa5a490a613ca7b29",
+      "after_sha256": "dd9dff5d6106b102ccd5834adac1b005de2719d5096328d1687a7aefac9c0cfe",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\tepSoundService\\CMakeLists.txt",
+      "replacements": 1,
+      "before_sha256": "75baaff9b8baf6aaa1089a90adcf67a75524d0779f5c3a84c6131323c26376ff",
+      "after_sha256": "2a2f73dbab95e2c1c2da67d18488b4de6c3ba14777fe879691730fdcf6a99edf",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\tepSoundService\\lda.hpp",
+      "replacements": 1,
+      "before_sha256": "6bbcd0d10e043e1a5d9842af617f2539bf58f2322a087427d308e7e86dc2d686",
+      "after_sha256": "2918aa1f4474330cee0a58393bd9706aca7ba830b9d058361ef19c37c3480beb",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\tepSoundService\\main.cpp",
+      "replacements": 2,
+      "before_sha256": "612fa3d806e016bfe7f6db626f61730b539cce0b00c8cfa76b634ccb60415694",
+      "after_sha256": "7410ad4a5c93abf537c0b08287c40aa2585e0d810cf9459690b5073129471ac9",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\SignalGenerator\\announcement.hpp",
+      "replacements": 1,
+      "before_sha256": "0022f50b44d67dd65a090a1a631200cf9556198a55c8c12f473dec505178cfb5",
+      "after_sha256": "cf6a42c5ba499178785f96c47b350f0b6a5baf62f1c84352fbcd96892686ab5b",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\quickStimulus\\cedpalette.hpp",
+      "replacements": 1,
+      "before_sha256": "692ab743e261d1c18239b608d45817025d12acf85463898860ab18d55f34316e",
+      "after_sha256": "90c660a9e4190a5c3434a27458b62924a1878a0e5c82072518b8098aed49cd00",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\quickStimulus\\CMakeLists.txt",
+      "replacements": 2,
+      "before_sha256": "5894427ad3693d176361c3a83457ad57220e733c0d52fe544a49ffc25e20a23e",
+      "after_sha256": "51614ae4d12e39996ed3729b479fc3568adfd0616865f7141262e90f5a62f156",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\playbackService\\playbackSource.bat",
+      "replacements": 1,
+      "before_sha256": "645a807ed7c03222ee96cb693d81e322637250b27d4ebe6138d35527db40844b",
+      "after_sha256": "b75b07f06e32e5b9b6483df7fd71ea967039bf985157f56e0717a648ee1acabc",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\scripts\\capture-neuron-mstim-estim-gui.ps1",
+      "replacements": 1,
+      "before_sha256": "fc38c8809424964a35e0e8a01a28ceaafb446470bba646de8fe3adc3bff7b515",
+      "after_sha256": "9b9d391aa1f3ae2938efb3c7f06e64dbfb991be0e76a0a134a233be5aa36adda",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\scripts\\validate-qt5-interop.ps1",
+      "replacements": 1,
+      "before_sha256": "447bf60489ba5b286e453212b5b2f689a4e281c92ce8eb0254ebaa7980db630b",
+      "after_sha256": "0fca508c49a720d2ac7fd1c1d5028950081e54bad1c9b44c30c8b423981403b2",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\scripts\\test-comport-latency-parity.py",
+      "replacements": 1,
+      "before_sha256": "8ff4513afe7b2cade85c96af608c19605679416ff48318aaa209bf95b3d05a6e",
+      "after_sha256": "e35fcc6a6b905b58dabae3419a8ed3a5b75fa0bdb7f966d5feb5ffa29fe37447",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\scripts\\test-stimulus-presentation.py",
+      "replacements": 1,
+      "before_sha256": "175fdcab3f9a12a25ca886d1897fe20c38a0f541ff73aab57fe97d5e84b48795",
+      "after_sha256": "57b08c208a7e5cb3a289bd8f8d400096cfe60b12d62f9b11526cca42c2c0f73c",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\scripts\\test-actichamp-parity.py",
+      "replacements": 1,
+      "before_sha256": "59b5a378644a1024cf6cbcad07edac6301515aa982a73b9108e6c73745da015b",
+      "after_sha256": "32e0e63e5faf45d3d2e78fb27fd5bf1ffc6c03065393b5d4a39d4b8c2ae5b5cc",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\scripts\\test-eyelink-parity.py",
+      "replacements": 1,
+      "before_sha256": "0863b1307a7a1321240be7f1d3948126042f494bfe06b346f516436c4a0b7bd0",
+      "after_sha256": "b022eb59351aa424a8fe79b999fc84c1503ea2c81b92ac7e288bccec41db327f",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\scripts\\test-speed-schema-parity.py",
+      "replacements": 1,
+      "before_sha256": "2a20bb3c263c5b1eeb6f8973462eff2d8fc9f54ac3767b2abd423aabf9917be2",
+      "after_sha256": "235996298cdb911c45b1cee591b09ebeccbcc397e928993c763738462227868d",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\scripts\\test-device-service-parity.py",
+      "replacements": 1,
+      "before_sha256": "d0f7c1591e04828905f9df0a86c750b3f2c2f542931d6e44e9b03b632ca46269",
+      "after_sha256": "30bc6ee4ee20afce7f8fbfcec36b475a6599a7c3da84c110affc842b2ee5f88b",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\scripts\\test-daqmx-fieldtrip.py",
+      "replacements": 1,
+      "before_sha256": "d5c81d66e0218dbf6034be261afd168ebb32a90ca425adc7a931eece532f6146",
+      "after_sha256": "4b5f2878d460c7eae6f735e7a9a63458d9ec0e364d6b0f15705b5f8bac4a4c36",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\scripts\\test-neuron-mstim-estim-parity.py",
+      "replacements": 1,
+      "before_sha256": "035bd0c402da96c0fd65543b11b838b8f3820d85a3275f4d790b92c489f52e24",
+      "after_sha256": "c55fd12b7aabe4b7845c54d4664e58ec4225d3caf1f8bfdfbdcbf80ea1b14403",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\quickStimulus\\tests\\topofield_test.cpp",
+      "replacements": 1,
+      "before_sha256": "49d6dc29eebb100a050eb2d8721f1e9fbb2a0871e96cd692ddeb6aa99e06eab7",
+      "after_sha256": "68cacef77253ea163cab5b478421117196ba76b6aad64f86ddfeadee463006d1",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\src\\quickStimulus\\tests\\cedpalette_test.cpp",
+      "replacements": 1,
+      "before_sha256": "d2f8ca686ffb70bf0b8d4d1521b498eb7d312fd6b35fdc6ce5ff7fd4a12e46f6",
+      "after_sha256": "856bc1eacb545247d049e1ae6c7b41ce2a5b5313e93d4f96dcf5be556995ee68",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\.claude\\settings.local.json",
+      "replacements": 2,
+      "before_sha256": "67d6c9ee3877ea7de01010477c2d3ffb070f74b7c4c76396b4de5653fb799b45",
+      "after_sha256": "e19df0018dbda16868509ce6aba27f14cf0c67ecebb3fbff05f25d1460cfd6ee",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\stim_shots.json",
+      "replacements": 1,
+      "before_sha256": "b5842e5fab97d08921537f0c7f3e20555eb974e203e1948ce812fdd45230138f",
+      "after_sha256": "b5d3ea508d091ce98462183c53d0d4d2aac10d8241edb1b43a07298d9f68c09c",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\stim_acceptance_protocol.json",
+      "replacements": 1,
+      "before_sha256": "35bb7268694d07bf09ad26bea9ee771509003db5a4a4ea936d1285e21868e818",
+      "after_sha256": "dcc62aec4d32a2b5a3476fd8fdcb79389d0609da69666f76b4efdfc75d8aa952",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\stim_t7_ns65.json",
+      "replacements": 1,
+      "before_sha256": "d298e2a39413bb7949239ca217ae0a5b21b661ac319c2b088d8aa1479937229e",
+      "after_sha256": "e0da39336b46b517ea50a35dfd6e2bbe33306367411add99a4e30e7187840364",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\stim_t2_generator.json",
+      "replacements": 1,
+      "before_sha256": "148287d4bd6ad3053c68d0e0160a5bb08b3ed4f427eec803e1d4c069c7054b3f",
+      "after_sha256": "e910f7fa6b7cc4b1f8170294c89c08503c14ad672f7cc2c86ffe192e687aaa74",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\stim_t8_offset.json",
+      "replacements": 1,
+      "before_sha256": "f0d876812d25b6e259773865f52e5d7cd78694febe7581721439eddc5434cea7",
+      "after_sha256": "d7de2a9bf48de614437078627651c7af3767999fbd847c01d2c6e37845cc176b",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\stim_t3_nvx136.json",
+      "replacements": 1,
+      "before_sha256": "897cc9d45eb20b6eb0ca70cd5f0b5d96a78f0e1f02eca3cbcc5b4cf4bd5794cf",
+      "after_sha256": "f70857a2578b31b6b4f54928850b33fa1c91cac26539e792c212384f455c73b8",
+      "change": "absolute relocation paths only"
+    },
+    {
+      "path": "R:\\config\\stim_t5_modes.json",
+      "replacements": 1,
+      "before_sha256": "6307f378b7459acc932dae0aa0d01594c320b8220bfe990fab0731f6fe7c4086",
+      "after_sha256": "e6eaf801085feb68e24ba0f0d97dde8726b518ec0a37316d4960b0666c907aef",
+      "change": "absolute relocation paths only"
+    }
+  ],
+  "powershell_syntax": {
+    "Parsed": 35,
+    "Failures": []
+  },
+  "shortcut_check": {
+    "Checked": 84,
+    "Affected": []
+  },
+  "builds_layout": {
+    "path": "R:/builds",
+    "subdirectories": 0,
+    "files": [
+      {
+        "name": "backup_aqtinstall.log",
+        "bytes": 5110,
+        "sha256": "46ccd6b3266228518946753ac6ddf1eb4a5ae5b19017e1e5f863baca91d2db74"
+      },
+      {
+        "name": "backup_docs_260615.zip",
+        "bytes": 3900596,
+        "sha256": "cb69c480fba359687c2aa1fa2c40db7919c00d4447cc7ba347f1959279fa52c1"
+      },
+      {
+        "name": "patch_configurator-live-status-delete-20260908.zip",
+        "bytes": 24428,
+        "sha256": "918c351c2247a432a81ebf3a2c5e41f3a61ae044e51300bd0019bf00a98584cd"
+      },
+      {
+        "name": "patch_configurator-stream-recovery-20260908.zip",
+        "bytes": 1782134,
+        "sha256": "1fe3f3800572c27a45362faa3556312f1abd1b0be9f43666c0fdd060d78af687"
+      },
+      {
+        "name": "patch_nvx136_2021_20260904.zip",
+        "bytes": 5011950,
+        "sha256": "76f5da8db5238ebb67a28da5b4fe142742bf7ebb353dc95b4abf0d416b4a36b3"
+      },
+      {
+        "name": "patch_nvx136_frame-layout_20260904.zip",
+        "bytes": 8627436,
+        "sha256": "8ce67c18b852af93f2cbd5a555f8e860984b609ed405add1ae50de69dca056c8"
+      },
+      {
+        "name": "resonance_20260905.verification.json",
+        "bytes": 7311,
+        "sha256": "585db87a4bbaeb90b8a5ea1a865bafeb6d2cf0fcb0c02166b2a678c84604e8cb"
+      },
+      {
+        "name": "resonance_20260905.zip",
+        "bytes": 993502396,
+        "sha256": "959632d5c63ec5672a6c378f652e8c95c9ff400efb1a24818eff2a81e1aa194d"
+      },
+      {
+        "name": "resonance_20260906.zip",
+        "bytes": 515049864,
+        "sha256": "847e8b5454d96a60d500070086d9f451d756420f09df1a50034cbbcb68a33f83"
+      },
+      {
+        "name": "resonance_20260907.zip",
+        "bytes": 515781524,
+        "sha256": "d1b60acc0761fe67c2a4a45a168ab1eeb944549c405454bbeb7da17b9f6fa35e"
+      }
+    ]
+  },
+  "scope": {
+    "config_reorganized": false,
+    "full_build_archive_payloads_rewritten": false,
+    "application_distribution_rewritten": false,
+    "operator_docx_rewritten": false,
+    "hardware_runs": 0,
+    "deployments": 0,
+    "matlab_jobs": 0,
+    "rebuilt_test_targets": [
+      "test_TopoField",
+      "test_CedPalette"
+    ]
+  },
+  "documentation": {
+    "markdown_files": 218,
+    "local_links_checked": 1815,
+    "unchanged_publications": 11,
+    "initial_reading_words": 1352,
+    "current_document_words": 34331,
+    "errors": []
+  },
+  "entry_and_index_links": {
+    "links_checked": 58,
+    "errors": []
+  }
+}

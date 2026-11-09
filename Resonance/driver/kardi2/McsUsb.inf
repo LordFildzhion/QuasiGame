@@ -1,0 +1,223 @@
+;--------------------------------------------------------------------;
+;
+; INF file for Win2000/WinXP/Vista/Win7/Win8
+;
+; Copyright (C) Medical Computer Systems 2010-2013.
+;
+;--------------------------------------------------------------------;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class = McsClass
+ClassGuid = {528D322C-0809-11D4-89C1-0060520407E9}
+Provider=%Mcs.Name%
+CatalogFile = McsUsb.cat
+DriverVer=10/10/2013,3.0.0.0
+DriverPackageDisplayName=%Mcs.Package.Desc%
+
+;--------------------------------------------------------------------;
+
+[ClassInstall32]
+Addreg=McsClassAddReg
+CopyFiles = Mcs.Class.Files
+
+[ClassInstall]
+Addreg=McsClassAddReg
+CopyFiles = Mcs.Class.Files
+
+[McsClassAddReg]
+HKR,,,,%Mcs.ClassName%
+;
+HKR,,Icon,,-20
+
+[Mcs.Class.Files]
+;
+
+;--------------------------------------------------------------------;
+
+[Manufacturer]
+;
+%Mcs.Name% = MCS, NTamd64
+
+;--------------------------------------------------------------------;
+
+[MCS]
+
+; KARDi2N series
+%Mcs.Dev.DeviceDesc2000%=Mcs.Dev, USB\VID_0B6E&PID_2000
+%Mcs.Dev.DeviceDesc2001%=Mcs.Dev, USB\VID_0B6E&PID_2001
+%Mcs.Dev.DeviceDesc2002%=Mcs.Dev, USB\VID_0B6E&PID_2002
+%Mcs.Dev.DeviceDesc2003%=Mcs.Dev, USB\VID_0B6E&PID_2003
+%Mcs.Dev.DeviceDesc2004%=Mcs.Dev, USB\VID_0B6E&PID_2004
+%Mcs.Dev.DeviceDesc2005%=Mcs.Dev, USB\VID_0B6E&PID_2005
+%Mcs.Dev.DeviceDesc2006%=Mcs.Dev, USB\VID_0B6E&PID_2006
+; NVX
+%Mcs.Dev.DeviceDesc2009%=Mcs.Dev, USB\VID_20F9&PID_0109
+; FirstAmp
+%Mcs.Dev.DeviceDesc.1103.0002% = Mcs.Dev, USB\VID_1103&PID_0002
+; BodyScan
+%Mcs.Dev.DeviceDesc2007%=Mcs.Dev, USB\VID_20F9&PID_2007
+; PneumoCard-5B
+%Mcs.Dev.DeviceDesc0117%=Mcs.Dev, USB\VID_20F9&PID_0117
+; NVX-16
+%Mcs.Dev.DeviceDesc0119%=Mcs.Dev, USB\VID_20F9&PID_0119
+; Kardi2-B
+%Mcs.Dev.DeviceDesc0121%=Mcs.Dev, USB\VID_20F9&PID_0121
+
+; NeuroVisor16U/20U/24U/40U
+%Mcs.Dev.DeviceDesc.0B6E.1002%=Mcs.Dev, USB\VID_0B6E&PID_1002
+; PneumoCard
+%Mcs.Dev.DeviceDesc.0B6E.1100%=Mcs.Dev, USB\VID_0B6E&PID_1100
+; KARDiDSP
+%Mcs.Dev.DeviceDesc.0B6E.1200%=Mcs.Dev, USB\VID_0B6E&PID_1200
+; Anna Usb Cable
+%Mcs.Dev.DeviceDesc.0B6E.1300%=Mcs.Dev, USB\VID_0B6E&PID_1300
+; NeuroS4U
+%Mcs.Dev.DeviceDesc.0B6E.1400%=Mcs.Dev, USB\VID_0B6E&PID_1400
+; OMEGADSP
+%Mcs.Dev.DeviceDesc.0B6E.1500%=Mcs.Dev, USB\VID_0B6E&PID_1500
+; EXO-OSTO-USB
+%Mcs.Dev.DeviceDesc.0B6E.1600%=Mcs.Dev, USB\VID_0B6E&PID_1600
+; FSS4 (FSS3)
+%Mcs.Dev.DeviceDesc.0B6E.1700%=Mcs.Dev, USB\VID_0B6E&PID_1700
+; NeuroS-MDM
+%Mcs.Dev.DeviceDesc.0B6E.1800%=Mcs.Dev, USB\VID_0B6E&PID_1800
+; NuAmps / Scan LT40
+%Mcs.Dev.DeviceDesc.0B6E.1B8B%=Mcs.Dev, USB\VID_0B6E&PID_1B8B
+
+;--------------------------------------------------------------------;
+
+[MCS.NTamd64]
+
+; KARDi2N series
+%Mcs.Dev.DeviceDesc2000%=Mcs.Dev, USB\VID_0B6E&PID_2000
+%Mcs.Dev.DeviceDesc2001%=Mcs.Dev, USB\VID_0B6E&PID_2001
+%Mcs.Dev.DeviceDesc2002%=Mcs.Dev, USB\VID_0B6E&PID_2002
+%Mcs.Dev.DeviceDesc2003%=Mcs.Dev, USB\VID_0B6E&PID_2003
+%Mcs.Dev.DeviceDesc2004%=Mcs.Dev, USB\VID_0B6E&PID_2004
+%Mcs.Dev.DeviceDesc2005%=Mcs.Dev, USB\VID_0B6E&PID_2005
+%Mcs.Dev.DeviceDesc2006%=Mcs.Dev, USB\VID_0B6E&PID_2006
+; NVX
+%Mcs.Dev.DeviceDesc2009%=Mcs.Dev, USB\VID_20F9&PID_0109
+; FirstAmp
+%Mcs.Dev.DeviceDesc.1103.0002% = Mcs.Dev, USB\VID_1103&PID_0002
+; BodyScan
+%Mcs.Dev.DeviceDesc2007%=Mcs.Dev, USB\VID_20F9&PID_2007
+; PneumoCard-5B
+%Mcs.Dev.DeviceDesc0117%=Mcs.Dev, USB\VID_20F9&PID_0117
+; NVX-16
+%Mcs.Dev.DeviceDesc0119%=Mcs.Dev, USB\VID_20F9&PID_0119
+; Kardi2-B
+%Mcs.Dev.DeviceDesc0121%=Mcs.Dev, USB\VID_20F9&PID_0121
+
+; NeuroVisor16U/20U/24U/40U
+%Mcs.Dev.DeviceDesc.0B6E.1002%=Mcs.Dev, USB\VID_0B6E&PID_1002
+; PneumoCard
+%Mcs.Dev.DeviceDesc.0B6E.1100%=Mcs.Dev, USB\VID_0B6E&PID_1100
+; KARDiDSP
+%Mcs.Dev.DeviceDesc.0B6E.1200%=Mcs.Dev, USB\VID_0B6E&PID_1200
+; Anna Usb Cable
+%Mcs.Dev.DeviceDesc.0B6E.1300%=Mcs.Dev, USB\VID_0B6E&PID_1300
+; NeuroS4U
+%Mcs.Dev.DeviceDesc.0B6E.1400%=Mcs.Dev, USB\VID_0B6E&PID_1400
+; OMEGADSP
+%Mcs.Dev.DeviceDesc.0B6E.1500%=Mcs.Dev, USB\VID_0B6E&PID_1500
+; EXO-OSTO-USB
+%Mcs.Dev.DeviceDesc.0B6E.1600%=Mcs.Dev, USB\VID_0B6E&PID_1600
+; FSS4 (FSS3)
+%Mcs.Dev.DeviceDesc.0B6E.1700%=Mcs.Dev, USB\VID_0B6E&PID_1700
+; NeuroS-MDM
+%Mcs.Dev.DeviceDesc.0B6E.1800%=Mcs.Dev, USB\VID_0B6E&PID_1800
+; NuAmps / Scan LT40
+%Mcs.Dev.DeviceDesc.0B6E.1B8B%=Mcs.Dev, USB\VID_0B6E&PID_1B8B
+
+;--------------------------------------------------------------------;
+
+[Mcs.Dev.NT]
+CopyFiles = Mcs.Dev.Files.Drv
+
+[Mcs.Dev.NT.Services]
+AddService = %Mcs.Dev.Service%, 0x00000002, Mcs.Dev.NT.AddService
+
+[Mcs.Dev.NT.AddService]
+ServiceType    = 1 ; SERVICE_KERNEL_DRIVER
+StartType      = 3 ; SERVICE_DEMAND_START
+ErrorControl   = 1 ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\%Mcs.Dev.Drv%
+
+[Mcs.Dev.Files.Drv]
+%Mcs.Dev.Drv%
+
+[DestinationDirs]
+Mcs.Class.Files = 10,System32
+Mcs.Dev.Files.Drv = 10,System32\Drivers
+
+[SourceDisksNames]
+1=,,,\i386
+
+[SourceDisksNames.amd64]
+1=,,,\amd64
+
+[SourceDisksFiles]
+McsUsb30.sys = 1,,
+
+;--------------------------------------------------------------------;
+
+[DestinationDirs]
+Mcs.Dev.CoInstaller.CopyFiles = 11
+
+[Mcs.Dev.NT.CoInstallers]
+AddReg = Mcs.Dev.CoInstaller.AddReg
+CopyFiles = Mcs.Dev.CoInstaller.CopyFiles
+
+[Mcs.Dev.CoInstaller.CopyFiles]
+WdfCoInstaller01009.dll
+
+[SourceDisksFiles]
+WdfCoInstaller01009.dll = 1
+
+[Mcs.Dev.CoInstaller.AddReg]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[Mcs.Dev.NT.Wdf]
+KmdfService = %Mcs.Dev.Service%, Mcs.Dev.Wdf.Sect
+
+[Mcs.Dev.Wdf.Sect]
+KmdfLibraryVersion = 1.9
+
+;--------------------------------------------------------------------;
+
+[Strings]
+Mcs.Package.Desc="MCS USB Driver Package"
+Mcs.Name = "Medical Computer Systems"
+Mcs.ClassName = "MCS USB Medical Devices"
+Mcs.Dev.Drv="McsUsb30.sys"
+Mcs.Dev.Service="McsUsb30"
+
+; New design on DSP55xx
+Mcs.Dev.DeviceDesc2000 = "KARDi2-N"
+Mcs.Dev.DeviceDesc2001 = "KARDi2-N"
+Mcs.Dev.DeviceDesc2002 = "KARDi2/4-N"
+Mcs.Dev.DeviceDesc2003 = "KARDi2-NF"
+Mcs.Dev.DeviceDesc2004 = "KARDi2-NP"
+Mcs.Dev.DeviceDesc2005 = "Cardiovisor6CN-12"
+Mcs.Dev.DeviceDesc2006 = "Cardiovisor6CN"
+Mcs.Dev.DeviceDesc2009 = "NVX"
+Mcs.Dev.DeviceDesc.1103.0002 = "FirstAmp EEG amplifier"
+Mcs.Dev.DeviceDesc2007 = "BodyScan"
+Mcs.Dev.DeviceDesc0117 = "PneumoCard-5B"
+Mcs.Dev.DeviceDesc0119 = "NVX-16"
+Mcs.Dev.DeviceDesc0121 = "Kardi2-B"
+
+; OLD design on USB9602
+Mcs.Dev.DeviceDesc.0B6E.1002 = "NeuroVisor16U/20U/24U/40U"
+Mcs.Dev.DeviceDesc.0B6E.1100 = "PneumoCard"
+Mcs.Dev.DeviceDesc.0B6E.1200 = "KARDiDSP"
+Mcs.Dev.DeviceDesc.0B6E.1300 = "Anna Usb Cable"
+Mcs.Dev.DeviceDesc.0B6E.1400 = "NeuroS4U"
+Mcs.Dev.DeviceDesc.0B6E.1500 = "OMEGADSP"
+Mcs.Dev.DeviceDesc.0B6E.1600 = "EXO-OSTO-USB"
+Mcs.Dev.DeviceDesc.0B6E.1700 = "FSS-4 USB"
+Mcs.Dev.DeviceDesc.0B6E.1800 = "NeuroS-MDM"
+Mcs.Dev.DeviceDesc.0B6E.1B8B = "NuAmps / Scan LT40"
+;--------------------------------------------------------------------;

@@ -1,0 +1,54 @@
+﻿; Конфигурация SPEED + EMG Interpreter + QuasiGame (UTF-8).
+; Меняйте значения справа от =. Изменения применятся после перезапуска SPEED / Prepare.
+; Номера каналов начинаются с 1. Значение 0 отключает соответствующую руку.
+
+[source]
+; Имя потока для справки; фактический вход выбирается в Resonance Configurator.
+; LSL уже подключён в Resonance, никакой внешний LSL-мост не нужен.
+service = Native_LSL
+stream = NVX136_Data
+sampling_rate_hz = 500
+; Единицы данных, которые отдаёт NATIVE Resonance LSL поток: V, mV, uV.
+; Уточните фактические единицы вашего NVX.
+input_units = V
+
+[channels]
+; Первый канал = 1, а не 0. Старые ЭМГ-каналы: 64 и 66.
+; Для одного 80-го EEG-канала: left_channel = 0, right_channel = 80.
+left_channel = 0
+right_channel = 80
+left_sensor_name = disabled
+right_sensor_name = EEG_80
+
+[filter]
+; Полоса ЭМГ: high_hz должна быть меньше sampling_rate_hz / 2.
+low_hz = 20
+high_hz = 200
+; Режектор 50 Гц: 0 отключит notch (адаптивное подавление 50 Гц останется).
+notch_hz = 50
+notch_q = 30
+order = 4
+rms_window_ms = 200
+attack_ms = 50
+release_ms = 150
+
+[normalization]
+; baseline можно включать только для исходных каналов 64/66 и точно той же записи.
+; manual: новые каналы/частоты. Старая калибровка НЕ применяется.
+; Выход: относительная активность от 0 до 1, НЕ процент MVC и НЕ сила.
+threshold_mode = manual
+; В manual пороги RMS задаются в мкВ; 0 отключает вычитание порога.
+; Перед серьёзным использованием настройте пороги по записям покоя и нагрузки.
+left_threshold_uv = 0
+right_threshold_uv = 0
+rolling_window_seconds = 10
+
+[game]
+; SPEED публикует РОВНО два потока: left_activity_index и right_activity_index.
+; Ноль в конфигурации канала означает отключённую руку и нулевой поток активности.
+; Игра получает оба канала по UDP; Tab в игре переключает руку.
+; Передача обеих активностей в QuasiGame по UDP.
+udp_enabled = true
+udp_host = 127.0.0.1
+udp_port = 8765
+udp_publish_hz = 20

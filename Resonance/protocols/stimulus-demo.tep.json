@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "name": "First presentation — text demonstration",
+  "notes": "No external triggers. Prepare, then Start. Press Space in the subject window to leave the welcome screen.",
+  "seed": 48211,
+  "screen": {
+    "background": "#101820",
+    "fixation": "none",
+    "photodiode": "top-right",
+    "photodiodeSize": 0.06
+  },
+  "generator": {
+    "mode": "pasted",
+    "maxRunLength": 0
+  },
+  "sequence": "1, 2, 1, 2",
+  "welcome": {
+    "number": 0,
+    "id": "welcome",
+    "label": "Welcome",
+    "medium": "text",
+    "text": "Ready?\nPress SPACE to begin",
+    "duration": 0,
+    "until": "key:Space",
+    "marker": -1,
+    "repetitions": 0
+  },
+  "stimuli": [
+    {
+      "number": 1,
+      "id": "breathe-in",
+      "label": "Breathe in",
+      "medium": "text",
+      "text": "Breathe in",
+      "duration": 1200,
+      "marker": 1,
+      "repetitions": 2
+    },
+    {
+      "number": 2,
+      "id": "breathe-out",
+      "label": "Breathe out",
+      "medium": "text",
+      "text": "Breathe out",
+      "duration": 1200,
+      "marker": 2,
+      "repetitions": 2
+    }
+  ],
+  "end": {
+    "number": -1,
+    "id": "end",
+    "label": "Finished",
+    "medium": "text",
+    "text": "Finished. Thank you.",
+    "duration": 2000,
+    "marker": -2,
+    "repetitions": 0
+  }
+}
