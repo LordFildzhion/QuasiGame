@@ -45,7 +45,7 @@ def create_scene(config: GameConfig, api: GameAPI, *, arm: str, keyboard: bool):
     fish = GameObject()
     fish.position = (0.0, 1.0)
     fish.tag = "fish"
-    Sprite(fish, 0.05, 0.05, "fish.png")
+    Sprite(fish, 0.08, 0.08, "fish.png")
     controller = FishController(fish, config.fish, min_to_reel=config.signal.min_to_reel)
 
     water = GameObject()
