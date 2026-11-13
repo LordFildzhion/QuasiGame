@@ -32,5 +32,5 @@ class GameHUD(UIContainer):
 
     def _settings_line(self):
         s = self.config.fish
-        return (f"Drift {s.speed:g}  Reel x{s.reel_speed_multiplier:g}  "
-                f"Slip >{s.slip_strength_threshold:g}  Low=strong")
+        return (f"Drift {self.fish.speed:g}  Reel x{s.reel_speed_multiplier:g}  "
+                f"Slip >{self.fish.slip_strength:g}  Low=strong")

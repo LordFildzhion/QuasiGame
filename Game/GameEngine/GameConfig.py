@@ -9,22 +9,21 @@ import math
 
 @dataclass(frozen=True)
 class FishSettings:
-    # Old controller: while hooked, drift toward (0, 1) at speed 0.5.
-    speed: float = 0.50
-    # Old pulling speed is 1/strength: multiplier defaults to 1.0.
+    start_speed: float = 0.05
+    speed_multiplier: float = 1.01
+    max_speed: float = 0.5
     reel_speed_multiplier: float = 1.0
-    slip_speed_multiplier: float = 2.0
+    slip_speed_multiplier: float = 10.0
     catch_pause_seconds: float = 1.0
-    slip_trigger_distance: float = 0.0
-    # Maximum dt consumed by one old-style EMG callback; NOT an active impulse.
     reel_impulse_seconds: float = 0.10
-    # Original rule: stronger signal >0.1 makes fish slip off immediately.
-    slip_strength_threshold: float = 0.10
-    # Original catch condition: fish position.y <0.3.
+    slip_trigger_distance: float = 0.0
+    start_slip_strength_threshold: float = 0.10
+    slip_strength_threshold_multiplier: float = 1
+    min_slip_strength_threshold: float = 0.1   
     catch_y: float = 0.30
 
     def __post_init__(self):
-        for name in ("speed", "reel_speed_multiplier", "slip_speed_multiplier"):
+        for name in ("start_speed", "reel_speed_multiplier", "slip_speed_multiplier"):
             value = getattr(self, name)
             if not math.isfinite(value) or value <= 0:
                 raise ValueError(f"fish.{name} must be finite and positive")
@@ -34,8 +33,8 @@ class FishSettings:
             raise ValueError("fish.slip_trigger_distance must be in [0, 0.50]")
         if not math.isfinite(self.reel_impulse_seconds) or self.reel_impulse_seconds <= 0:
             raise ValueError("fish.reel_impulse_seconds must be positive")
-        if not math.isfinite(self.slip_strength_threshold) or not 0 <= self.slip_strength_threshold <= 1:
-            raise ValueError("fish.slip_strength_threshold must be in [0, 1]")
+        if not math.isfinite(self.start_slip_strength_threshold) or not 0 <= self.start_slip_strength_threshold <= 1:
+            raise ValueError("fish.start_slip_strength_threshold must be in [0, 1]")
         if not math.isfinite(self.catch_y) or not 0 <= self.catch_y <= 1:
             raise ValueError("fish.catch_y must be in [0, 1]")
 
@@ -46,6 +45,7 @@ class SignalSettings:
     min_to_reel: float = 0.02
     keyboard_strength: float = 0.06
     smoothing_seconds: float = 0.0
+    debug: bool = False
 
     def __post_init__(self):
         if not math.isfinite(self.multiplier) or self.multiplier <= 0:
@@ -95,13 +95,17 @@ class GameConfig:
 
         defaults = FishSettings()
         fish = FishSettings(
-            speed=get("fish", "speed", defaults.speed, float),
+            start_speed=get("fish", "start_speed", defaults.start_speed, float),
+            speed_multiplier=get("fish", "speed_multiplier", defaults.speed_multiplier, float),
+            max_speed=get("fish", "max_speed", defaults.max_speed, float),
             reel_speed_multiplier=get("fish", "reel_speed_multiplier", defaults.reel_speed_multiplier, float),
-            slip_speed_multiplier=get("fish", "slip_speed_multiplier", defaults.slip_speed_multiplier, float),
             catch_pause_seconds=get("fish", "catch_pause_seconds", defaults.catch_pause_seconds, float),
+            slip_speed_multiplier=get("fish", "slip_speed_multiplier", defaults.slip_speed_multiplier, float),
             slip_trigger_distance=get("fish", "slip_trigger_distance", defaults.slip_trigger_distance, float),
             reel_impulse_seconds=get("fish", "reel_impulse_seconds", defaults.reel_impulse_seconds, float),
-            slip_strength_threshold=get("fish", "slip_strength_threshold", defaults.slip_strength_threshold, float),
+            start_slip_strength_threshold=get("fish", "start_slip_strength_threshold", defaults.start_slip_strength_threshold, float),
+            slip_strength_threshold_multiplier=get("fish", "slip_strength_threshold_multiplier", defaults.slip_strength_threshold_multiplier, float),
+            min_slip_strength_threshold=get("fish", "min_slip_strength_threshold", defaults.min_slip_strength_threshold, float),   
             catch_y=get("fish", "catch_y", defaults.catch_y, float),
         )
         sig_def = SignalSettings()
@@ -110,6 +114,7 @@ class GameConfig:
             min_to_reel=get("signal", "min_to_reel", sig_def.min_to_reel, float),
             keyboard_strength=get("signal", "keyboard_strength", sig_def.keyboard_strength, float),
             smoothing_seconds=get("signal", "smoothing_seconds", sig_def.smoothing_seconds, float),
+            debug=parser.getboolean("signal", "debug", fallback=False)
         )
         section = "input" if parser.has_section("input") else "connection"
         try:

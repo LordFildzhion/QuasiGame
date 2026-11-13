@@ -36,6 +36,9 @@ class FishController(Component):
         self.catches = 0
         self.escapes = 0
 
+        self.speed = self.settings.start_speed
+        self.slip_strength = self.settings.start_slip_strength_threshold
+
         self.hook = None
         self.hook_start = None
         self.rod = None
@@ -71,11 +74,11 @@ class FishController(Component):
         """Move once per frame; apply each contraction just like old wasHooked()."""
         dt = max(0.0, float(Time.deltaTime))
         if self.state is FishingState.SWIMMING:
-            if self.moove(self.hook.position, self.settings.speed * self.settings.slip_speed_multiplier, dt):
+            if self.moove(self.hook.position, self.speed * self.settings.slip_speed_multiplier, dt):
                 self.state = FishingState.HOOKED
 
         elif self.state is FishingState.HOOKED:
-            arrived = self.moove(self.escape_position, self.settings.speed, dt)
+            arrived = self.moove(self.escape_position, self.speed, dt)
             if arrived or (Vector2(self.gameObject.position) - self.escape_position).length() <= self.settings.slip_trigger_distance:
                 self._slip_off()
 
@@ -87,7 +90,7 @@ class FishController(Component):
 
         elif self.state is FishingState.SLIPPED_OFF:
             if self.moove(self.escape_position,
-                          self.settings.speed * self.settings.slip_speed_multiplier,
+                          self.speed * self.settings.slip_speed_multiplier,
                           dt):
                 self.state = FishingState.SWIMMING
 
@@ -123,7 +126,7 @@ class FishController(Component):
         value = float(val)
         if not math.isfinite(value):
             return
-        if value > self.settings.slip_strength_threshold:
+        if value > self.slip_strength:
             self._slip_off()
             return
 
@@ -138,8 +141,14 @@ class FishController(Component):
             self.state = FishingState.PULLED_OUT
             self.delay = self.settings.catch_pause_seconds
             self.catches += 1
+            self.speed = min(self.settings.max_speed, self.speed * self.settings.speed_multiplier)
+            self.slip_strength = max(self.settings.min_slip_strength_threshold, self.slip_strength * self.settings.slip_strength_threshold_multiplier)
 
     def _slip_off(self) -> None:
         if self.state is FishingState.HOOKED:
             self.state = FishingState.SLIPPED_OFF
             self.escapes += 1
+            self.speed = self.speed / self.settings.speed_multiplier
+            self.slip_strength = min(1, self.slip_strength / self.settings.slip_strength_threshold_multiplier)
+
+

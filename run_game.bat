@@ -11,3 +11,4 @@ set "PYTHONHOME="
 set "PYTHONPATH=%PROJECT_ROOT%"
 set "PYTHONNOUSERSITE="
 "%GAME_PY%" -m Integration.run_game %*
+pause

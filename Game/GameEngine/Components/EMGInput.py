@@ -42,6 +42,8 @@ class EMGInput(Component):
 
     def _transform(self, event: ContractionSignal) -> ContractionSignal:
         scaled = self.settings.scale(event.strength)
+        if self.settings.debug:
+            print("Got signal: row = " + str(event.strength) + " transformed = " + str(scaled))
         if scaled is None:
             # GameAPI already validates event values; defensive fallback.
             scaled = 0.0
