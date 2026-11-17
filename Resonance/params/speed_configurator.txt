@@ -13,10 +13,9 @@ sampling_rate_hz = 500
 input_units = V
 
 [channels]
-; Первый канал = 1, а не 0. Старые ЭМГ-каналы: 64 и 66.
-; Для одного 80-го EEG-канала: left_channel = 0, right_channel = 80.
-left_channel = 64
-right_channel = 66
+; Первый канал = 1, а не 0.
+left_channel = 0
+right_channel = 2
 left_sensor_name = left_p
 right_sensor_name = right_p
 
@@ -55,9 +54,9 @@ port = 8765
 calibration_seconds = 2.0
 ; Порог включения в долях робастного sigma шума. Начальное значение снижает ложные события от случайных колебаний.
 ; Меньше = лучше ловит микро-сокращения, но выше риск ложных срабатываний.
-onset_sigma = 4.0
+onset_sigma = 1.0
 ; Гистерезис отпускания: должно быть меньше onset_sigma.
-release_sigma = 1.5
+release_sigma = 0.5
 ; Минимальная длительность сокращения. 20 мс при 500 Гц = 10 отсчётов; короткий одиночный шумовой пик не считается событием.
 min_contraction_ms = 20
 ; Длительность ниже release threshold для завершения события.

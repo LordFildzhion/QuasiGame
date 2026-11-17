@@ -311,8 +311,16 @@ class ConfiguredSpeedProcessor:
         events, pulses = self.detector.process(
             envelope,
             timestamps_ns=timestamps_ns,
-            valid_mask=valid,
+            valid_mask=None,
         )
+        if events:
+            for event in events:
+                print(
+                    f"EVENT: {event.arm}, "
+                    f"strength={event.strength:.3f}, "
+                    f"peak={event.peak_rms * 1e6:.3f} uV",
+                    flush=True
+                )
         enabled = (s.left_channel != 0, s.right_channel != 0)
         ready = self.detector.ready
         if not self._detector_ready_reported and all(ready[i] or not enabled[i] for i in range(2)):
@@ -336,7 +344,10 @@ class ConfiguredSpeedProcessor:
                     self._bridge_error_reported = True
         # SPEED output traces now contain isolated event pulses (zero otherwise),
         # not a continuously varying activity level.
-        return np.clip(pulses, 0.0, 1.0)
+        return np.column_stack((
+            frame.left_activity_index,
+            frame.right_activity_index
+        ))
 
 
 def build_configured_speed(settings_path: str | Path, baseline_path: str | Path) -> None:
